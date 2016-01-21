@@ -32,9 +32,6 @@ private let reuseIdentifier = "Cell"
 class CustomFocusEffectsCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
-
-    let imageArray = ["goat1", "goat2", "goat3", "goat4", "goat5", "goat6", "goat7"]
-    
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -47,9 +44,8 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
     
         if let imageCell = cell as? CustomFocusCell {
-            //imageCell.imageView.image = UIImage(named: imageArray[indexPath.item % imageArray.count])
             let dinoObject = DinoDataManager.sharedInstance.dinoArray[indexPath.item]
-            imageCell.imageView.image = UIImage(named: dinoObject.nameString)
+            imageCell.imageView.image = UIImage(named: dinoObject.previewImageName)
             imageCell.titleLabel.text = dinoObject.nameString
         }
     
