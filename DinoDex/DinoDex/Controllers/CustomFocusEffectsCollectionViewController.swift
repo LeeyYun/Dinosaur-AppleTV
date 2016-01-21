@@ -49,6 +49,7 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
         if let imageCell = cell as? CustomFocusCell {
             //imageCell.imageView.image = UIImage(named: imageArray[indexPath.item % imageArray.count])
             let dinoObject = DinoDataManager.sharedInstance.dinoArray[indexPath.item]
+            imageCell.imageView.image = UIImage(named: dinoObject.nameString)
             imageCell.titleLabel.text = dinoObject.nameString
         }
     
