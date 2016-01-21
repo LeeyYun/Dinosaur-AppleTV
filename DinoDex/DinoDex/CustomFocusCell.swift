@@ -24,7 +24,7 @@ class CustomFocusCell: UICollectionViewCell {
         self.gradient.frame = gradientView.bounds
         self.gradientView.layer.addSublayer(self.gradient)
         
-        self.titleLabel.font = UIFont.systemFontOfSize(25.0, weight: UIFontWeightLight)
+        self.titleLabel.font = UIFont.systemFontOfSize(33.0, weight: UIFontWeightLight)
     }
     
     override func layoutSubviews() {
@@ -45,6 +45,8 @@ class CustomFocusCell: UICollectionViewCell {
     }
     
     func enableFocusedState() {
+        
+        self.titleLabel.font = UIFont.systemFontOfSize(55.0, weight: UIFontWeightLight)
         
         let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis)
         horizontalMotionEffect.minimumRelativeValue = -3
@@ -78,7 +80,7 @@ class CustomFocusCell: UICollectionViewCell {
         
         self.gradientView.transform = CGAffineTransformMakeScale(1.0, 1.0)
         self.titleLabel.transform = CGAffineTransformIdentity
-        self.titleLabel.font = UIFont.systemFontOfSize(25.0, weight: UIFontWeightLight)
+        self.titleLabel.font = UIFont.systemFontOfSize(33.0, weight: UIFontWeightLight)
         
     }
 }
