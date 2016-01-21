@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="DinoDex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
+                                <rect key="frame" x="857" y="519" width="207" height="43"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
+                                <rect key="frame" x="853" y="570" width="215" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
+                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
+                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="second" id="cPa-gy-q4n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2246" y="624"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nbO-q7-ptu" kind="relationship" relationship="viewControllers" id="dMz-Vk-cH8"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="5O4-ua-pHX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="-558"/>
+        </scene>
+        <!--Dinosaurs-->
+        <scene sceneID="liO-9K-vw1">
+            <objects>
+                <viewController storyboardIdentifier="FirstViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r7B-RV-IQg" customClass="FirstViewController" customModule="DinoDex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oSv-O0-bra"/>
+                        <viewControllerLayoutGuide type="bottom" id="VSE-vr-fW2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="spR-Sp-aIf">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <sceneKitView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="Raptor.scn" allowsCameraControl="YES" preferredRenderingAPI="1" translatesAutoresizingMaskIntoConstraints="NO" id="FSZ-hj-5Oa">
+                                <rect key="frame" x="461" y="0.0" width="1459" height="1080"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1459" id="Dt0-E2-r0M"/>
+                                </constraints>
+                            </sceneKitView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velociraptor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynD-37-hsv">
+                                <rect key="frame" x="731" y="20" width="458" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="6qI-om-PMr"/>
+                                    <constraint firstAttribute="width" constant="458" id="StT-SK-b2E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="90"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MZ-1z-U7Y">
+                                <rect key="frame" x="123" y="459" width="671" height="341"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="341" id="EYl-5I-OgE"/>
+                                    <constraint firstAttribute="width" constant="671" id="axw-0i-Yjg"/>
+                                </constraints>
+                                <string key="text">Velociraptor was a mid-sized dromaeosaurid, with adults measuring up to 2.07 m (6.8 ft) long, 0.5 m (1.6 ft) high at the hip, and weighing up to 15 kg (33 lb). The skull, which grew up to 25 cm (10 in) long, was uniquely up-curved, concave on the upper surface and convex on the lower. The jaws were lined with 26–28 widely spaced teeth on each side, each more strongly serrated on the back edge than the front.</string>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
+                                <color key="textColor" red="0.51784205439999997" green="0.58159953360000005" blue="0.58617168659999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DH-DU-yLN">
+                                <rect key="frame" x="318" y="388" width="280" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="4D4-IB-bs0"/>
+                                    <constraint firstAttribute="height" constant="63" id="Gej-g7-bLo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ynD-37-hsv" firstAttribute="top" secondItem="spR-Sp-aIf" secondAttribute="topMargin" constant="20" id="3fN-Cq-VUf"/>
+                            <constraint firstItem="FSZ-hj-5Oa" firstAttribute="height" secondItem="spR-Sp-aIf" secondAttribute="height" id="3vm-Q8-RZk"/>
+                            <constraint firstItem="8MZ-1z-U7Y" firstAttribute="top" secondItem="5DH-DU-yLN" secondAttribute="bottom" constant="8" id="DCf-hi-sjj"/>
+                            <constraint firstItem="8MZ-1z-U7Y" firstAttribute="leading" secondItem="spR-Sp-aIf" secondAttribute="leading" constant="123" id="GJF-PS-N9P"/>
+                            <constraint firstItem="ynD-37-hsv" firstAttribute="centerX" secondItem="spR-Sp-aIf" secondAttribute="centerX" id="S4C-j0-2Bx"/>
+                            <constraint firstAttribute="topMargin" secondItem="FSZ-hj-5Oa" secondAttribute="top" id="bV2-VH-2Fl"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="8MZ-1z-U7Y" secondAttribute="bottom" constant="280" id="gKE-op-2Iq"/>
+                            <constraint firstItem="5DH-DU-yLN" firstAttribute="leading" secondItem="spR-Sp-aIf" secondAttribute="leading" constant="318" id="rlK-jw-Dzh"/>
+                            <constraint firstAttribute="trailing" secondItem="FSZ-hj-5Oa" secondAttribute="trailing" id="t7Z-KT-jca"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dinosaurs" image="first" id="bdB-V2-1t9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqJ-yJ-t73" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2259" y="-693"/>
+        </scene>
+        <!--Dinosaurs-->
+        <scene sceneID="VpE-rl-Poe">
+            <objects>
+                <collectionViewController id="nbO-q7-ptu" customClass="CustomFocusEffectsCollectionViewController" customModule="DinoDex" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qqo-Wm-KNc">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="50" minimumInteritemSpacing="50" id="JDD-if-CMz">
+                            <size key="itemSize" width="183" height="186"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="64" maxX="20" maxY="20"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="T84-cp-CBc" customClass="CustomFocusCell" customModule="DinoDex" customModuleProvider="target">
+                                <rect key="frame" x="20" y="64" width="183" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="183" height="186"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAi-CS-TIE">
+                                            <rect key="frame" x="0.0" y="0.0" width="183" height="186"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0WY-rs-hRx">
+                                            <rect key="frame" x="0.0" y="0.0" width="183" height="186"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4P-nh-prL">
+                                            <rect key="frame" x="8" y="158" width="167" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="IAi-CS-TIE" firstAttribute="leading" secondItem="T84-cp-CBc" secondAttribute="leading" id="JX5-qS-9TK"/>
+                                    <constraint firstAttribute="bottom" secondItem="IAi-CS-TIE" secondAttribute="bottom" id="Kiz-cq-o1N"/>
+                                    <constraint firstItem="0WY-rs-hRx" firstAttribute="top" secondItem="T84-cp-CBc" secondAttribute="top" id="M5m-zK-sJk"/>
+                                    <constraint firstItem="IAi-CS-TIE" firstAttribute="top" secondItem="T84-cp-CBc" secondAttribute="top" id="NFN-Ne-Ztq"/>
+                                    <constraint firstItem="B4P-nh-prL" firstAttribute="leading" secondItem="T84-cp-CBc" secondAttribute="leadingMargin" id="NHm-z0-z5Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="IAi-CS-TIE" secondAttribute="trailing" id="gQS-v7-bWw"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="B4P-nh-prL" secondAttribute="trailing" id="hp0-2y-cC4"/>
+                                    <constraint firstAttribute="bottom" secondItem="0WY-rs-hRx" secondAttribute="bottom" id="jIm-qJ-lGq"/>
+                                    <constraint firstItem="0WY-rs-hRx" firstAttribute="leading" secondItem="T84-cp-CBc" secondAttribute="leading" id="k69-Sg-CXU"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="B4P-nh-prL" secondAttribute="bottom" constant="-1" id="kLW-3z-cND"/>
+                                    <constraint firstAttribute="trailing" secondItem="0WY-rs-hRx" secondAttribute="trailing" id="wUZ-lV-wDa"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="gradientView" destination="0WY-rs-hRx" id="0BG-cb-XZo"/>
+                                    <outlet property="imageView" destination="IAi-CS-TIE" id="b0r-2v-7dL"/>
+                                    <outlet property="titleLabel" destination="B4P-nh-prL" id="PKT-ir-38a"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="nbO-q7-ptu" id="3zx-j3-QXo"/>
+                            <outlet property="delegate" destination="nbO-q7-ptu" id="czU-Xf-TkP"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Dinosaurs" image="first" id="Ybm-Bf-dfp"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcW-Cp-pV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2152" y="-1991"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="dO6-6q-g89">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cbD-hF-1gT" customClass="DetailViewController" customModule="DinoDex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tu2-Yr-l3j"/>
+                        <viewControllerLayoutGuide type="bottom" id="qJz-nK-MRZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bEh-4B-iZx">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgd-ef-oph">
+                                <rect key="frame" x="719" y="82" width="244" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Top Right"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOc-uw-mfl">
+                                <rect key="frame" x="128" y="271" width="282" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Bottom Left"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zgd-ef-oph" secondAttribute="trailing" constant="937" id="C8t-dU-fde"/>
+                            <constraint firstItem="nOc-uw-mfl" firstAttribute="top" secondItem="tu2-Yr-l3j" secondAttribute="bottom" constant="271" id="V1E-Kx-gMX"/>
+                            <constraint firstItem="nOc-uw-mfl" firstAttribute="leading" secondItem="bEh-4B-iZx" secondAttribute="leadingMargin" constant="108" id="Wws-GC-VeS"/>
+                            <constraint firstItem="zgd-ef-oph" firstAttribute="top" secondItem="tu2-Yr-l3j" secondAttribute="bottom" constant="82" id="epy-Ne-peL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomLeftButton" destination="nOc-uw-mfl" id="i1h-Bq-GwW"/>
+                        <outlet property="topRightButton" destination="zgd-ef-oph" id="qQG-5s-Ok4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flH-wO-g6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4298" y="-731"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
