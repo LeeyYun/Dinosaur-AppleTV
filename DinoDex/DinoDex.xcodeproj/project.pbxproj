@@ -25,6 +25,14 @@
 		348293991C506AD50078CB29 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293951C506AD50078CB29 /* SecondViewController.swift */; };
 		3482939C1C506B290078CB29 /* Raptor.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3482939B1C506B290078CB29 /* Raptor.scn */; };
 		3482939E1C506C020078CB29 /* CustomFocusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3482939D1C506C020078CB29 /* CustomFocusCell.swift */; };
+		348293A11C5078290078CB29 /* DinoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293A01C5078290078CB29 /* DinoDataManager.swift */; };
+		348293A31C507AD40078CB29 /* Dinosaur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293A21C507AD40078CB29 /* Dinosaur.swift */; };
+		348293A91C507CD20078CB29 /* Spine_D.tga in Resources */ = {isa = PBXBuildFile; fileRef = 348293A41C507CD20078CB29 /* Spine_D.tga */; };
+		348293AA1C507CD20078CB29 /* Spine_N.tga in Resources */ = {isa = PBXBuildFile; fileRef = 348293A51C507CD20078CB29 /* Spine_N.tga */; };
+		348293AB1C507CD20078CB29 /* Spine_S.tga in Resources */ = {isa = PBXBuildFile; fileRef = 348293A61C507CD20078CB29 /* Spine_S.tga */; };
+		348293AC1C507CD20078CB29 /* Spinosaurus.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 348293A71C507CD20078CB29 /* Spinosaurus.mtl */; };
+		348293AD1C507CD20078CB29 /* Spinosaurus.obj in Resources */ = {isa = PBXBuildFile; fileRef = 348293A81C507CD20078CB29 /* Spinosaurus.obj */; };
+		348293B11C507CF70078CB29 /* Spinosaurus.scn in Resources */ = {isa = PBXBuildFile; fileRef = 348293B01C507CF70078CB29 /* Spinosaurus.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +66,8 @@
 		342BBF9A1C4DBD6C00C4C9AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		342BBFA61C4DBE1000C4C9AE /* Raptor.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Raptor.mtl; path = ../Raptor.mtl; sourceTree = "<group>"; };
 		342BBFA71C4DBE1000C4C9AE /* Raptor.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Raptor.obj; path = ../Raptor.obj; sourceTree = "<group>"; };
-		342BBFA91C4DBE1000C4C9AE /* raptor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = raptor.jpg; sourceTree = "<group>"; };
-		342BBFAA1C4DBE1000C4C9AE /* raptor_normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = raptor_normal.jpg; sourceTree = "<group>"; };
+		342BBFA91C4DBE1000C4C9AE /* raptor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = raptor.jpg; path = ../Texture/raptor.jpg; sourceTree = "<group>"; };
+		342BBFAA1C4DBE1000C4C9AE /* raptor_normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = raptor_normal.jpg; path = ../Texture/raptor_normal.jpg; sourceTree = "<group>"; };
 		342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		342BBFEC1C4EF39100C4C9AE /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -69,6 +77,14 @@
 		348293951C506AD50078CB29 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = Controllers/SecondViewController.swift; sourceTree = "<group>"; };
 		3482939B1C506B290078CB29 /* Raptor.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Raptor.scn; path = DinoDex/Raptor.scn; sourceTree = SOURCE_ROOT; };
 		3482939D1C506C020078CB29 /* CustomFocusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFocusCell.swift; sourceTree = "<group>"; };
+		348293A01C5078290078CB29 /* DinoDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinoDataManager.swift; sourceTree = "<group>"; };
+		348293A21C507AD40078CB29 /* Dinosaur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dinosaur.swift; sourceTree = "<group>"; };
+		348293A41C507CD20078CB29 /* Spine_D.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Spine_D.tga; sourceTree = "<group>"; };
+		348293A51C507CD20078CB29 /* Spine_N.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Spine_N.tga; sourceTree = "<group>"; };
+		348293A61C507CD20078CB29 /* Spine_S.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Spine_S.tga; sourceTree = "<group>"; };
+		348293A71C507CD20078CB29 /* Spinosaurus.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Spinosaurus.mtl; sourceTree = "<group>"; };
+		348293A81C507CD20078CB29 /* Spinosaurus.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Spinosaurus.obj; sourceTree = "<group>"; };
+		348293B01C507CF70078CB29 /* Spinosaurus.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Spinosaurus.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +145,7 @@
 				342BBF7F1C4DBD6C00C4C9AE /* Main.storyboard */,
 				3482939A1C506B030078CB29 /* Assets */,
 				3482938F1C506A4D0078CB29 /* Views */,
+				3482939F1C5078290078CB29 /* DataManagers */,
 				3482938E1C506A480078CB29 /* Models */,
 				3482938D1C506A3F0078CB29 /* Controllers */,
 				342BBF821C4DBD6C00C4C9AE /* Assets.xcassets */,
@@ -158,8 +175,6 @@
 		342BBFA81C4DBE1000C4C9AE /* Texture */ = {
 			isa = PBXGroup;
 			children = (
-				342BBFA91C4DBE1000C4C9AE /* raptor.jpg */,
-				342BBFAA1C4DBE1000C4C9AE /* raptor_normal.jpg */,
 			);
 			name = Texture;
 			path = ../Texture;
@@ -179,6 +194,7 @@
 		3482938E1C506A480078CB29 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				348293A21C507AD40078CB29 /* Dinosaur.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -194,12 +210,44 @@
 		3482939A1C506B030078CB29 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				348293AF1C507CE20078CB29 /* Spinosaurus */,
+				348293AE1C507CD80078CB29 /* Raptor */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		3482939F1C5078290078CB29 /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				348293A01C5078290078CB29 /* DinoDataManager.swift */,
+			);
+			path = DataManagers;
+			sourceTree = "<group>";
+		};
+		348293AE1C507CD80078CB29 /* Raptor */ = {
+			isa = PBXGroup;
+			children = (
 				342BBFA61C4DBE1000C4C9AE /* Raptor.mtl */,
 				342BBFA71C4DBE1000C4C9AE /* Raptor.obj */,
 				3482939B1C506B290078CB29 /* Raptor.scn */,
 				342BBFA81C4DBE1000C4C9AE /* Texture */,
+				342BBFA91C4DBE1000C4C9AE /* raptor.jpg */,
+				342BBFAA1C4DBE1000C4C9AE /* raptor_normal.jpg */,
 			);
-			path = Assets;
+			name = Raptor;
+			sourceTree = "<group>";
+		};
+		348293AF1C507CE20078CB29 /* Spinosaurus */ = {
+			isa = PBXGroup;
+			children = (
+				348293A41C507CD20078CB29 /* Spine_D.tga */,
+				348293A51C507CD20078CB29 /* Spine_N.tga */,
+				348293A61C507CD20078CB29 /* Spine_S.tga */,
+				348293A71C507CD20078CB29 /* Spinosaurus.mtl */,
+				348293A81C507CD20078CB29 /* Spinosaurus.obj */,
+				348293B01C507CF70078CB29 /* Spinosaurus.scn */,
+			);
+			name = Spinosaurus;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,7 +361,13 @@
 				3482939C1C506B290078CB29 /* Raptor.scn in Resources */,
 				342BBFAC1C4DBE1000C4C9AE /* Raptor.obj in Resources */,
 				342BBFAE1C4DBE1000C4C9AE /* raptor_normal.jpg in Resources */,
+				348293AC1C507CD20078CB29 /* Spinosaurus.mtl in Resources */,
+				348293AA1C507CD20078CB29 /* Spine_N.tga in Resources */,
+				348293AD1C507CD20078CB29 /* Spinosaurus.obj in Resources */,
+				348293B11C507CF70078CB29 /* Spinosaurus.scn in Resources */,
 				342BBFAD1C4DBE1000C4C9AE /* raptor.jpg in Resources */,
+				348293AB1C507CD20078CB29 /* Spine_S.tga in Resources */,
+				348293A91C507CD20078CB29 /* Spine_D.tga in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +398,8 @@
 				348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */,
 				348293991C506AD50078CB29 /* SecondViewController.swift in Sources */,
 				348293981C506AD50078CB29 /* FirstViewController.swift in Sources */,
+				348293A31C507AD40078CB29 /* Dinosaur.swift in Sources */,
+				348293A11C5078290078CB29 /* DinoDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

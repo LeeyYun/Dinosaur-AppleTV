@@ -25,6 +25,7 @@
 //
 
 import UIKit
+import SceneKit
 
 private let reuseIdentifier = "Cell"
 
@@ -39,23 +40,29 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return DinoDataManager.sharedInstance.dinoArray.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
     
         if let imageCell = cell as? CustomFocusCell {
-            imageCell.imageView.image = UIImage(named: imageArray[indexPath.item % imageArray.count])
-            imageCell.titleLabel.text = "Velociraptor"
+            //imageCell.imageView.image = UIImage(named: imageArray[indexPath.item % imageArray.count])
+            let dinoObject = DinoDataManager.sharedInstance.dinoArray[indexPath.item]
+            imageCell.titleLabel.text = dinoObject.nameString
         }
     
         return cell
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        if let detail = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("FirstViewController") as? FirstViewController {
-            self.presentViewController(detail, animated: true, completion: nil)
+        if let first = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("FirstViewController") as? FirstViewController {
+            //setup the dinosaur model and text to show here based on indexpath
+            let dinoObject = DinoDataManager.sharedInstance.dinoArray[indexPath.item]
+            first.nameString = dinoObject.nameString
+            first.descriptionString = dinoObject.descriptionString
+            first.sceneKitString = dinoObject.sceneKitString
+            self.presentViewController(first, animated: true, completion: nil)
         }
     }
 }

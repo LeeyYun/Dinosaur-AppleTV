@@ -94,7 +94,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MZ-1z-U7Y">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="8MZ-1z-U7Y">
                                 <rect key="frame" x="123" y="459" width="671" height="341"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="341" id="EYl-5I-OgE"/>
@@ -130,6 +130,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dinosaurs" image="first" id="bdB-V2-1t9"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="8MZ-1z-U7Y" id="Wkz-Tw-Hwd"/>
+                        <outlet property="nameLabel" destination="ynD-37-hsv" id="vCX-jF-7zc"/>
+                        <outlet property="sceneView" destination="FSZ-hj-5Oa" id="Zwv-Jy-Tfp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqJ-yJ-t73" sceneMemberID="firstResponder"/>
             </objects>
