@@ -33,6 +33,10 @@
 		348293AC1C507CD20078CB29 /* Spinosaurus.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 348293A71C507CD20078CB29 /* Spinosaurus.mtl */; };
 		348293AD1C507CD20078CB29 /* Spinosaurus.obj in Resources */ = {isa = PBXBuildFile; fileRef = 348293A81C507CD20078CB29 /* Spinosaurus.obj */; };
 		348293B11C507CF70078CB29 /* Spinosaurus.scn in Resources */ = {isa = PBXBuildFile; fileRef = 348293B01C507CF70078CB29 /* Spinosaurus.scn */; };
+		348293B61C509B340078CB29 /* trike.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 348293B31C509B340078CB29 /* trike.mtl */; };
+		348293B71C509B340078CB29 /* trike.obj in Resources */ = {isa = PBXBuildFile; fileRef = 348293B41C509B340078CB29 /* trike.obj */; };
+		348293B81C509B340078CB29 /* trike.png in Resources */ = {isa = PBXBuildFile; fileRef = 348293B51C509B340078CB29 /* trike.png */; };
+		348293BA1C509B480078CB29 /* trike.scn in Resources */ = {isa = PBXBuildFile; fileRef = 348293B91C509B480078CB29 /* trike.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,10 @@
 		348293A71C507CD20078CB29 /* Spinosaurus.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Spinosaurus.mtl; sourceTree = "<group>"; };
 		348293A81C507CD20078CB29 /* Spinosaurus.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Spinosaurus.obj; sourceTree = "<group>"; };
 		348293B01C507CF70078CB29 /* Spinosaurus.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Spinosaurus.scn; sourceTree = "<group>"; };
+		348293B31C509B340078CB29 /* trike.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trike.mtl; sourceTree = "<group>"; };
+		348293B41C509B340078CB29 /* trike.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trike.obj; sourceTree = "<group>"; };
+		348293B51C509B340078CB29 /* trike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trike.png; sourceTree = "<group>"; };
+		348293B91C509B480078CB29 /* trike.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = trike.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +218,7 @@
 		3482939A1C506B030078CB29 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				348293B21C509B260078CB29 /* Triceratops */,
 				348293AF1C507CE20078CB29 /* Spinosaurus */,
 				348293AE1C507CD80078CB29 /* Raptor */,
 			);
@@ -248,6 +257,17 @@
 				348293B01C507CF70078CB29 /* Spinosaurus.scn */,
 			);
 			name = Spinosaurus;
+			sourceTree = "<group>";
+		};
+		348293B21C509B260078CB29 /* Triceratops */ = {
+			isa = PBXGroup;
+			children = (
+				348293B31C509B340078CB29 /* trike.mtl */,
+				348293B41C509B340078CB29 /* trike.obj */,
+				348293B91C509B480078CB29 /* trike.scn */,
+				348293B51C509B340078CB29 /* trike.png */,
+			);
+			name = Triceratops;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,13 +381,17 @@
 				3482939C1C506B290078CB29 /* Raptor.scn in Resources */,
 				342BBFAC1C4DBE1000C4C9AE /* Raptor.obj in Resources */,
 				342BBFAE1C4DBE1000C4C9AE /* raptor_normal.jpg in Resources */,
+				348293BA1C509B480078CB29 /* trike.scn in Resources */,
 				348293AC1C507CD20078CB29 /* Spinosaurus.mtl in Resources */,
+				348293B61C509B340078CB29 /* trike.mtl in Resources */,
 				348293AA1C507CD20078CB29 /* Spine_N.tga in Resources */,
 				348293AD1C507CD20078CB29 /* Spinosaurus.obj in Resources */,
 				348293B11C507CF70078CB29 /* Spinosaurus.scn in Resources */,
+				348293B81C509B340078CB29 /* trike.png in Resources */,
 				342BBFAD1C4DBE1000C4C9AE /* raptor.jpg in Resources */,
 				348293AB1C507CD20078CB29 /* Spine_S.tga in Resources */,
 				348293A91C507CD20078CB29 /* Spine_D.tga in Resources */,
+				348293B71C509B340078CB29 /* trike.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
