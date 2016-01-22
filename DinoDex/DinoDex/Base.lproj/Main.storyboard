@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Settings-->
+        <!-- Settings-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="DinoDex" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,11 +39,11 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title=" Settings" image="sliders_up_2" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2246" y="624"/>
+            <point key="canvasLocation" x="2152" y="-144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -162,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqJ-yJ-t73" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2259" y="-693"/>
+            <point key="canvasLocation" x="4147" y="-1485"/>
         </scene>
         <!--Dinosaurs-->
         <scene sceneID="VpE-rl-Poe">
@@ -175,11 +175,11 @@
                             <size key="itemSize" width="397" height="345"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="90" minY="64" maxX="90" maxY="20"/>
+                            <inset key="sectionInset" minX="90" minY="145" maxX="90" maxY="20"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="T84-cp-CBc" customClass="CustomFocusCell" customModule="DinoDex" customModuleProvider="target">
-                                <rect key="frame" x="90" y="64" width="397" height="345"/>
+                                <rect key="frame" x="90" y="145" width="397" height="345"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="397" height="345"/>
@@ -230,15 +230,16 @@
                             <outlet property="delegate" destination="nbO-q7-ptu" id="czU-Xf-TkP"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Dinosaurs" image="first" id="Ybm-Bf-dfp"/>
+                    <tabBarItem key="tabBarItem" title="Dinosaurs" image="Claw_Marks_medium" id="Ybm-Bf-dfp"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcW-Cp-pV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2152" y="-1991"/>
+            <point key="canvasLocation" x="2152" y="-1479"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="dO6-6q-g89">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flH-wO-g6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cbD-hF-1gT" customClass="DetailViewController" customModule="DinoDex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tu2-Yr-l3j"/>
@@ -271,14 +272,14 @@
                         <outlet property="topRightButton" destination="zgd-ef-oph" id="qQG-5s-Ok4"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="flH-wO-g6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4298" y="-731"/>
+            <point key="canvasLocation" x="2394" y="1957"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Claw_Marks_medium" width="50" height="49"/>
         <image name="Spinosaurus" width="1171" height="666"/>
         <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="sliders_up_2" width="32" height="32"/>
     </resources>
 </document>

@@ -60,7 +60,7 @@ class CustomFocusCell: UICollectionViewCell {
         verticalMotionEffect.minimumRelativeValue = -3
         verticalMotionEffect.maximumRelativeValue = 3
         self.titleLabel.addMotionEffect(verticalMotionEffect)
-        
+        self.imageView.transform = CGAffineTransformMakeScale(1.15, 1.15)
         self.titleLabel.transform = CGAffineTransformMakeScale(1.2, 1.2)
         
         let gradientHorizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis)
@@ -81,6 +81,7 @@ class CustomFocusCell: UICollectionViewCell {
         self.titleLabel.motionEffects.forEach { self.titleLabel.removeMotionEffect($0) }
         self.gradientView.motionEffects.forEach { self.gradientView.removeMotionEffect($0) }
         
+        self.imageView.transform = CGAffineTransformMakeScale(1.0, 1.0)
         self.gradientView.transform = CGAffineTransformMakeScale(1.0, 1.0)
         self.titleLabel.transform = CGAffineTransformIdentity
         self.titleLabel.font = UIFont.systemFontOfSize(37.0, weight: UIFontWeightLight)
