@@ -19,6 +19,7 @@
 		342BBFEB1C4EF38B00C4C9AE /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */; };
 		342BBFED1C4EF39100C4C9AE /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEC1C4EF39100C4C9AE /* Metal.framework */; };
 		342BBFEF1C4EF39600C4C9AE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */; };
+		3432F8D61C51DEE5008727F5 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3432F8D51C51DEE5008727F5 /* UIColorExtension.swift */; };
 		348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */; };
 		348293971C506AD50078CB29 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293931C506AD50078CB29 /* DetailViewController.swift */; };
 		348293981C506AD50078CB29 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293941C506AD50078CB29 /* FirstViewController.swift */; };
@@ -75,6 +76,7 @@
 		342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		342BBFEC1C4EF39100C4C9AE /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3432F8D51C51DEE5008727F5 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFocusEffectsCollectionViewController.swift; path = Controllers/CustomFocusEffectsCollectionViewController.swift; sourceTree = "<group>"; };
 		348293931C506AD50078CB29 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controllers/DetailViewController.swift; sourceTree = "<group>"; };
 		348293941C506AD50078CB29 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = Controllers/FirstViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,8 @@
 		342BBF781C4DBD6C00C4C9AE /* DinoDex */ = {
 			isa = PBXGroup;
 			children = (
+				3432F8D41C51DED5008727F5 /* Extensions */,
+				3432F8A11C51DE3F008727F5 /* ExternalLibraries */,
 				342BBF791C4DBD6C00C4C9AE /* AppDelegate.swift */,
 				342BBF7F1C4DBD6C00C4C9AE /* Main.storyboard */,
 				3482939A1C506B030078CB29 /* Assets */,
@@ -186,6 +190,21 @@
 			);
 			name = Texture;
 			path = ../Texture;
+			sourceTree = "<group>";
+		};
+		3432F8A11C51DE3F008727F5 /* ExternalLibraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ExternalLibraries;
+			sourceTree = "<group>";
+		};
+		3432F8D41C51DED5008727F5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3432F8D51C51DEE5008727F5 /* UIColorExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		3482938D1C506A3F0078CB29 /* Controllers */ = {
@@ -421,6 +440,7 @@
 				342BBF7A1C4DBD6C00C4C9AE /* AppDelegate.swift in Sources */,
 				348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */,
 				348293991C506AD50078CB29 /* SecondViewController.swift in Sources */,
+				3432F8D61C51DEE5008727F5 /* UIColorExtension.swift in Sources */,
 				348293981C506AD50078CB29 /* FirstViewController.swift in Sources */,
 				348293A31C507AD40078CB29 /* Dinosaur.swift in Sources */,
 				348293A11C5078290078CB29 /* DinoDataManager.swift in Sources */,

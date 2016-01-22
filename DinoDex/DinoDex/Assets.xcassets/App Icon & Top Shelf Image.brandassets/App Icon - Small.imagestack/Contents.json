@@ -1,13 +1,19 @@
 {
   "layers" : [
     {
-      "filename" : "Front.imagestacklayer"
+      "filename" : "claw_marks.imagestacklayer"
     },
     {
-      "filename" : "Middle.imagestacklayer"
+      "filename" : "claw_marks_shadow.imagestacklayer"
     },
     {
-      "filename" : "Back.imagestacklayer"
+      "filename" : "dinosaurs-3d.imagestacklayer"
+    },
+    {
+      "filename" : "dinosaurs-3d_shadow.imagestacklayer"
+    },
+    {
+      "filename" : "layer-0.imagestacklayer"
     }
   ],
   "info" : {

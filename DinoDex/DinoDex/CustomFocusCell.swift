@@ -18,13 +18,14 @@ class CustomFocusCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         self.gradient = CAGradientLayer()
-        self.gradient.colors = [UIColor.blackColor().colorWithAlphaComponent(0.8).CGColor, UIColor(white: 0.0, alpha: 0.0).CGColor]
+        self.gradient.colors = [UIColor(hex: 0xFBC700, alpha: 0.8).CGColor, UIColor(hex: 0xF99A00, alpha: 0.8).CGColor]
         self.gradient.startPoint = CGPointMake(0.5, 1)
         self.gradient.endPoint = CGPointMake(0.5, 0.5)
         self.gradient.frame = gradientView.bounds
         self.gradientView.layer.addSublayer(self.gradient)
         
-        self.titleLabel.font = UIFont.systemFontOfSize(33.0, weight: UIFontWeightLight)
+        self.titleLabel.font = UIFont.systemFontOfSize(37.0, weight: UIFontWeightLight)
+        self.titleLabel.hidden = true
     }
     
     override func layoutSubviews() {
@@ -46,7 +47,9 @@ class CustomFocusCell: UICollectionViewCell {
     
     func enableFocusedState() {
         
-        self.titleLabel.font = UIFont.systemFontOfSize(55.0, weight: UIFontWeightLight)
+        self.titleLabel.font = UIFont.systemFontOfSize(43.0, weight: UIFontWeightLight)
+        self.titleLabel.hidden = false
+
         
         let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis)
         horizontalMotionEffect.minimumRelativeValue = -3
@@ -80,7 +83,8 @@ class CustomFocusCell: UICollectionViewCell {
         
         self.gradientView.transform = CGAffineTransformMakeScale(1.0, 1.0)
         self.titleLabel.transform = CGAffineTransformIdentity
-        self.titleLabel.font = UIFont.systemFontOfSize(33.0, weight: UIFontWeightLight)
+        self.titleLabel.font = UIFont.systemFontOfSize(37.0, weight: UIFontWeightLight)
+        self.titleLabel.hidden = true
         
     }
 }
