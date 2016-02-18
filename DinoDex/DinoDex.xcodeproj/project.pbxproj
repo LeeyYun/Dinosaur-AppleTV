@@ -40,6 +40,7 @@
 		348293BA1C509B480078CB29 /* trike.scn in Resources */ = {isa = PBXBuildFile; fileRef = 348293B91C509B480078CB29 /* trike.scn */; };
 		348CAC031C7587F80016CC38 /* Trex.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC021C7587F80016CC38 /* Trex.mp3 */; };
 		348CAC051C75884A0016CC38 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC041C75884A0016CC38 /* AVFoundation.framework */; };
+		348CAC071C75895E0016CC38 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC061C75895E0016CC38 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		348293B91C509B480078CB29 /* trike.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = trike.scn; sourceTree = "<group>"; };
 		348CAC021C7587F80016CC38 /* Trex.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Trex.mp3; sourceTree = "<group>"; };
 		348CAC041C75884A0016CC38 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		348CAC061C75895E0016CC38 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				348CAC071C75895E0016CC38 /* AudioToolbox.framework in Frameworks */,
 				348CAC051C75884A0016CC38 /* AVFoundation.framework in Frameworks */,
 				342BBFEF1C4EF39600C4C9AE /* QuartzCore.framework in Frameworks */,
 				342BBFED1C4EF39100C4C9AE /* Metal.framework in Frameworks */,
@@ -133,6 +136,7 @@
 		342BBF6D1C4DBD6C00C4C9AE = {
 			isa = PBXGroup;
 			children = (
+				348CAC061C75895E0016CC38 /* AudioToolbox.framework */,
 				348CAC041C75884A0016CC38 /* AVFoundation.framework */,
 				342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */,
 				342BBFEC1C4EF39100C4C9AE /* Metal.framework */,

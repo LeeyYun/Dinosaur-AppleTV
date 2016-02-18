@@ -8,7 +8,7 @@
 
 import UIKit
 import SceneKit
-import AVFoundation
+import AudioToolbox
 
 class FirstViewController: UIViewController {
     
@@ -21,9 +21,6 @@ class FirstViewController: UIViewController {
     var descriptionString: String!
     var sceneKitString: String!
     
-    var coinSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Trex", ofType: "mp3")!)
-    var audioPlayer = AVAudioPlayer()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +30,7 @@ class FirstViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        if let soundURL = NSBundle.mainBundle().URLForResource("Trex", withExtension: "mp3") {
-            var mySound: SystemSoundID = 0
-            AudioServicesCreateSystemSoundID(soundURL, &mySound)
-            // Play
-            AudioServicesPlaySystemSound(mySound);
-        }
+        playSound()
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,7 +40,12 @@ class FirstViewController: UIViewController {
     
     
     func playSound() {
-        
+        if let soundURL = NSBundle.mainBundle().URLForResource("Trex", withExtension: "mp3") {
+            var mySound: SystemSoundID = 0
+            AudioServicesCreateSystemSoundID(soundURL, &mySound)
+            // Play
+            AudioServicesPlaySystemSound(mySound);
+        }
         
     }
     
