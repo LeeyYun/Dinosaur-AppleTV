@@ -38,6 +38,8 @@
 		348293B71C509B340078CB29 /* trike.obj in Resources */ = {isa = PBXBuildFile; fileRef = 348293B41C509B340078CB29 /* trike.obj */; };
 		348293B81C509B340078CB29 /* trike.png in Resources */ = {isa = PBXBuildFile; fileRef = 348293B51C509B340078CB29 /* trike.png */; };
 		348293BA1C509B480078CB29 /* trike.scn in Resources */ = {isa = PBXBuildFile; fileRef = 348293B91C509B480078CB29 /* trike.scn */; };
+		348CAC031C7587F80016CC38 /* Trex.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC021C7587F80016CC38 /* Trex.mp3 */; };
+		348CAC051C75884A0016CC38 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC041C75884A0016CC38 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		348293B41C509B340078CB29 /* trike.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trike.obj; sourceTree = "<group>"; };
 		348293B51C509B340078CB29 /* trike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trike.png; sourceTree = "<group>"; };
 		348293B91C509B480078CB29 /* trike.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = trike.scn; sourceTree = "<group>"; };
+		348CAC021C7587F80016CC38 /* Trex.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Trex.mp3; sourceTree = "<group>"; };
+		348CAC041C75884A0016CC38 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				348CAC051C75884A0016CC38 /* AVFoundation.framework in Frameworks */,
 				342BBFEF1C4EF39600C4C9AE /* QuartzCore.framework in Frameworks */,
 				342BBFED1C4EF39100C4C9AE /* Metal.framework in Frameworks */,
 				342BBFEB1C4EF38B00C4C9AE /* SceneKit.framework in Frameworks */,
@@ -128,6 +133,7 @@
 		342BBF6D1C4DBD6C00C4C9AE = {
 			isa = PBXGroup;
 			children = (
+				348CAC041C75884A0016CC38 /* AVFoundation.framework */,
 				342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */,
 				342BBFEC1C4EF39100C4C9AE /* Metal.framework */,
 				342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */,
@@ -237,6 +243,7 @@
 		3482939A1C506B030078CB29 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				348CAC011C7587EA0016CC38 /* Sounds */,
 				348293B21C509B260078CB29 /* Triceratops */,
 				348293AF1C507CE20078CB29 /* Spinosaurus */,
 				348293AE1C507CD80078CB29 /* Raptor */,
@@ -287,6 +294,14 @@
 				348293B51C509B340078CB29 /* trike.png */,
 			);
 			name = Triceratops;
+			sourceTree = "<group>";
+		};
+		348CAC011C7587EA0016CC38 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				348CAC021C7587F80016CC38 /* Trex.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +418,7 @@
 				348293BA1C509B480078CB29 /* trike.scn in Resources */,
 				348293AC1C507CD20078CB29 /* Spinosaurus.mtl in Resources */,
 				348293B61C509B340078CB29 /* trike.mtl in Resources */,
+				348CAC031C7587F80016CC38 /* Trex.mp3 in Resources */,
 				348293AA1C507CD20078CB29 /* Spine_N.tga in Resources */,
 				348293AD1C507CD20078CB29 /* Spinosaurus.obj in Resources */,
 				348293B11C507CF70078CB29 /* Spinosaurus.scn in Resources */,
