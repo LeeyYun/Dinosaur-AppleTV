@@ -46,17 +46,17 @@
 		348CAC151C758A550016CC38 /* trex.obj in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC0E1C758A550016CC38 /* trex.obj */; };
 		348CAC161C758A550016CC38 /* Trex.png in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC0F1C758A550016CC38 /* Trex.png */; };
 		34C7CC901C7BA243005E044B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C7CC741C7B9FB8005E044B /* StoreKit.framework */; };
-		34C7CC911C7BA243005E044B /* StoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34C7CC741C7B9FB8005E044B /* StoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34C7CC911C7BA243005E044B /* StoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34C7CC741C7B9FB8005E044B /* StoreKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		34C7CC921C7BA243005E044B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC061C75895E0016CC38 /* AudioToolbox.framework */; };
-		34C7CC931C7BA243005E044B /* AudioToolbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC061C75895E0016CC38 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34C7CC931C7BA243005E044B /* AudioToolbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC061C75895E0016CC38 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		34C7CC941C7BA243005E044B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC041C75884A0016CC38 /* AVFoundation.framework */; };
-		34C7CC951C7BA243005E044B /* AVFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC041C75884A0016CC38 /* AVFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34C7CC951C7BA243005E044B /* AVFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC041C75884A0016CC38 /* AVFoundation.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		34C7CC961C7BA243005E044B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */; };
-		34C7CC971C7BA243005E044B /* QuartzCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34C7CC971C7BA243005E044B /* QuartzCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		34C7CC981C7BA243005E044B /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEC1C4EF39100C4C9AE /* Metal.framework */; };
-		34C7CC991C7BA243005E044B /* Metal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEC1C4EF39100C4C9AE /* Metal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34C7CC991C7BA243005E044B /* Metal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEC1C4EF39100C4C9AE /* Metal.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		34C7CC9A1C7BA243005E044B /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */; };
-		34C7CC9B1C7BA243005E044B /* SceneKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34C7CC9B1C7BA243005E044B /* SceneKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +79,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		34C7CC9C1C7BA243005E044B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
@@ -91,7 +91,7 @@
 				34C7CC951C7BA243005E044B /* AVFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
