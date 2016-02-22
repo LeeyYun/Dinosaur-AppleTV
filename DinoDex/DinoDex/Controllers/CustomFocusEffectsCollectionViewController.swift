@@ -90,7 +90,7 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
         }
     }
     
-
+    
     
     
     
@@ -110,25 +110,27 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
-
+    
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //return DinoDataManager.sharedInstance.dinoArray.count
-        return products.count
+        return DinoDataManager.sharedInstance.dinoArray.count
+        //return products.count
     }
-
+    
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
-        let product = products[indexPath.row]
-        print("\(product.localizedTitle)")
-        priceFormatter.locale = product.priceLocale
-        print("Formatted price: \(priceFormatter.stringFromNumber(product.price))")
-    
+        if indexPath.row < products.count {
+            let product = products[indexPath.row]
+            print("\(product.localizedTitle)")
+            priceFormatter.locale = product.priceLocale
+            print("Formatted price: \(priceFormatter.stringFromNumber(product.price))")
+        }
+        
         if let imageCell = cell as? CustomFocusCell {
             let dinoObject = DinoDataManager.sharedInstance.dinoArray[indexPath.item]
             imageCell.imageView.image = UIImage(named: dinoObject.previewImageName)
             imageCell.titleLabel.text = dinoObject.nameString
         }
-    
+        
         return cell
     }
     
