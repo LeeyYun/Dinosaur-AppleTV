@@ -12,11 +12,12 @@ public enum DinoProducts {
   
   /// MARK: - Supported Product Identifiers
   public static let Spinosaurus = Prefix + "spinosaurus"
+    public static let Triceratops = Prefix + "triceratops"
 //add others here
   
   
   // All of the products assembled into a set of product identifiers.
-  private static let productIdentifiers: Set<ProductIdentifier> = [DinoProducts.Spinosaurus]//add others separated by comma
+  private static let productIdentifiers: Set<ProductIdentifier> = [DinoProducts.Spinosaurus, DinoProducts.Triceratops]//add others separated by comma
   
   /// Static instance of IAPHelper that for rage products.
   public static let store = IAPHelper(productIdentifiers: DinoProducts.productIdentifiers)

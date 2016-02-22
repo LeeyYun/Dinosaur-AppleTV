@@ -31,18 +31,97 @@ import StoreKit
 private let reuseIdentifier = "Cell"
 
 class CustomFocusEffectsCollectionViewController: UICollectionViewController {
+    
+    // This list of available in-app purchases
+    var products = [SKProduct]()
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    // priceFormatter is used to show proper, localized currency
+    lazy var priceFormatter: NSNumberFormatter = {
+        let pf = NSNumberFormatter()
+        pf.formatterBehavior = .Behavior10_4
+        pf.numberStyle = .CurrencyStyle
+        return pf
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        reload()
+        // Subscribe to a notification that fires when a product is purchased.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "productPurchased:", name: IAPHelperProductPurchasedNotification, object: nil)
+    }
+    
+    // Fetch the products from iTunes connect, redisplay the table on successful completion
+    func reload() {
+        products = []
+        self.collectionView!.reloadData()
+        DinoProducts.store.requestProductsWithCompletionHandler { success, products in
+            if success {
+                self.products = products
+                self.collectionView!.reloadData()
+            }
+            //self.refreshControl?.endRefreshing()
+        }
+    }
+    
+    // Restore purchases to this device.
+    func restoreTapped(sender: AnyObject) {
+        DinoProducts.store.restoreCompletedTransactions()
+    }
+    
+    // Purchase the product
+    func buyButtonTapped(button: UIButton) {
+        let product = products[button.tag]
+        DinoProducts.store.purchaseProduct(product)
+    }
+    
+    // When a product is purchased, this notification fires, redraw the correct row
+    func productPurchased(notification: NSNotification) {
+        let productIdentifier = notification.object as! String
+        for (index, product) in products.enumerate() {
+            if product.productIdentifier == productIdentifier {
+                //self.collectionView!.reloadRowsAtIndexPaths([NSIndexPath(forRow: index, inSection: 0)], withRowAnimation: .Fade)
+                self.collectionView?.reloadData()
+                break
+            }
+        }
+    }
+    
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // MARK: UICollectionViewDataSource
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return DinoDataManager.sharedInstance.dinoArray.count
+        //return DinoDataManager.sharedInstance.dinoArray.count
+        return products.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        let product = products[indexPath.row]
+        print("\(product.localizedTitle)")
+        priceFormatter.locale = product.priceLocale
+        print("Formatted price: \(priceFormatter.stringFromNumber(product.price))")
     
         if let imageCell = cell as? CustomFocusCell {
             let dinoObject = DinoDataManager.sharedInstance.dinoArray[indexPath.item]
