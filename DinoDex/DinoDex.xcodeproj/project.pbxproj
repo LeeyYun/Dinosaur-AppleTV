@@ -16,10 +16,9 @@
 		342BBFAC1C4DBE1000C4C9AE /* Raptor.obj in Resources */ = {isa = PBXBuildFile; fileRef = 342BBFA71C4DBE1000C4C9AE /* Raptor.obj */; };
 		342BBFAD1C4DBE1000C4C9AE /* raptor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 342BBFA91C4DBE1000C4C9AE /* raptor.jpg */; };
 		342BBFAE1C4DBE1000C4C9AE /* raptor_normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 342BBFAA1C4DBE1000C4C9AE /* raptor_normal.jpg */; };
-		342BBFEB1C4EF38B00C4C9AE /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */; };
-		342BBFED1C4EF39100C4C9AE /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEC1C4EF39100C4C9AE /* Metal.framework */; };
-		342BBFEF1C4EF39600C4C9AE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */; };
 		3432F8D61C51DEE5008727F5 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3432F8D51C51DEE5008727F5 /* UIColorExtension.swift */; };
+		344964E61C7BA31500633451 /* DinoProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344964E41C7BA31500633451 /* DinoProducts.swift */; };
+		344964E71C7BA31500633451 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344964E51C7BA31500633451 /* IAPHelper.swift */; };
 		348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */; };
 		348293971C506AD50078CB29 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293931C506AD50078CB29 /* DetailViewController.swift */; };
 		348293981C506AD50078CB29 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293941C506AD50078CB29 /* FirstViewController.swift */; };
@@ -39,8 +38,6 @@
 		348293B81C509B340078CB29 /* trike.png in Resources */ = {isa = PBXBuildFile; fileRef = 348293B51C509B340078CB29 /* trike.png */; };
 		348293BA1C509B480078CB29 /* trex.scn in Resources */ = {isa = PBXBuildFile; fileRef = 348293B91C509B480078CB29 /* trex.scn */; };
 		348CAC031C7587F80016CC38 /* Trex.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC021C7587F80016CC38 /* Trex.mp3 */; };
-		348CAC051C75884A0016CC38 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC041C75884A0016CC38 /* AVFoundation.framework */; };
-		348CAC071C75895E0016CC38 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC061C75895E0016CC38 /* AudioToolbox.framework */; };
 		348CAC101C758A550016CC38 /* Trex_opa.png in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC091C758A550016CC38 /* Trex_opa.png */; };
 		348CAC111C758A550016CC38 /* Trex-2_opa.png in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC0A1C758A550016CC38 /* Trex-2_opa.png */; };
 		348CAC121C758A550016CC38 /* Trex-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC0B1C758A550016CC38 /* Trex-2.png */; };
@@ -48,6 +45,18 @@
 		348CAC141C758A550016CC38 /* trex.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC0D1C758A550016CC38 /* trex.mtl */; };
 		348CAC151C758A550016CC38 /* trex.obj in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC0E1C758A550016CC38 /* trex.obj */; };
 		348CAC161C758A550016CC38 /* Trex.png in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC0F1C758A550016CC38 /* Trex.png */; };
+		34C7CC901C7BA243005E044B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C7CC741C7B9FB8005E044B /* StoreKit.framework */; };
+		34C7CC911C7BA243005E044B /* StoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34C7CC741C7B9FB8005E044B /* StoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34C7CC921C7BA243005E044B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC061C75895E0016CC38 /* AudioToolbox.framework */; };
+		34C7CC931C7BA243005E044B /* AudioToolbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC061C75895E0016CC38 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34C7CC941C7BA243005E044B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC041C75884A0016CC38 /* AVFoundation.framework */; };
+		34C7CC951C7BA243005E044B /* AVFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC041C75884A0016CC38 /* AVFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34C7CC961C7BA243005E044B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */; };
+		34C7CC971C7BA243005E044B /* QuartzCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34C7CC981C7BA243005E044B /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEC1C4EF39100C4C9AE /* Metal.framework */; };
+		34C7CC991C7BA243005E044B /* Metal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEC1C4EF39100C4C9AE /* Metal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34C7CC9A1C7BA243005E044B /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */; };
+		34C7CC9B1C7BA243005E044B /* SceneKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +75,25 @@
 			remoteInfo = DinoDex;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		34C7CC9C1C7BA243005E044B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				34C7CC971C7BA243005E044B /* QuartzCore.framework in Embed Frameworks */,
+				34C7CC911C7BA243005E044B /* StoreKit.framework in Embed Frameworks */,
+				34C7CC991C7BA243005E044B /* Metal.framework in Embed Frameworks */,
+				34C7CC931C7BA243005E044B /* AudioToolbox.framework in Embed Frameworks */,
+				34C7CC9B1C7BA243005E044B /* SceneKit.framework in Embed Frameworks */,
+				34C7CC951C7BA243005E044B /* AVFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		342BBF761C4DBD6C00C4C9AE /* DinoDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinoDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +115,8 @@
 		342BBFEC1C4EF39100C4C9AE /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3432F8D51C51DEE5008727F5 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		344964E41C7BA31500633451 /* DinoProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinoProducts.swift; sourceTree = "<group>"; };
+		344964E51C7BA31500633451 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFocusEffectsCollectionViewController.swift; path = Controllers/CustomFocusEffectsCollectionViewController.swift; sourceTree = "<group>"; };
 		348293931C506AD50078CB29 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controllers/DetailViewController.swift; sourceTree = "<group>"; };
 		348293941C506AD50078CB29 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = Controllers/FirstViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +145,7 @@
 		348CAC0D1C758A550016CC38 /* trex.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trex.mtl; sourceTree = "<group>"; };
 		348CAC0E1C758A550016CC38 /* trex.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trex.obj; sourceTree = "<group>"; };
 		348CAC0F1C758A550016CC38 /* Trex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trex.png; sourceTree = "<group>"; };
+		34C7CC741C7B9FB8005E044B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +153,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				348CAC071C75895E0016CC38 /* AudioToolbox.framework in Frameworks */,
-				348CAC051C75884A0016CC38 /* AVFoundation.framework in Frameworks */,
-				342BBFEF1C4EF39600C4C9AE /* QuartzCore.framework in Frameworks */,
-				342BBFED1C4EF39100C4C9AE /* Metal.framework in Frameworks */,
-				342BBFEB1C4EF38B00C4C9AE /* SceneKit.framework in Frameworks */,
+				34C7CC961C7BA243005E044B /* QuartzCore.framework in Frameworks */,
+				34C7CC901C7BA243005E044B /* StoreKit.framework in Frameworks */,
+				34C7CC981C7BA243005E044B /* Metal.framework in Frameworks */,
+				34C7CC921C7BA243005E044B /* AudioToolbox.framework in Frameworks */,
+				34C7CC9A1C7BA243005E044B /* SceneKit.framework in Frameworks */,
+				34C7CC941C7BA243005E044B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +182,7 @@
 		342BBF6D1C4DBD6C00C4C9AE = {
 			isa = PBXGroup;
 			children = (
+				34C7CC741C7B9FB8005E044B /* StoreKit.framework */,
 				348CAC061C75895E0016CC38 /* AudioToolbox.framework */,
 				348CAC041C75884A0016CC38 /* AVFoundation.framework */,
 				342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */,
@@ -175,6 +208,7 @@
 		342BBF781C4DBD6C00C4C9AE /* DinoDex */ = {
 			isa = PBXGroup;
 			children = (
+				344964E31C7BA30A00633451 /* IAP */,
 				3432F8D41C51DED5008727F5 /* Extensions */,
 				3432F8A11C51DE3F008727F5 /* ExternalLibraries */,
 				342BBF791C4DBD6C00C4C9AE /* AppDelegate.swift */,
@@ -229,6 +263,15 @@
 				3432F8D51C51DEE5008727F5 /* UIColorExtension.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		344964E31C7BA30A00633451 /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				344964E41C7BA31500633451 /* DinoProducts.swift */,
+				344964E51C7BA31500633451 /* IAPHelper.swift */,
+			);
+			name = IAP;
 			sourceTree = "<group>";
 		};
 		3482938D1C506A3F0078CB29 /* Controllers */ = {
@@ -347,6 +390,7 @@
 				342BBF721C4DBD6C00C4C9AE /* Sources */,
 				342BBF731C4DBD6C00C4C9AE /* Frameworks */,
 				342BBF741C4DBD6C00C4C9AE /* Resources */,
+				34C7CC9C1C7BA243005E044B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -405,7 +449,12 @@
 				TargetAttributes = {
 					342BBF751C4DBD6C00C4C9AE = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = FFX5ZT2KQD;
+						DevelopmentTeam = 6553V5X9R4;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					342BBF881C4DBD6C00C4C9AE = {
 						CreatedOnToolsVersion = 7.2;
@@ -491,11 +540,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				344964E71C7BA31500633451 /* IAPHelper.swift in Sources */,
 				348293971C506AD50078CB29 /* DetailViewController.swift in Sources */,
 				3482939E1C506C020078CB29 /* CustomFocusCell.swift in Sources */,
 				342BBF7A1C4DBD6C00C4C9AE /* AppDelegate.swift in Sources */,
 				348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */,
 				348293991C506AD50078CB29 /* SecondViewController.swift in Sources */,
+				344964E61C7BA31500633451 /* DinoProducts.swift in Sources */,
 				3432F8D61C51DEE5008727F5 /* UIColorExtension.swift in Sources */,
 				348293981C506AD50078CB29 /* FirstViewController.swift in Sources */,
 				348293A31C507AD40078CB29 /* Dinosaur.swift in Sources */,
@@ -565,6 +616,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -609,6 +661,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -633,10 +686,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DinoDex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.NTH.DinoDex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NTH.Dinosaurs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -646,10 +702,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DinoDex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.NTH.DinoDex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NTH.Dinosaurs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
