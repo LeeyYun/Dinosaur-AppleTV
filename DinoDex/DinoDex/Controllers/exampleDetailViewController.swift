@@ -25,7 +25,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class exampleDetailViewController: UIViewController {
 
     @IBOutlet var topRightButton: UIButton!
     @IBOutlet var bottomLeftButton: UIButton!

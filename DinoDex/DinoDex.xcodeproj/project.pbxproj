@@ -20,9 +20,9 @@
 		344964E61C7BA31500633451 /* DinoProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344964E41C7BA31500633451 /* DinoProducts.swift */; };
 		344964E71C7BA31500633451 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344964E51C7BA31500633451 /* IAPHelper.swift */; };
 		348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */; };
-		348293971C506AD50078CB29 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293931C506AD50078CB29 /* DetailViewController.swift */; };
-		348293981C506AD50078CB29 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293941C506AD50078CB29 /* FirstViewController.swift */; };
-		348293991C506AD50078CB29 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293951C506AD50078CB29 /* SecondViewController.swift */; };
+		348293971C506AD50078CB29 /* exampleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293931C506AD50078CB29 /* exampleDetailViewController.swift */; };
+		348293981C506AD50078CB29 /* DinoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293941C506AD50078CB29 /* DinoDetailViewController.swift */; };
+		348293991C506AD50078CB29 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293951C506AD50078CB29 /* SettingsViewController.swift */; };
 		3482939C1C506B290078CB29 /* Raptor.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3482939B1C506B290078CB29 /* Raptor.scn */; };
 		3482939E1C506C020078CB29 /* CustomFocusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3482939D1C506C020078CB29 /* CustomFocusCell.swift */; };
 		348293A11C5078290078CB29 /* DinoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293A01C5078290078CB29 /* DinoDataManager.swift */; };
@@ -118,9 +118,9 @@
 		344964E41C7BA31500633451 /* DinoProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinoProducts.swift; sourceTree = "<group>"; };
 		344964E51C7BA31500633451 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFocusEffectsCollectionViewController.swift; path = Controllers/CustomFocusEffectsCollectionViewController.swift; sourceTree = "<group>"; };
-		348293931C506AD50078CB29 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controllers/DetailViewController.swift; sourceTree = "<group>"; };
-		348293941C506AD50078CB29 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = Controllers/FirstViewController.swift; sourceTree = "<group>"; };
-		348293951C506AD50078CB29 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = Controllers/SecondViewController.swift; sourceTree = "<group>"; };
+		348293931C506AD50078CB29 /* exampleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = exampleDetailViewController.swift; path = Controllers/exampleDetailViewController.swift; sourceTree = "<group>"; };
+		348293941C506AD50078CB29 /* DinoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DinoDetailViewController.swift; path = Controllers/DinoDetailViewController.swift; sourceTree = "<group>"; };
+		348293951C506AD50078CB29 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controllers/SettingsViewController.swift; sourceTree = "<group>"; };
 		3482939B1C506B290078CB29 /* Raptor.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Raptor.scn; path = DinoDex/Raptor.scn; sourceTree = SOURCE_ROOT; };
 		3482939D1C506C020078CB29 /* CustomFocusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFocusCell.swift; sourceTree = "<group>"; };
 		348293A01C5078290078CB29 /* DinoDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinoDataManager.swift; sourceTree = "<group>"; };
@@ -211,8 +211,6 @@
 				344964E31C7BA30A00633451 /* IAP */,
 				3432F8D41C51DED5008727F5 /* Extensions */,
 				3432F8A11C51DE3F008727F5 /* ExternalLibraries */,
-				342BBF791C4DBD6C00C4C9AE /* AppDelegate.swift */,
-				342BBF7F1C4DBD6C00C4C9AE /* Main.storyboard */,
 				3482939A1C506B030078CB29 /* Assets */,
 				3482938F1C506A4D0078CB29 /* Views */,
 				3482938E1C506A480078CB29 /* Models */,
@@ -220,6 +218,8 @@
 				3482938D1C506A3F0078CB29 /* Controllers */,
 				342BBF821C4DBD6C00C4C9AE /* Assets.xcassets */,
 				342BBF841C4DBD6C00C4C9AE /* Info.plist */,
+				342BBF791C4DBD6C00C4C9AE /* AppDelegate.swift */,
+				342BBF7F1C4DBD6C00C4C9AE /* Main.storyboard */,
 			);
 			path = DinoDex;
 			sourceTree = "<group>";
@@ -278,9 +278,9 @@
 			isa = PBXGroup;
 			children = (
 				348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */,
-				348293931C506AD50078CB29 /* DetailViewController.swift */,
-				348293941C506AD50078CB29 /* FirstViewController.swift */,
-				348293951C506AD50078CB29 /* SecondViewController.swift */,
+				348293931C506AD50078CB29 /* exampleDetailViewController.swift */,
+				348293941C506AD50078CB29 /* DinoDetailViewController.swift */,
+				348293951C506AD50078CB29 /* SettingsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -541,14 +541,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				344964E71C7BA31500633451 /* IAPHelper.swift in Sources */,
-				348293971C506AD50078CB29 /* DetailViewController.swift in Sources */,
+				348293971C506AD50078CB29 /* exampleDetailViewController.swift in Sources */,
 				3482939E1C506C020078CB29 /* CustomFocusCell.swift in Sources */,
 				342BBF7A1C4DBD6C00C4C9AE /* AppDelegate.swift in Sources */,
 				348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */,
-				348293991C506AD50078CB29 /* SecondViewController.swift in Sources */,
+				348293991C506AD50078CB29 /* SettingsViewController.swift in Sources */,
 				344964E61C7BA31500633451 /* DinoProducts.swift in Sources */,
 				3432F8D61C51DEE5008727F5 /* UIColorExtension.swift in Sources */,
-				348293981C506AD50078CB29 /* FirstViewController.swift in Sources */,
+				348293981C506AD50078CB29 /* DinoDetailViewController.swift in Sources */,
 				348293A31C507AD40078CB29 /* Dinosaur.swift in Sources */,
 				348293A11C5078290078CB29 /* DinoDataManager.swift in Sources */,
 			);

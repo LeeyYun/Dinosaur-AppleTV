@@ -10,7 +10,7 @@ import UIKit
 import SceneKit
 import AudioToolbox
 
-class FirstViewController: UIViewController {
+class DinoDetailViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!

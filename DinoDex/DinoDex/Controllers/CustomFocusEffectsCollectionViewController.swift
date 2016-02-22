@@ -67,10 +67,7 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
         }
     }
     
-    // Restore purchases to this device.
-    func restoreTapped(sender: AnyObject) {
-        DinoProducts.store.restoreCompletedTransactions()
-    }
+
     
     // Purchase the product
     func buyButtonTapped(button: UIButton) {
@@ -122,7 +119,7 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
             let product = products[indexPath.row]
             print("\(product.localizedTitle)")
             priceFormatter.locale = product.priceLocale
-            print("Formatted price: \(priceFormatter.stringFromNumber(product.price))")
+            print("Formatted price: \(priceFormatter.stringFromNumber(product.price)!)")
         }
         
         if let imageCell = cell as? CustomFocusCell {
@@ -135,7 +132,7 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        if let first = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("FirstViewController") as? FirstViewController {
+        if let first = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DinoDetailViewController") as? DinoDetailViewController {
             //setup the dinosaur model and text to show here based on indexpath
             let dinoObject = DinoDataManager.sharedInstance.dinoArray[indexPath.item]
             first.nameString = dinoObject.nameString
