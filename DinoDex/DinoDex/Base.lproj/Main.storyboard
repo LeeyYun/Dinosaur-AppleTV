@@ -225,11 +225,11 @@
             </objects>
             <point key="canvasLocation" x="2152" y="-1479"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Example Detail View Controller-->
         <scene sceneID="dO6-6q-g89">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flH-wO-g6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cbD-hF-1gT" customClass="DetailViewController" customModule="DinoDex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="exampleDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cbD-hF-1gT" customClass="exampleDetailViewController" customModule="DinoDex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tu2-Yr-l3j"/>
                         <viewControllerLayoutGuide type="bottom" id="qJz-nK-MRZ"/>
