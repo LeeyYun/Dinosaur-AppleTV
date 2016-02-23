@@ -19,6 +19,7 @@
 		3432F8D61C51DEE5008727F5 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3432F8D51C51DEE5008727F5 /* UIColorExtension.swift */; };
 		344964E61C7BA31500633451 /* DinoProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344964E41C7BA31500633451 /* DinoProducts.swift */; };
 		344964E71C7BA31500633451 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344964E51C7BA31500633451 /* IAPHelper.swift */; };
+		346A82631C7C07AC006390E0 /* trike.scn in Resources */ = {isa = PBXBuildFile; fileRef = 346A82621C7C06AB006390E0 /* trike.scn */; };
 		348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */; };
 		348293971C506AD50078CB29 /* exampleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293931C506AD50078CB29 /* exampleDetailViewController.swift */; };
 		348293981C506AD50078CB29 /* DinoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293941C506AD50078CB29 /* DinoDetailViewController.swift */; };
@@ -34,7 +35,6 @@
 		348293AD1C507CD20078CB29 /* Spinosaurus.obj in Resources */ = {isa = PBXBuildFile; fileRef = 348293A81C507CD20078CB29 /* Spinosaurus.obj */; };
 		348293B11C507CF70078CB29 /* Spinosaurus.scn in Resources */ = {isa = PBXBuildFile; fileRef = 348293B01C507CF70078CB29 /* Spinosaurus.scn */; };
 		348293B61C509B340078CB29 /* trike.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 348293B31C509B340078CB29 /* trike.mtl */; };
-		348293B71C509B340078CB29 /* trike.obj in Resources */ = {isa = PBXBuildFile; fileRef = 348293B41C509B340078CB29 /* trike.obj */; };
 		348293B81C509B340078CB29 /* trike.png in Resources */ = {isa = PBXBuildFile; fileRef = 348293B51C509B340078CB29 /* trike.png */; };
 		348293BA1C509B480078CB29 /* trex.scn in Resources */ = {isa = PBXBuildFile; fileRef = 348293B91C509B480078CB29 /* trex.scn */; };
 		348CAC031C7587F80016CC38 /* Trex.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC021C7587F80016CC38 /* Trex.mp3 */; };
@@ -117,6 +117,7 @@
 		3432F8D51C51DEE5008727F5 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		344964E41C7BA31500633451 /* DinoProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinoProducts.swift; sourceTree = "<group>"; };
 		344964E51C7BA31500633451 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		346A82621C7C06AB006390E0 /* trike.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = trike.scn; sourceTree = "<group>"; };
 		348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFocusEffectsCollectionViewController.swift; path = Controllers/CustomFocusEffectsCollectionViewController.swift; sourceTree = "<group>"; };
 		348293931C506AD50078CB29 /* exampleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = exampleDetailViewController.swift; path = Controllers/exampleDetailViewController.swift; sourceTree = "<group>"; };
 		348293941C506AD50078CB29 /* DinoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DinoDetailViewController.swift; path = Controllers/DinoDetailViewController.swift; sourceTree = "<group>"; };
@@ -132,7 +133,6 @@
 		348293A81C507CD20078CB29 /* Spinosaurus.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Spinosaurus.obj; sourceTree = "<group>"; };
 		348293B01C507CF70078CB29 /* Spinosaurus.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Spinosaurus.scn; sourceTree = "<group>"; };
 		348293B31C509B340078CB29 /* trike.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trike.mtl; sourceTree = "<group>"; };
-		348293B41C509B340078CB29 /* trike.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trike.obj; sourceTree = "<group>"; };
 		348293B51C509B340078CB29 /* trike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trike.png; sourceTree = "<group>"; };
 		348293B91C509B480078CB29 /* trex.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = trex.scn; sourceTree = "<group>"; };
 		348CAC021C7587F80016CC38 /* Trex.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Trex.mp3; sourceTree = "<group>"; };
@@ -351,7 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				348293B31C509B340078CB29 /* trike.mtl */,
-				348293B41C509B340078CB29 /* trike.obj */,
+				346A82621C7C06AB006390E0 /* trike.scn */,
 				348293B51C509B340078CB29 /* trike.png */,
 			);
 			name = Triceratops;
@@ -506,6 +506,7 @@
 				348CAC031C7587F80016CC38 /* Trex.mp3 in Resources */,
 				348CAC151C758A550016CC38 /* trex.obj in Resources */,
 				348293AA1C507CD20078CB29 /* Spine_N.tga in Resources */,
+				346A82631C7C07AC006390E0 /* trike.scn in Resources */,
 				348293AD1C507CD20078CB29 /* Spinosaurus.obj in Resources */,
 				348293B11C507CF70078CB29 /* Spinosaurus.scn in Resources */,
 				348CAC141C758A550016CC38 /* trex.mtl in Resources */,
@@ -515,7 +516,6 @@
 				348293A91C507CD20078CB29 /* Spine_D.tga in Resources */,
 				348CAC131C758A550016CC38 /* trex.dae in Resources */,
 				348CAC111C758A550016CC38 /* Trex-2_opa.png in Resources */,
-				348293B71C509B340078CB29 /* trike.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
