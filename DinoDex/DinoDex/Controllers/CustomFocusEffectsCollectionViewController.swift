@@ -151,16 +151,23 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
                 print("Formatted price: \(numberAsString)")
                 
                 //should maybe lookup Dinosaur DLC object in data manager and display details
+                for dinoObject in DinoDataManager.sharedInstance.dinoDLCArray {
+                    if dinoObject.nameString == product.localizedTitle {
+                        imageCell.imageView.image = UIImage(named: dinoObject.previewImageName)
+                        imageCell.titleLabel.text = dinoObject.nameString!
+                        print("setup cell for DLC - \(dinoObject.nameString)")
+                    }
+                }
                 
                 
-                //
+                // check status of product sale
                 if DinoProducts.store.isProductPurchased(product.productIdentifier) {
                     //update cell to show it's purchased
                 }
                 else if IAPHelper.canMakePayments() {
                     //setup cell for "Buy" state, so user can buy this new content
-                    
-                    imageCell.titleLabel.text = numberAsString
+                    let oldText = imageCell.titleLabel.text!
+                    imageCell.titleLabel.text = "\(oldText) - \(numberAsString)"
                     imageCell.gradient.colors = [UIColor(hex: 0xE8ECEE, alpha: 1.0).CGColor, UIColor(hex: 0x6D797A, alpha: 1.0).CGColor]
                 }
                 else {
@@ -197,7 +204,20 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
             let relativeProductInt = indexPath.row - (DinoDataManager.sharedInstance.dinoArray.count - 1)
             let product = products[relativeProductInt - 1]
             //maybe check if purchased before purchasing?
-            DinoProducts.store.purchaseProduct(product)
+            
+            
+            // check status of product sale
+            if DinoProducts.store.isProductPurchased(product.productIdentifier) {
+                //update cell to show it's purchased
+            }
+            else if IAPHelper.canMakePayments() {
+                //setup cell for "Buy" state, so user can buy this new content
+                DinoProducts.store.purchaseProduct(product)
+            }
+            else {
+                //state not found, maybe don't display cell
+            }
+            
             
             
         }
