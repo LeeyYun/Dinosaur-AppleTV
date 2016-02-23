@@ -55,6 +55,11 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "productPurchaseFailed:", name: IAPHelperProductFailedNotification, object: nil)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.collectionView?.reloadData()
+    }
+    
     // Fetch the products from iTunes connect, redisplay the table on successful completion
     func reload() {
         products = []
