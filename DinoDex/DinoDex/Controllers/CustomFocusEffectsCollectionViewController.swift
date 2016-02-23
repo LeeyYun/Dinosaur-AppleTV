@@ -145,6 +145,7 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
                 let dinoObject = DinoDataManager.sharedInstance.dinoArray[indexPath.item]
                 imageCell.imageView.image = UIImage(named: dinoObject.previewImageName)
                 imageCell.titleLabel.text = dinoObject.nameString
+                imageCell.setPurchasedState()
             }
             //show dlc
             if indexPath.row > (DinoDataManager.sharedInstance.dinoArray.count - 1) {
