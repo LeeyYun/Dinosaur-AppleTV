@@ -28,6 +28,7 @@ class CustomFocusCell: UICollectionViewCell {
         self.titleLabel.hidden = true
     }
     
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         self.gradient.frame = self.imageView.bounds
@@ -45,11 +46,21 @@ class CustomFocusCell: UICollectionViewCell {
             }, completion: nil)
     }
     
+    func setPurchasedState() {
+        self.gradient.colors = [UIColor(hex: 0xFBC700, alpha: 0.8).CGColor, UIColor(hex: 0xF99A00, alpha: 0.8).CGColor]
+        
+    }
+    
+    func setDLCState() {
+        
+        self.gradient.colors = [UIColor(hex: 0xE8ECEE, alpha: 1.0).CGColor, UIColor(hex: 0x6D797A, alpha: 1.0).CGColor]
+    }
+    
     func enableFocusedState() {
         
         self.titleLabel.font = UIFont.systemFontOfSize(43.0, weight: UIFontWeightLight)
         self.titleLabel.hidden = false
-
+        
         
         let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis)
         horizontalMotionEffect.minimumRelativeValue = -3

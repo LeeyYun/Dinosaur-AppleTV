@@ -163,12 +163,13 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
                 // check status of product sale
                 if DinoProducts.store.isProductPurchased(product.productIdentifier) {
                     //update cell to show it's purchased
+                    imageCell.setPurchasedState()
                 }
                 else if IAPHelper.canMakePayments() {
                     //setup cell for "Buy" state, so user can buy this new content
                     let oldText = imageCell.titleLabel.text!
                     imageCell.titleLabel.text = "\(oldText) - \(numberAsString)"
-                    imageCell.gradient.colors = [UIColor(hex: 0xE8ECEE, alpha: 1.0).CGColor, UIColor(hex: 0x6D797A, alpha: 1.0).CGColor]
+                    imageCell.setDLCState()
                 }
                 else {
                     //state not found, maybe don't display cell
@@ -209,6 +210,17 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
             // check status of product sale
             if DinoProducts.store.isProductPurchased(product.productIdentifier) {
                 //update cell to show it's purchased
+                for dinoObject in DinoDataManager.sharedInstance.dinoDLCArray {
+                    if dinoObject.nameString == product.localizedTitle {
+                        if let first = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DinoDetailViewController") as? DinoDetailViewController {
+                            //setup the dinosaur model and text to show here based on indexpath
+                            first.nameString = dinoObject.nameString
+                            first.descriptionString = dinoObject.descriptionString
+                            first.sceneKitString = dinoObject.sceneKitString
+                            self.presentViewController(first, animated: true, completion: nil)
+                        }
+                    }
+                }
             }
             else if IAPHelper.canMakePayments() {
                 //setup cell for "Buy" state, so user can buy this new content
