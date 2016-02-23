@@ -52,6 +52,7 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
         reload()
         // Subscribe to a notification that fires when a product is purchased.
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "productPurchased:", name: IAPHelperProductPurchasedNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "productPurchaseFailed:", name: IAPHelperProductFailedNotification, object: nil)
     }
     
     // Fetch the products from iTunes connect, redisplay the table on successful completion
@@ -67,7 +68,7 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
         }
     }
     
-
+    
     
     // Purchase the product
     func buyButtonTapped(button: UIButton) {
@@ -80,7 +81,23 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
         let productIdentifier = notification.object as! String
         for (index, product) in products.enumerate() {
             if product.productIdentifier == productIdentifier {
+                //redraw view showing that product was purchased
                 //self.collectionView!.reloadRowsAtIndexPaths([NSIndexPath(forRow: index, inSection: 0)], withRowAnimation: .Fade)
+                self.collectionView?.reloadData()
+                break
+            }
+        }
+    }
+    
+    // When a product is purchased, this notification fires, redraw the correct row
+    func productPurchaseFailed(notification: NSNotification) {
+        let productIdentifier = notification.object as! String
+        for (index, product) in products.enumerate() {
+            if product.productIdentifier == productIdentifier {
+                print("Received notification couldn't purchase \(productIdentifier)")
+                //redraw view showing that product failed purchasing
+                //self.collectionView!.reloadRowsAtIndexPaths([NSIndexPath(forRow: index, inSection: 0)], withRowAnimation: .Fade)
+                
                 self.collectionView?.reloadData()
                 break
             }
@@ -109,36 +126,81 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return DinoDataManager.sharedInstance.dinoArray.count
+        return DinoDataManager.sharedInstance.dinoArray.count + products.count
         //return products.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
-        if indexPath.row < products.count {
-            let product = products[indexPath.row]
-            print("\(product.localizedTitle)")
-            priceFormatter.locale = product.priceLocale
-            print("Formatted price: \(priceFormatter.stringFromNumber(product.price)!)")
-        }
+        
+        
         
         if let imageCell = cell as? CustomFocusCell {
-            let dinoObject = DinoDataManager.sharedInstance.dinoArray[indexPath.item]
-            imageCell.imageView.image = UIImage(named: dinoObject.previewImageName)
-            imageCell.titleLabel.text = dinoObject.nameString
+            if indexPath.row < (DinoDataManager.sharedInstance.dinoArray.count) {
+                let dinoObject = DinoDataManager.sharedInstance.dinoArray[indexPath.item]
+                imageCell.imageView.image = UIImage(named: dinoObject.previewImageName)
+                imageCell.titleLabel.text = dinoObject.nameString
+            }
+            //show dlc
+            if indexPath.row > (DinoDataManager.sharedInstance.dinoArray.count - 1) {
+                let relativeProductInt = indexPath.row - (DinoDataManager.sharedInstance.dinoArray.count - 1)
+                let product = products[relativeProductInt - 1]
+                print("\(product.localizedTitle)")
+                priceFormatter.locale = product.priceLocale
+                let numberAsString = priceFormatter.stringFromNumber(product.price)!
+                print("Formatted price: \(numberAsString)")
+                
+                //should maybe lookup Dinosaur DLC object in data manager and display details
+                
+                
+                //
+                if DinoProducts.store.isProductPurchased(product.productIdentifier) {
+                    //update cell to show it's purchased
+                }
+                else if IAPHelper.canMakePayments() {
+                    //setup cell for "Buy" state, so user can buy this new content
+                    
+                    imageCell.titleLabel.text = numberAsString
+                    imageCell.gradient.colors = [UIColor(hex: 0xE8ECEE, alpha: 1.0).CGColor, UIColor(hex: 0x6D797A, alpha: 1.0).CGColor]
+                }
+                else {
+                    //state not found, maybe don't display cell
+                }
+                
+                
+            }
+            
         }
         
         return cell
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        if let first = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DinoDetailViewController") as? DinoDetailViewController {
-            //setup the dinosaur model and text to show here based on indexpath
-            let dinoObject = DinoDataManager.sharedInstance.dinoArray[indexPath.item]
-            first.nameString = dinoObject.nameString
-            first.descriptionString = dinoObject.descriptionString
-            first.sceneKitString = dinoObject.sceneKitString
-            self.presentViewController(first, animated: true, completion: nil)
+//        if indexPath.row < products.count {
+//            let product = products[indexPath.row]
+//            DinoProducts.store.purchaseProduct(product)
+//        }
+        
+        //unlocked content
+        if indexPath.row < (DinoDataManager.sharedInstance.dinoArray.count) {
+            if let first = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DinoDetailViewController") as? DinoDetailViewController {
+                //setup the dinosaur model and text to show here based on indexpath
+                let dinoObject = DinoDataManager.sharedInstance.dinoArray[indexPath.item]
+                first.nameString = dinoObject.nameString
+                first.descriptionString = dinoObject.descriptionString
+                first.sceneKitString = dinoObject.sceneKitString
+                self.presentViewController(first, animated: true, completion: nil)
+            }
         }
+        //show dlc
+        if indexPath.row > (DinoDataManager.sharedInstance.dinoArray.count - 1) {
+            let relativeProductInt = indexPath.row - (DinoDataManager.sharedInstance.dinoArray.count - 1)
+            let product = products[relativeProductInt - 1]
+            //maybe check if purchased before purchasing?
+            DinoProducts.store.purchaseProduct(product)
+            
+            
+        }
+
     }
 }
