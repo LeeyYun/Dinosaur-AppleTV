@@ -47,12 +47,13 @@ class CustomFocusCell: UICollectionViewCell {
     }
     
     func setPurchasedState() {
+        self.imageView.alpha = 1.0
         self.gradient.colors = [UIColor(hex: 0xFBC700, alpha: 0.8).CGColor, UIColor(hex: 0xF99A00, alpha: 0.8).CGColor]
         
     }
     
     func setDLCState() {
-        
+        self.imageView.alpha = 0.5
         self.gradient.colors = [UIColor(hex: 0xE8ECEE, alpha: 1.0).CGColor, UIColor(hex: 0x6D797A, alpha: 1.0).CGColor]
     }
     
