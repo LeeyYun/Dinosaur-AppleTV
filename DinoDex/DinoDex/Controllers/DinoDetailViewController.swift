@@ -38,7 +38,7 @@ class DinoDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    //todo: play correct sound based on perhaps value in current Dinosaur object that contains name of sounds file for playing
     func playSound() {
         if let soundURL = NSBundle.mainBundle().URLForResource("Trex", withExtension: "mp3") {
             var mySound: SystemSoundID = 0
@@ -49,6 +49,7 @@ class DinoDetailViewController: UIViewController {
         
     }
     
+    //todo: pass in a Dinosaur object and set it up from this, rather than setting individual labels
     func setupView() {
         nameLabel.text = nameString
         descriptionLabel.text = descriptionString

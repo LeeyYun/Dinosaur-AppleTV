@@ -220,6 +220,7 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
                     if dinoObject.nameString == product.localizedTitle {
                         if let first = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DinoDetailViewController") as? DinoDetailViewController {
                             //setup the dinosaur model and text to show here based on indexpath
+                            //todo: need to send a Dinosaur object and setup based on this
                             first.nameString = dinoObject.nameString
                             first.descriptionString = dinoObject.descriptionString
                             first.sceneKitString = dinoObject.sceneKitString
