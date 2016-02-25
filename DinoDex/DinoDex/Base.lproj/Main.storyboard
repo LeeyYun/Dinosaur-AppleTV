@@ -74,9 +74,9 @@
                                 </constraints>
                             </sceneKitView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="8MZ-1z-U7Y">
-                                <rect key="frame" x="123" y="459" width="671" height="341"/>
+                                <rect key="frame" x="123" y="292" width="671" height="406"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="341" id="EYl-5I-OgE"/>
+                                    <constraint firstAttribute="height" constant="406" id="EYl-5I-OgE"/>
                                     <constraint firstAttribute="width" constant="671" id="axw-0i-Yjg"/>
                                 </constraints>
                                 <string key="text">Velociraptor was a mid-sized dromaeosaurid, with adults measuring up to 2.07 m (6.8 ft) long, 0.5 m (1.6 ft) high at the hip, and weighing up to 15 kg (33 lb). The skull, which grew up to 25 cm (10 in) long, was uniquely up-curved, concave on the upper surface and convex on the lower. The jaws were lined with 26–28 widely spaced teeth on each side, each more strongly serrated on the back edge than the front.</string>
@@ -85,7 +85,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DH-DU-yLN">
-                                <rect key="frame" x="318" y="388" width="280" height="63"/>
+                                <rect key="frame" x="318" y="221" width="280" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="4D4-IB-bs0"/>
                                     <constraint firstAttribute="height" constant="63" id="Gej-g7-bLo"/>
@@ -124,6 +124,30 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7M-Y7-EWa">
+                                <rect key="frame" x="207" y="719" width="503" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Spin Dinosaur"/>
+                                <connections>
+                                    <action selector="tappedSpinButton:" destination="r7B-RV-IQg" eventType="primaryActionTriggered" id="wOH-fX-FdB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyX-A7-qjX">
+                                <rect key="frame" x="207" y="829" width="503" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Play Voice Narration"/>
+                                <connections>
+                                    <action selector="tappedVoiceButton:" destination="r7B-RV-IQg" eventType="primaryActionTriggered" id="oQ1-st-kNO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUu-Wo-ZKb">
+                                <rect key="frame" x="207" y="939" width="503" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Feed Dinosaur"/>
+                                <connections>
+                                    <action selector="tappedFeedButton:" destination="r7B-RV-IQg" eventType="primaryActionTriggered" id="3IL-7e-4ta"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -136,7 +160,7 @@
                             <constraint firstItem="ynD-37-hsv" firstAttribute="centerX" secondItem="spR-Sp-aIf" secondAttribute="centerX" id="S4C-j0-2Bx"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ffE-Y3-JfT" secondAttribute="bottom" constant="33" id="TSI-Ha-5ph"/>
                             <constraint firstAttribute="topMargin" secondItem="FSZ-hj-5Oa" secondAttribute="top" id="bV2-VH-2Fl"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="8MZ-1z-U7Y" secondAttribute="bottom" constant="280" id="gKE-op-2Iq"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="8MZ-1z-U7Y" secondAttribute="bottom" constant="382" id="gKE-op-2Iq"/>
                             <constraint firstItem="ffE-Y3-JfT" firstAttribute="leading" secondItem="spR-Sp-aIf" secondAttribute="leading" constant="176" id="lin-X2-dAH"/>
                             <constraint firstItem="5DH-DU-yLN" firstAttribute="leading" secondItem="spR-Sp-aIf" secondAttribute="leading" constant="318" id="rlK-jw-Dzh"/>
                             <constraint firstAttribute="trailing" secondItem="FSZ-hj-5Oa" secondAttribute="trailing" id="t7Z-KT-jca"/>
@@ -145,8 +169,11 @@
                     <tabBarItem key="tabBarItem" title="Dinosaurs" image="first" id="bdB-V2-1t9"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="8MZ-1z-U7Y" id="Wkz-Tw-Hwd"/>
+                        <outlet property="feedButton" destination="cUu-Wo-ZKb" id="miQ-Nz-3gz"/>
                         <outlet property="nameLabel" destination="ynD-37-hsv" id="vCX-jF-7zc"/>
                         <outlet property="sceneView" destination="FSZ-hj-5Oa" id="Zwv-Jy-Tfp"/>
+                        <outlet property="spinButton" destination="z7M-Y7-EWa" id="dQO-jS-G8m"/>
+                        <outlet property="voiceButton" destination="RyX-A7-qjX" id="qkZ-Gs-QkQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqJ-yJ-t73" sceneMemberID="firstResponder"/>

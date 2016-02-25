@@ -25,6 +25,10 @@ class DinoDetailViewController: UIViewController {
     var soundString: String!
     
     
+    @IBOutlet weak var spinButton: UIButton!
+    @IBOutlet weak var voiceButton: UIButton!
+    @IBOutlet weak var feedButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,7 +37,6 @@ class DinoDetailViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        playSound()
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,6 +53,25 @@ class DinoDetailViewController: UIViewController {
         }
         
     }
+    @IBAction func tappedSpinButton(sender: AnyObject) {
+        spinButton.resignFirstResponder()
+        spinButton.enabled = false
+        voiceButton.enabled = false
+        feedButton.enabled = false
+    }
+
+    
+    
+    @IBAction func tappedVoiceButton(sender: AnyObject) {
+        playSound()
+    }
+    
+    
+    
+    @IBAction func tappedFeedButton(sender: AnyObject) {
+        
+    }
+
     
     func setupView() {
         nameLabel.text = currentDino.nameString
