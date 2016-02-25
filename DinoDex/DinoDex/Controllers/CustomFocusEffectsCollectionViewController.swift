@@ -116,15 +116,6 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     // MARK: UICollectionViewDataSource
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
@@ -197,13 +188,12 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
         
         //unlocked content
         if indexPath.row < (DinoDataManager.sharedInstance.dinoArray.count) {
-            if let first = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DinoDetailViewController") as? DinoDetailViewController {
+            if let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DinoDetailViewController") as? DinoDetailViewController {
                 //setup the dinosaur model and text to show here based on indexpath
                 let dinoObject = DinoDataManager.sharedInstance.dinoArray[indexPath.item]
-                first.nameString = dinoObject.nameString
-                first.descriptionString = dinoObject.descriptionString
-                first.sceneKitString = dinoObject.sceneKitString
-                self.presentViewController(first, animated: true, completion: nil)
+                //send the dino object to the view to setup itself
+                detailVC.currentDino = dinoObject
+                self.presentViewController(detailVC, animated: true, completion: nil)
             }
         }
         //show dlc
@@ -215,16 +205,13 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
             
             // check status of product sale
             if DinoProducts.store.isProductPurchased(product.productIdentifier) {
-                //update cell to show it's purchased
+                //allow user to see details if purchased
                 for dinoObject in DinoDataManager.sharedInstance.dinoDLCArray {
                     if dinoObject.nameString == product.localizedTitle {
-                        if let first = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DinoDetailViewController") as? DinoDetailViewController {
-                            //setup the dinosaur model and text to show here based on indexpath
-                            //todo: need to send a Dinosaur object and setup based on this
-                            first.nameString = dinoObject.nameString
-                            first.descriptionString = dinoObject.descriptionString
-                            first.sceneKitString = dinoObject.sceneKitString
-                            self.presentViewController(first, animated: true, completion: nil)
+                        if let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DinoDetailViewController") as? DinoDetailViewController {
+                            //send the dino object to the view to setup itself
+                            detailVC.currentDino = dinoObject
+                            self.presentViewController(detailVC, animated: true, completion: nil)
                         }
                     }
                 }
