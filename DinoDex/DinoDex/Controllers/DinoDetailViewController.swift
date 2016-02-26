@@ -24,8 +24,7 @@ class DinoDetailViewController: UIViewController {
     var currentDino: Dinosaur!
     var soundString: String!
     
-    
-    @IBOutlet weak var spinButton: UIButton!
+    @IBOutlet weak var scrollLabel: UILabel!
     @IBOutlet weak var voiceButton: UIButton!
     @IBOutlet weak var feedButton: UIButton!
     
@@ -33,7 +32,15 @@ class DinoDetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupView()
-        
+    }
+    
+    override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
+        if(presses.first?.type == UIPressType.PlayPause) { //user pressed play/pause button, toggle spin action
+            toggleSpinDino()
+        } else {
+            // perform default action (in your case, exit)
+            super.pressesBegan(presses, withEvent: event)
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -53,13 +60,28 @@ class DinoDetailViewController: UIViewController {
         }
         
     }
-    @IBAction func tappedSpinButton(sender: AnyObject) {
-        spinButton.resignFirstResponder()
-        spinButton.enabled = false
-        voiceButton.enabled = false
-        feedButton.enabled = false
+    func toggleSpinDino() {
+        if voiceButton.enabled { //enable spinning
+            feedButton.resignFirstResponder()
+            voiceButton.resignFirstResponder()
+            
+            voiceButton.enabled = false
+            feedButton.enabled = false
+            
+            //set label for directions
+            scrollLabel.text = "Scroll on touchpad to rotate. Press Play/Pause when done."
+        }
+        else { //disable spinning
+            voiceButton.becomeFirstResponder()
+            voiceButton.enabled = true
+            feedButton.enabled = true
+            
+            //set label for directions
+            scrollLabel.text = "Press Play/Pause to enable rotating."
+        }
+        
     }
-
+    
     
     
     @IBAction func tappedVoiceButton(sender: AnyObject) {
@@ -71,7 +93,7 @@ class DinoDetailViewController: UIViewController {
     @IBAction func tappedFeedButton(sender: AnyObject) {
         
     }
-
+    
     
     func setupView() {
         nameLabel.text = currentDino.nameString

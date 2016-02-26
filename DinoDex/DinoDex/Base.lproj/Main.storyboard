@@ -94,16 +94,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scroll on touchpad to rotate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGn-JZ-aBw">
-                                <rect key="frame" x="1111" y="984" width="564" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="3En-7Z-sGe"/>
-                                    <constraint firstAttribute="width" constant="564" id="DJG-mQ-0Qd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="27"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source: Wikipedia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-Y3-JfT">
                                 <rect key="frame" x="176" y="984" width="564" height="63"/>
                                 <constraints>
@@ -124,30 +114,32 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7M-Y7-EWa">
-                                <rect key="frame" x="207" y="719" width="503" height="86"/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Spin Dinosaur"/>
-                                <connections>
-                                    <action selector="tappedSpinButton:" destination="r7B-RV-IQg" eventType="primaryActionTriggered" id="wOH-fX-FdB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyX-A7-qjX">
-                                <rect key="frame" x="207" y="829" width="503" height="86"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyX-A7-qjX">
+                                <rect key="frame" x="207" y="744" width="503" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Play Voice Narration"/>
                                 <connections>
                                     <action selector="tappedVoiceButton:" destination="r7B-RV-IQg" eventType="primaryActionTriggered" id="oQ1-st-kNO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUu-Wo-ZKb">
-                                <rect key="frame" x="207" y="939" width="503" height="86"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUu-Wo-ZKb">
+                                <rect key="frame" x="207" y="854" width="503" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Feed Dinosaur"/>
                                 <connections>
                                     <action selector="tappedFeedButton:" destination="r7B-RV-IQg" eventType="primaryActionTriggered" id="3IL-7e-4ta"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scroll on touchpad to rotate. Press Play/Pause when done." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGn-JZ-aBw">
+                                <rect key="frame" x="1040" y="984" width="684" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="3En-7Z-sGe"/>
+                                    <constraint firstAttribute="width" constant="684" id="DJG-mQ-0Qd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="27"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -156,7 +148,7 @@
                             <constraint firstItem="8MZ-1z-U7Y" firstAttribute="top" secondItem="5DH-DU-yLN" secondAttribute="bottom" constant="8" id="DCf-hi-sjj"/>
                             <constraint firstItem="8MZ-1z-U7Y" firstAttribute="leading" secondItem="spR-Sp-aIf" secondAttribute="leading" constant="123" id="GJF-PS-N9P"/>
                             <constraint firstAttribute="bottomMargin" secondItem="AGn-JZ-aBw" secondAttribute="bottom" constant="33" id="JMv-qC-8AJ"/>
-                            <constraint firstAttribute="trailing" secondItem="AGn-JZ-aBw" secondAttribute="trailing" constant="245" id="Lu2-Bx-wIp"/>
+                            <constraint firstAttribute="trailing" secondItem="AGn-JZ-aBw" secondAttribute="trailing" constant="196" id="Lu2-Bx-wIp"/>
                             <constraint firstItem="ynD-37-hsv" firstAttribute="centerX" secondItem="spR-Sp-aIf" secondAttribute="centerX" id="S4C-j0-2Bx"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ffE-Y3-JfT" secondAttribute="bottom" constant="33" id="TSI-Ha-5ph"/>
                             <constraint firstAttribute="topMargin" secondItem="FSZ-hj-5Oa" secondAttribute="top" id="bV2-VH-2Fl"/>
@@ -172,7 +164,7 @@
                         <outlet property="feedButton" destination="cUu-Wo-ZKb" id="miQ-Nz-3gz"/>
                         <outlet property="nameLabel" destination="ynD-37-hsv" id="vCX-jF-7zc"/>
                         <outlet property="sceneView" destination="FSZ-hj-5Oa" id="Zwv-Jy-Tfp"/>
-                        <outlet property="spinButton" destination="z7M-Y7-EWa" id="dQO-jS-G8m"/>
+                        <outlet property="scrollLabel" destination="AGn-JZ-aBw" id="oH3-7f-Xcz"/>
                         <outlet property="voiceButton" destination="RyX-A7-qjX" id="qkZ-Gs-QkQ"/>
                     </connections>
                 </viewController>
