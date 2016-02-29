@@ -87,11 +87,12 @@ class DinoDetailViewController: UIViewController {
     }
     
     func animateSpinningDinosaur(duration: Double) {
+        sceneView.allowsCameraControl = false
         let rotateByAxisAction = SCNAction.rotateByAngle(6.28, aroundAxis: SCNVector3.init(0, 1, 0), duration: duration)
         rotateByAxisAction.timingMode = .EaseInEaseOut
         if let node = self.currentDinoNode {
             node.runAction(rotateByAxisAction, completionHandler: { _ in
-                
+                self.sceneView.allowsCameraControl = true
             })
         }
     }
