@@ -23,6 +23,7 @@ class DinoDetailViewController: UIViewController {
     var sceneKitString: String!
     
     var currentDino: Dinosaur!
+    var currentDinoNode: SCNNode?
     var soundString: String!
     
     @IBOutlet weak var scrollLabel: UILabel!
@@ -33,6 +34,8 @@ class DinoDetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupView()
+        //get root node (dinosaur object)
+        getRootNode()
     }
     
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
@@ -45,11 +48,61 @@ class DinoDetailViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        animateSpinningDinosaur(1.0)
+        addBobbingAnimation()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func setupView() {
+        soundString = currentDino.previewImageName //make sure mp3 file name is same as image preview name
+        nameLabel.text = currentDino.nameString
+        descriptionLabel.text = currentDino.descriptionString
+        
+        
+    }
+    
+    
+    func getRootNode() {
+        sceneView.scene = SCNScene(named: currentDino.sceneKitString)
+        guard let node = sceneView.scene?.rootNode
+            else {
+                return
+        }
+        self.currentDinoNode = node //save copy of current dino node
+    }
+    
+    func animateSpinningDinosaur(duration: Double) {
+        let rotateByAxisAction = SCNAction.rotateByAngle(6.28, aroundAxis: SCNVector3.init(0, 1, 0), duration: duration)
+        rotateByAxisAction.timingMode = .EaseInEaseOut
+        if let node = self.currentDinoNode {
+            node.runAction(rotateByAxisAction, completionHandler: { _ in
+                
+            })
+        }
+    }
+    
+    func addBobbingAnimation() {
+        if let node = self.currentDinoNode {
+            var min = SCNVector3Zero
+            var max = SCNVector3Zero
+            node.getBoundingBoxMin(&min, max: &max)
+            let height = max.y - min.y
+            let relativeAmount = CGFloat(height/50)
+            let moveUp = SCNAction.moveByX(0, y: relativeAmount, z: 0, duration: 1)
+            moveUp.timingMode = SCNActionTimingMode.EaseInEaseOut
+            let moveDown = SCNAction.moveByX(0, y: (-1 * relativeAmount), z: 0, duration: 1)
+            moveDown.timingMode = SCNActionTimingMode.EaseInEaseOut
+            let moveSequence = SCNAction.sequence([moveUp,moveDown])
+            let moveLoop = SCNAction.repeatActionForever(moveSequence)
+            node.runAction(moveLoop)
+        }
     }
     
     func playSound() {
@@ -70,7 +123,10 @@ class DinoDetailViewController: UIViewController {
             feedButton.enabled = false
             
             //set label for directions
-            scrollLabel.text = "Scroll on touchpad to rotate. Press Play/Pause when done."
+            scrollLabel.text = "Scroll on touchpad to rotate. Press Play/Pause to end rotating."
+            
+            //begin dinosaur pulsating animation so user knows he/she can swipe to rotate
+            addBobbingAnimation()
         }
         else { //disable spinning
             voiceButton.becomeFirstResponder()
@@ -79,6 +135,9 @@ class DinoDetailViewController: UIViewController {
             
             //set label for directions
             scrollLabel.text = "Press Play/Pause to enable rotating."
+            
+            //reset scene to remove pulsating action, user no longer can swipe to rotate
+            getRootNode()
         }
         
     }
@@ -95,7 +154,7 @@ class DinoDetailViewController: UIViewController {
         feedButton.enabled = false
         foodLabel.hidden = false
         let oldFrame = foodLabel.frame
-        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 10, options: .CurveEaseOut, animations: { _ in
+        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 2, options: .CurveEaseOut, animations: { _ in
             
             self.foodLabel.frame = CGRect(x: oldFrame.origin.x, y: oldFrame.origin.y + 500, width: oldFrame.width, height: oldFrame.height)
             
@@ -110,6 +169,9 @@ class DinoDetailViewController: UIViewController {
                         self.foodLabel.alpha = 1.0
                         self.foodLabel.frame = oldFrame
                         self.feedButton.enabled = true
+                        //self.sceneView.scene = SCNScene(named: self.currentDino.sceneKitString)  //replay actions
+                        //rotate dino after feeding
+                        self.animateSpinningDinosaur(0.5)
                 })
                 
                 
@@ -117,13 +179,7 @@ class DinoDetailViewController: UIViewController {
     }
     
     
-    func setupView() {
-        nameLabel.text = currentDino.nameString
-        descriptionLabel.text = currentDino.descriptionString
-        sceneView.scene = SCNScene(named: currentDino.sceneKitString)
-        soundString = currentDino.previewImageName //make sure mp3 file name is same as image preview name
-        
-    }
+    
     
     
 }

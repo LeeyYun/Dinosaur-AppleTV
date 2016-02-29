@@ -65,43 +65,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <sceneKitView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="Raptor.scn" allowsCameraControl="YES" preferredRenderingAPI="1" translatesAutoresizingMaskIntoConstraints="NO" id="FSZ-hj-5Oa">
-                                <rect key="frame" x="254" y="0.0" width="1666" height="1080"/>
+                            <sceneKitView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" sceneName="Raptor.scn" allowsCameraControl="YES" preferredRenderingAPI="1" translatesAutoresizingMaskIntoConstraints="NO" id="FSZ-hj-5Oa">
+                                <rect key="frame" x="686" y="0.0" width="1375" height="1080"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="1666" id="Dt0-E2-r0M"/>
+                                    <constraint firstAttribute="width" constant="1375" id="Dt0-E2-r0M"/>
                                 </constraints>
                             </sceneKitView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="8MZ-1z-U7Y">
-                                <rect key="frame" x="123" y="292" width="671" height="406"/>
+                                <rect key="frame" x="74" y="193" width="720" height="535"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="406" id="EYl-5I-OgE"/>
-                                    <constraint firstAttribute="width" constant="671" id="axw-0i-Yjg"/>
+                                    <constraint firstAttribute="height" constant="535" id="EYl-5I-OgE"/>
+                                    <constraint firstAttribute="width" constant="720" id="axw-0i-Yjg"/>
                                 </constraints>
                                 <string key="text">Velociraptor was a mid-sized dromaeosaurid, with adults measuring up to 2.07 m (6.8 ft) long, 0.5 m (1.6 ft) high at the hip, and weighing up to 15 kg (33 lb). The skull, which grew up to 25 cm (10 in) long, was uniquely up-curved, concave on the upper surface and convex on the lower. The jaws were lined with 26–28 widely spaced teeth on each side, each more strongly serrated on the back edge than the front.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" red="0.51784205439999997" green="0.58159953360000005" blue="0.58617168659999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DH-DU-yLN">
-                                <rect key="frame" x="318" y="221" width="280" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="4D4-IB-bs0"/>
-                                    <constraint firstAttribute="height" constant="63" id="Gej-g7-bLo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.42655369639396667" green="0.47584608197212219" blue="0.48026475310325623" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source: Wikipedia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-Y3-JfT">
-                                <rect key="frame" x="176" y="984" width="564" height="63"/>
+                                <rect key="frame" x="152" y="736" width="564" height="47"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="iTX-uU-JMA"/>
+                                    <constraint firstAttribute="height" constant="47" id="iTX-uU-JMA"/>
                                     <constraint firstAttribute="width" constant="564" id="tgL-G4-VtP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
-                                <color key="textColor" red="0.51784205439999997" green="0.58159953360000005" blue="0.58617168659999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.42655369640000002" green="0.475846082" blue="0.4802647531" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velociraptor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynD-37-hsv">
@@ -115,7 +105,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyX-A7-qjX">
-                                <rect key="frame" x="207" y="744" width="503" height="86"/>
+                                <rect key="frame" x="183" y="829" width="503" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Play Voice Narration"/>
                                 <connections>
@@ -123,26 +113,26 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUu-Wo-ZKb">
-                                <rect key="frame" x="207" y="854" width="503" height="86"/>
+                                <rect key="frame" x="183" y="939" width="503" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Feed Dinosaur"/>
                                 <connections>
                                     <action selector="tappedFeedButton:" destination="r7B-RV-IQg" eventType="primaryActionTriggered" id="3IL-7e-4ta"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scroll on touchpad to rotate. Press Play/Pause when done." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGn-JZ-aBw">
-                                <rect key="frame" x="1040" y="984" width="684" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="3En-7Z-sGe"/>
-                                    <constraint firstAttribute="width" constant="684" id="DJG-mQ-0Qd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="27"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🌿" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0l-XJ-8vf">
+                                <rect key="frame" x="888" y="-88" width="145" height="101"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="90"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🌿" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0l-XJ-8vf">
-                                <rect key="frame" x="888" y="37" width="145" height="101"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="90"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scroll on touchpad to rotate. Press Play/Pause to end rotating." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGn-JZ-aBw">
+                                <rect key="frame" x="961" y="979" width="837" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="3En-7Z-sGe"/>
+                                    <constraint firstAttribute="width" constant="837" id="DJG-mQ-0Qd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="27"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -151,17 +141,15 @@
                         <constraints>
                             <constraint firstItem="ynD-37-hsv" firstAttribute="top" secondItem="spR-Sp-aIf" secondAttribute="topMargin" constant="20" id="3fN-Cq-VUf"/>
                             <constraint firstItem="FSZ-hj-5Oa" firstAttribute="height" secondItem="spR-Sp-aIf" secondAttribute="height" id="3vm-Q8-RZk"/>
-                            <constraint firstItem="8MZ-1z-U7Y" firstAttribute="top" secondItem="5DH-DU-yLN" secondAttribute="bottom" constant="8" id="DCf-hi-sjj"/>
-                            <constraint firstItem="8MZ-1z-U7Y" firstAttribute="leading" secondItem="spR-Sp-aIf" secondAttribute="leading" constant="123" id="GJF-PS-N9P"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="AGn-JZ-aBw" secondAttribute="bottom" constant="33" id="JMv-qC-8AJ"/>
-                            <constraint firstAttribute="trailing" secondItem="AGn-JZ-aBw" secondAttribute="trailing" constant="196" id="Lu2-Bx-wIp"/>
+                            <constraint firstItem="8MZ-1z-U7Y" firstAttribute="leading" secondItem="spR-Sp-aIf" secondAttribute="leading" constant="74" id="GJF-PS-N9P"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="AGn-JZ-aBw" secondAttribute="bottom" constant="38" id="JMv-qC-8AJ"/>
+                            <constraint firstAttribute="trailing" secondItem="AGn-JZ-aBw" secondAttribute="trailing" constant="122" id="Lu2-Bx-wIp"/>
                             <constraint firstItem="ynD-37-hsv" firstAttribute="centerX" secondItem="spR-Sp-aIf" secondAttribute="centerX" id="S4C-j0-2Bx"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="ffE-Y3-JfT" secondAttribute="bottom" constant="33" id="TSI-Ha-5ph"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ffE-Y3-JfT" secondAttribute="bottom" constant="297" id="TSI-Ha-5ph"/>
                             <constraint firstAttribute="topMargin" secondItem="FSZ-hj-5Oa" secondAttribute="top" id="bV2-VH-2Fl"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="8MZ-1z-U7Y" secondAttribute="bottom" constant="382" id="gKE-op-2Iq"/>
-                            <constraint firstItem="ffE-Y3-JfT" firstAttribute="leading" secondItem="spR-Sp-aIf" secondAttribute="leading" constant="176" id="lin-X2-dAH"/>
-                            <constraint firstItem="5DH-DU-yLN" firstAttribute="leading" secondItem="spR-Sp-aIf" secondAttribute="leading" constant="318" id="rlK-jw-Dzh"/>
-                            <constraint firstAttribute="trailing" secondItem="FSZ-hj-5Oa" secondAttribute="trailing" id="t7Z-KT-jca"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="8MZ-1z-U7Y" secondAttribute="bottom" constant="352" id="gKE-op-2Iq"/>
+                            <constraint firstItem="ffE-Y3-JfT" firstAttribute="leading" secondItem="spR-Sp-aIf" secondAttribute="leading" constant="152" id="lin-X2-dAH"/>
+                            <constraint firstAttribute="trailing" secondItem="FSZ-hj-5Oa" secondAttribute="trailing" constant="-141" id="t7Z-KT-jca"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dinosaurs" image="first" id="bdB-V2-1t9"/>
