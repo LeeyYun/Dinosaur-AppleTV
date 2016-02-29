@@ -100,9 +100,18 @@ class DinoDetailViewController: UIViewController {
             self.foodLabel.frame = CGRect(x: oldFrame.origin.x, y: oldFrame.origin.y + 500, width: oldFrame.width, height: oldFrame.height)
             
             }, completion: { _ in
-                self.foodLabel.hidden = true
-                self.foodLabel.frame = oldFrame
-                self.feedButton.enabled = true
+                
+                UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveLinear, animations: { _ in
+                    self.foodLabel.alpha = 0.0
+                    
+                    
+                    }, completion: { _ in
+                        self.foodLabel.hidden = true
+                        self.foodLabel.alpha = 1.0
+                        self.foodLabel.frame = oldFrame
+                        self.feedButton.enabled = true
+                })
+                
                 
         })
     }
