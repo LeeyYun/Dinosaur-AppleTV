@@ -17,6 +17,7 @@
 		342BBFAD1C4DBE1000C4C9AE /* raptor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 342BBFA91C4DBE1000C4C9AE /* raptor.jpg */; };
 		342BBFAE1C4DBE1000C4C9AE /* raptor_normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 342BBFAA1C4DBE1000C4C9AE /* raptor_normal.jpg */; };
 		3432F8D61C51DEE5008727F5 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3432F8D51C51DEE5008727F5 /* UIColorExtension.swift */; };
+		3444AD9F1C84F757001B03F5 /* DinoSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3444AD9E1C84F757001B03F5 /* DinoSceneView.swift */; };
 		344964E61C7BA31500633451 /* DinoProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344964E41C7BA31500633451 /* DinoProducts.swift */; };
 		344964E71C7BA31500633451 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344964E51C7BA31500633451 /* IAPHelper.swift */; };
 		346A82631C7C07AC006390E0 /* trike.scn in Resources */ = {isa = PBXBuildFile; fileRef = 346A82621C7C06AB006390E0 /* trike.scn */; };
@@ -115,6 +116,7 @@
 		342BBFEC1C4EF39100C4C9AE /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3432F8D51C51DEE5008727F5 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		3444AD9E1C84F757001B03F5 /* DinoSceneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinoSceneView.swift; sourceTree = "<group>"; };
 		344964E41C7BA31500633451 /* DinoProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinoProducts.swift; sourceTree = "<group>"; };
 		344964E51C7BA31500633451 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		346A82621C7C06AB006390E0 /* trike.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = trike.scn; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				3482939D1C506C020078CB29 /* CustomFocusCell.swift */,
+				3444AD9E1C84F757001B03F5 /* DinoSceneView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				344964E71C7BA31500633451 /* IAPHelper.swift in Sources */,
+				3444AD9F1C84F757001B03F5 /* DinoSceneView.swift in Sources */,
 				348293971C506AD50078CB29 /* exampleDetailViewController.swift in Sources */,
 				3482939E1C506C020078CB29 /* CustomFocusCell.swift in Sources */,
 				342BBF7A1C4DBD6C00C4C9AE /* AppDelegate.swift in Sources */,

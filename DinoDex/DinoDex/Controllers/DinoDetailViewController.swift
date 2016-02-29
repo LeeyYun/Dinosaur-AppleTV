@@ -16,7 +16,7 @@ class DinoDetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    @IBOutlet var sceneView: SCNView!
+    @IBOutlet var sceneView: DinoSceneView!
     
     var nameString: String!
     var descriptionString: String!
@@ -59,6 +59,14 @@ class DinoDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override weak var preferredFocusedView: UIView? {
+        if voiceButton.enabled == true {
+            return voiceButton
+        } else {
+            return sceneView
+        }
+    }
+    
     
     func setupView() {
         soundString = currentDino.previewImageName //make sure mp3 file name is same as image preview name
@@ -94,7 +102,7 @@ class DinoDetailViewController: UIViewController {
             var max = SCNVector3Zero
             node.getBoundingBoxMin(&min, max: &max)
             let height = max.y - min.y
-            let relativeAmount = CGFloat(height/50)
+            let relativeAmount = CGFloat(height/30)
             let moveUp = SCNAction.moveByX(0, y: relativeAmount, z: 0, duration: 1)
             moveUp.timingMode = SCNActionTimingMode.EaseInEaseOut
             let moveDown = SCNAction.moveByX(0, y: (-1 * relativeAmount), z: 0, duration: 1)
@@ -119,8 +127,14 @@ class DinoDetailViewController: UIViewController {
             feedButton.resignFirstResponder()
             voiceButton.resignFirstResponder()
             
+            sceneView.userInteractionEnabled = true
+            sceneView.becomeFirstResponder()
+            
             voiceButton.enabled = false
             feedButton.enabled = false
+            
+            self.setNeedsFocusUpdate()
+            self.updateFocusIfNeeded()
             
             //set label for directions
             scrollLabel.text = "Scroll on touchpad to rotate. Press Play/Pause to end rotating."
@@ -129,9 +143,20 @@ class DinoDetailViewController: UIViewController {
             addBobbingAnimation()
         }
         else { //disable spinning
-            voiceButton.becomeFirstResponder()
+            
+            
+            sceneView.resignFirstResponder()
+            sceneView.userInteractionEnabled = false
+            
+            
             voiceButton.enabled = true
             feedButton.enabled = true
+            
+            self.setNeedsFocusUpdate()
+            self.updateFocusIfNeeded()
+            
+            voiceButton.becomeFirstResponder()
+            //voiceButton.selected = true
             
             //set label for directions
             scrollLabel.text = "Press Play/Pause to enable rotating."
