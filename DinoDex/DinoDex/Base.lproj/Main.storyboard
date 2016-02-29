@@ -140,6 +140,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🌿" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0l-XJ-8vf">
+                                <rect key="frame" x="888" y="37" width="145" height="101"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="90"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -162,6 +168,7 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="8MZ-1z-U7Y" id="Wkz-Tw-Hwd"/>
                         <outlet property="feedButton" destination="cUu-Wo-ZKb" id="miQ-Nz-3gz"/>
+                        <outlet property="foodLabel" destination="X0l-XJ-8vf" id="JfS-8M-z43"/>
                         <outlet property="nameLabel" destination="ynD-37-hsv" id="vCX-jF-7zc"/>
                         <outlet property="sceneView" destination="FSZ-hj-5Oa" id="Zwv-Jy-Tfp"/>
                         <outlet property="scrollLabel" destination="AGn-JZ-aBw" id="oH3-7f-Xcz"/>

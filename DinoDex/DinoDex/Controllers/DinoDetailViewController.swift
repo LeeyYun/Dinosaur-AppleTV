@@ -12,6 +12,7 @@ import AudioToolbox
 
 class DinoDetailViewController: UIViewController {
     
+    @IBOutlet weak var foodLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
@@ -91,7 +92,19 @@ class DinoDetailViewController: UIViewController {
     
     
     @IBAction func tappedFeedButton(sender: AnyObject) {
-        
+        feedButton.enabled = false
+        foodLabel.hidden = false
+        let oldFrame = foodLabel.frame
+        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 10, options: .CurveEaseOut, animations: { _ in
+            
+            self.foodLabel.frame = CGRect(x: oldFrame.origin.x, y: oldFrame.origin.y + 500, width: oldFrame.width, height: oldFrame.height)
+            
+            }, completion: { _ in
+                self.foodLabel.hidden = true
+                self.foodLabel.frame = oldFrame
+                self.feedButton.enabled = true
+                
+        })
     }
     
     
