@@ -110,12 +110,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scroll on touchpad to rotate. Press Play/Pause to end rotating." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGn-JZ-aBw">
-                                <rect key="frame" x="961" y="979" width="837" height="63"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGn-JZ-aBw">
+                                <rect key="frame" x="961" y="957" width="837" height="85"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="3En-7Z-sGe"/>
+                                    <constraint firstAttribute="height" constant="85" id="3En-7Z-sGe"/>
                                     <constraint firstAttribute="width" constant="837" id="DJG-mQ-0Qd"/>
                                 </constraints>
+                                <string key="text">Scroll on the touch surface to rotate.
+Press Play/Pause to end 3D rotating.</string>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="27"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -136,6 +138,12 @@
                                     <action selector="tappedFeedButton:" destination="r7B-RV-IQg" eventType="primaryActionTriggered" id="3IL-7e-4ta"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="play_pause_small" translatesAutoresizingMaskIntoConstraints="NO" id="7le-iQ-iRm">
+                                <rect key="frame" x="1628" y="949" width="101" height="105"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="swipe_small" translatesAutoresizingMaskIntoConstraints="NO" id="xXQ-eR-ROR">
+                                <rect key="frame" x="1031" y="950" width="83" height="98"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -282,6 +290,8 @@
     <resources>
         <image name="Claw_Marks_medium" width="50" height="49"/>
         <image name="first" width="30" height="30"/>
+        <image name="play_pause_small" width="96" height="113"/>
         <image name="sliders_up_2" width="32" height="32"/>
+        <image name="swipe_small" width="77" height="88"/>
     </resources>
 </document>

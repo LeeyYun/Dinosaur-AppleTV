@@ -138,7 +138,7 @@ class DinoDetailViewController: UIViewController {
             self.updateFocusIfNeeded()
             
             //set label for directions
-            scrollLabel.text = "Scroll on touchpad to rotate. Press Play/Pause to end rotating."
+            scrollLabel.text = "Scroll on the touch surface to rotate.\nPress Play/Pause to end 3D rotating."
             
             //begin dinosaur pulsating animation so user knows he/she can swipe to rotate
             addBobbingAnimation()
@@ -160,7 +160,7 @@ class DinoDetailViewController: UIViewController {
             //voiceButton.selected = true
             
             //set label for directions
-            scrollLabel.text = "Press Play/Pause to enable rotating."
+            scrollLabel.text = "Select an option from the left,\nor press Play/Pause to enable 3D rotating."
             
             //reset scene to remove pulsating action, user no longer can swipe to rotate
             getRootNode()
