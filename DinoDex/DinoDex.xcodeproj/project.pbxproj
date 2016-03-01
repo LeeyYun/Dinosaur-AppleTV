@@ -38,7 +38,6 @@
 		348293B61C509B340078CB29 /* trike.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 348293B31C509B340078CB29 /* trike.mtl */; };
 		348293B81C509B340078CB29 /* trike.png in Resources */ = {isa = PBXBuildFile; fileRef = 348293B51C509B340078CB29 /* trike.png */; };
 		348293BA1C509B480078CB29 /* trex.scn in Resources */ = {isa = PBXBuildFile; fileRef = 348293B91C509B480078CB29 /* trex.scn */; };
-		348CAC031C7587F80016CC38 /* Trex.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC021C7587F80016CC38 /* Trex.mp3 */; };
 		348CAC101C758A550016CC38 /* Trex_opa.png in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC091C758A550016CC38 /* Trex_opa.png */; };
 		348CAC111C758A550016CC38 /* Trex-2_opa.png in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC0A1C758A550016CC38 /* Trex-2_opa.png */; };
 		348CAC121C758A550016CC38 /* Trex-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC0B1C758A550016CC38 /* Trex-2.png */; };
@@ -58,6 +57,10 @@
 		34C7CC991C7BA243005E044B /* Metal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEC1C4EF39100C4C9AE /* Metal.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		34C7CC9A1C7BA243005E044B /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */; };
 		34C7CC9B1C7BA243005E044B /* SceneKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		34D99D1E1C8539A100106795 /* Trex.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34D99D1A1C8539A100106795 /* Trex.mp3 */; };
+		34D99D1F1C8539A100106795 /* trike.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34D99D1B1C8539A100106795 /* trike.mp3 */; };
+		34D99D201C8539A100106795 /* Spinosaurus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34D99D1C1C8539A100106795 /* Spinosaurus.mp3 */; };
+		34D99D211C8539A100106795 /* Raptor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34D99D1D1C8539A100106795 /* Raptor.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,7 +140,6 @@
 		348293B31C509B340078CB29 /* trike.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trike.mtl; sourceTree = "<group>"; };
 		348293B51C509B340078CB29 /* trike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trike.png; sourceTree = "<group>"; };
 		348293B91C509B480078CB29 /* trex.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = trex.scn; sourceTree = "<group>"; };
-		348CAC021C7587F80016CC38 /* Trex.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Trex.mp3; sourceTree = "<group>"; };
 		348CAC041C75884A0016CC38 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		348CAC061C75895E0016CC38 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		348CAC091C758A550016CC38 /* Trex_opa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trex_opa.png; sourceTree = "<group>"; };
@@ -148,6 +150,10 @@
 		348CAC0E1C758A550016CC38 /* trex.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trex.obj; sourceTree = "<group>"; };
 		348CAC0F1C758A550016CC38 /* Trex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trex.png; sourceTree = "<group>"; };
 		34C7CC741C7B9FB8005E044B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		34D99D1A1C8539A100106795 /* Trex.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Trex.mp3; sourceTree = "<group>"; };
+		34D99D1B1C8539A100106795 /* trike.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trike.mp3; sourceTree = "<group>"; };
+		34D99D1C1C8539A100106795 /* Spinosaurus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Spinosaurus.mp3; sourceTree = "<group>"; };
+		34D99D1D1C8539A100106795 /* Raptor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Raptor.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,7 +369,10 @@
 		348CAC011C7587EA0016CC38 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				348CAC021C7587F80016CC38 /* Trex.mp3 */,
+				34D99D1A1C8539A100106795 /* Trex.mp3 */,
+				34D99D1B1C8539A100106795 /* trike.mp3 */,
+				34D99D1C1C8539A100106795 /* Spinosaurus.mp3 */,
+				34D99D1D1C8539A100106795 /* Raptor.mp3 */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -494,6 +503,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34D99D211C8539A100106795 /* Raptor.mp3 in Resources */,
 				348CAC101C758A550016CC38 /* Trex_opa.png in Resources */,
 				342BBF831C4DBD6C00C4C9AE /* Assets.xcassets in Resources */,
 				342BBF811C4DBD6C00C4C9AE /* Main.storyboard in Resources */,
@@ -506,16 +516,18 @@
 				348293BA1C509B480078CB29 /* trex.scn in Resources */,
 				348293AC1C507CD20078CB29 /* Spinosaurus.mtl in Resources */,
 				348293B61C509B340078CB29 /* trike.mtl in Resources */,
-				348CAC031C7587F80016CC38 /* Trex.mp3 in Resources */,
+				34D99D1E1C8539A100106795 /* Trex.mp3 in Resources */,
 				348CAC151C758A550016CC38 /* trex.obj in Resources */,
 				348293AA1C507CD20078CB29 /* Spine_N.tga in Resources */,
 				346A82631C7C07AC006390E0 /* trike.scn in Resources */,
 				348293AD1C507CD20078CB29 /* Spinosaurus.obj in Resources */,
+				34D99D201C8539A100106795 /* Spinosaurus.mp3 in Resources */,
 				348293B11C507CF70078CB29 /* Spinosaurus.scn in Resources */,
 				348CAC141C758A550016CC38 /* trex.mtl in Resources */,
 				348293B81C509B340078CB29 /* trike.png in Resources */,
 				342BBFAD1C4DBE1000C4C9AE /* raptor.jpg in Resources */,
 				348293AB1C507CD20078CB29 /* Spine_S.tga in Resources */,
+				34D99D1F1C8539A100106795 /* trike.mp3 in Resources */,
 				348293A91C507CD20078CB29 /* Spine_D.tga in Resources */,
 				348CAC131C758A550016CC38 /* trex.dae in Resources */,
 				348CAC111C758A550016CC38 /* Trex-2_opa.png in Resources */,
