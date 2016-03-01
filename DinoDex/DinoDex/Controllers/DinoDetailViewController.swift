@@ -9,6 +9,7 @@
 import UIKit
 import SceneKit
 import AudioToolbox
+import AVFoundation
 
 class DinoDetailViewController: UIViewController {
     
@@ -25,7 +26,7 @@ class DinoDetailViewController: UIViewController {
     var currentDino: Dinosaur!
     var currentDinoNode: SCNNode?
     var soundString: String!
-    var mySound: SystemSoundID = 0
+    var player : AVAudioPlayer! = nil // will be Optional, must supply initializer
     
     @IBOutlet weak var scrollLabel: UILabel!
     @IBOutlet weak var voiceButton: UIButton!
@@ -75,7 +76,7 @@ class DinoDetailViewController: UIViewController {
         descriptionLabel.text = currentDino.descriptionString
         
         //setup voice button
-        voiceButton.addTarget(self, action: "playNarration", forControlEvents: .TouchUpInside)
+        voiceButton.addTarget(self, action: "playNarration", forControlEvents: .PrimaryActionTriggered)
         
         
     }
@@ -119,10 +120,24 @@ class DinoDetailViewController: UIViewController {
     }
     
     func playSound(mp3FileName: String) {
-        if let soundURL = NSBundle.mainBundle().URLForResource(mp3FileName, withExtension: "mp3") {
-            AudioServicesCreateSystemSoundID(soundURL, &mySound)
-            // Play
-            AudioServicesPlaySystemSound(mySound);
+        //        if let soundURL = NSBundle.mainBundle().URLForResource(mp3FileName, withExtension: "mp3") {
+        //            var thisSound: SystemSoundID = 0
+        //            AudioServicesCreateSystemSoundID(soundURL, &thisSound)
+        //            // Play
+        //            AudioServicesPlaySystemSound(thisSound)
+        //        }
+        
+        if let path = NSBundle.mainBundle().pathForResource(mp3FileName, ofType:"mp3") {
+            let fileURL = NSURL(fileURLWithPath: path)
+            do {
+                player = try AVAudioPlayer(contentsOfURL: fileURL)
+                player.prepareToPlay()
+                player.delegate = self
+                player.play()
+            }
+            catch {
+                print("Error getting the audio file")
+            }
         }
         
     }
@@ -130,7 +145,7 @@ class DinoDetailViewController: UIViewController {
     
     func stopSound() {
         
-        AudioServicesDisposeSystemSoundID(mySound)
+        player.stop()
     }
     
     func toggleSpinDino() {
@@ -182,14 +197,14 @@ class DinoDetailViewController: UIViewController {
         playSound(soundString)
         voiceButton.setTitle("Stop Narration", forState: .Normal)
         voiceButton.removeTarget(nil, action: nil, forControlEvents: .AllEvents)
-        voiceButton.addTarget(self, action: "stopNarration", forControlEvents: .TouchUpInside)
+        voiceButton.addTarget(self, action: "stopNarration", forControlEvents: .PrimaryActionTriggered)
     }
     
     func stopNarration() {
         stopSound()
         voiceButton.setTitle("Play Voice Narration", forState: .Normal)
         voiceButton.removeTarget(nil, action: nil, forControlEvents: .AllEvents)
-        voiceButton.addTarget(self, action: "playNarration", forControlEvents: .TouchUpInside)
+        voiceButton.addTarget(self, action: "playNarration", forControlEvents: .PrimaryActionTriggered)
     }
     
     
@@ -226,5 +241,14 @@ class DinoDetailViewController: UIViewController {
     
     
     
+}
+
+
+extension DinoDetailViewController: AVAudioPlayerDelegate {
+    
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+        //
+    }
 }
 
