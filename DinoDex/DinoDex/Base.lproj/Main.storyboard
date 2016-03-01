@@ -126,9 +126,6 @@ Press Play/Pause to end 3D rotating.</string>
                                 <rect key="frame" x="153" y="829" width="562" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Play Voice Narration"/>
-                                <connections>
-                                    <action selector="tappedVoiceButton:" destination="r7B-RV-IQg" eventType="primaryActionTriggered" id="oQ1-st-kNO"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUu-Wo-ZKb">
                                 <rect key="frame" x="153" y="939" width="562" height="86"/>

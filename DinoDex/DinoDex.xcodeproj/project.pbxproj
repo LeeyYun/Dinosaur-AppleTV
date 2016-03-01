@@ -61,6 +61,7 @@
 		34D99D1F1C8539A100106795 /* trike.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34D99D1B1C8539A100106795 /* trike.mp3 */; };
 		34D99D201C8539A100106795 /* Spinosaurus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34D99D1C1C8539A100106795 /* Spinosaurus.mp3 */; };
 		34D99D211C8539A100106795 /* Raptor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34D99D1D1C8539A100106795 /* Raptor.mp3 */; };
+		34D99D231C853A8000106795 /* eating.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34D99D221C853A8000106795 /* eating.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +155,7 @@
 		34D99D1B1C8539A100106795 /* trike.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trike.mp3; sourceTree = "<group>"; };
 		34D99D1C1C8539A100106795 /* Spinosaurus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Spinosaurus.mp3; sourceTree = "<group>"; };
 		34D99D1D1C8539A100106795 /* Raptor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Raptor.mp3; sourceTree = "<group>"; };
+		34D99D221C853A8000106795 /* eating.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eating.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +371,7 @@
 		348CAC011C7587EA0016CC38 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				34D99D221C853A8000106795 /* eating.mp3 */,
 				34D99D1A1C8539A100106795 /* Trex.mp3 */,
 				34D99D1B1C8539A100106795 /* trike.mp3 */,
 				34D99D1C1C8539A100106795 /* Spinosaurus.mp3 */,
@@ -525,6 +528,7 @@
 				348293B11C507CF70078CB29 /* Spinosaurus.scn in Resources */,
 				348CAC141C758A550016CC38 /* trex.mtl in Resources */,
 				348293B81C509B340078CB29 /* trike.png in Resources */,
+				34D99D231C853A8000106795 /* eating.mp3 in Resources */,
 				342BBFAD1C4DBE1000C4C9AE /* raptor.jpg in Resources */,
 				348293AB1C507CD20078CB29 /* Spine_S.tga in Resources */,
 				34D99D1F1C8539A100106795 /* trike.mp3 in Resources */,

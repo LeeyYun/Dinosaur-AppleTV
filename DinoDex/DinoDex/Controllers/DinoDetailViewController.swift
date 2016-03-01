@@ -25,6 +25,7 @@ class DinoDetailViewController: UIViewController {
     var currentDino: Dinosaur!
     var currentDinoNode: SCNNode?
     var soundString: String!
+    var mySound: SystemSoundID = 0
     
     @IBOutlet weak var scrollLabel: UILabel!
     @IBOutlet weak var voiceButton: UIButton!
@@ -73,6 +74,9 @@ class DinoDetailViewController: UIViewController {
         nameLabel.text = currentDino.nameString
         descriptionLabel.text = currentDino.descriptionString
         
+        //setup voice button
+        voiceButton.addTarget(self, action: "playNarration", forControlEvents: .TouchUpInside)
+        
         
     }
     
@@ -114,15 +118,21 @@ class DinoDetailViewController: UIViewController {
         }
     }
     
-    func playSound() {
-        if let soundURL = NSBundle.mainBundle().URLForResource(soundString, withExtension: "mp3") {
-            var mySound: SystemSoundID = 0
+    func playSound(mp3FileName: String) {
+        if let soundURL = NSBundle.mainBundle().URLForResource(mp3FileName, withExtension: "mp3") {
             AudioServicesCreateSystemSoundID(soundURL, &mySound)
             // Play
             AudioServicesPlaySystemSound(mySound);
         }
         
     }
+    
+    
+    func stopSound() {
+        
+        AudioServicesDisposeSystemSoundID(mySound)
+    }
+    
     func toggleSpinDino() {
         if voiceButton.enabled { //enable spinning
             feedButton.resignFirstResponder()
@@ -168,10 +178,18 @@ class DinoDetailViewController: UIViewController {
         
     }
     
+    func playNarration() {
+        playSound(soundString)
+        voiceButton.setTitle("Stop Narration", forState: .Normal)
+        voiceButton.removeTarget(nil, action: nil, forControlEvents: .AllEvents)
+        voiceButton.addTarget(self, action: "stopNarration", forControlEvents: .TouchUpInside)
+    }
     
-    
-    @IBAction func tappedVoiceButton(sender: AnyObject) {
-        playSound()
+    func stopNarration() {
+        stopSound()
+        voiceButton.setTitle("Play Voice Narration", forState: .Normal)
+        voiceButton.removeTarget(nil, action: nil, forControlEvents: .AllEvents)
+        voiceButton.addTarget(self, action: "playNarration", forControlEvents: .TouchUpInside)
     }
     
     
@@ -185,7 +203,7 @@ class DinoDetailViewController: UIViewController {
             self.foodLabel.frame = CGRect(x: oldFrame.origin.x, y: oldFrame.origin.y + 500, width: oldFrame.width, height: oldFrame.height)
             
             }, completion: { _ in
-                
+                self.playSound("eating")
                 UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveLinear, animations: { _ in
                     self.foodLabel.alpha = 0.0
                     
