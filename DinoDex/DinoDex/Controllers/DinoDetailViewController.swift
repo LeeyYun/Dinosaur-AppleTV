@@ -52,7 +52,7 @@ class DinoDetailViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        animateSpinningDinosaur(1.0)
+        animateSpinningDinosaur(0.5, angle: 6.28)
         addBobbingAnimation()
     }
     
@@ -74,6 +74,7 @@ class DinoDetailViewController: UIViewController {
         soundString = currentDino.previewImageName //make sure mp3 file name is same as image preview name
         nameLabel.text = currentDino.nameString
         descriptionLabel.text = currentDino.descriptionString
+        foodLabel.text = currentDino.foodString
         
         //setup voice button
         voiceButton.addTarget(self, action: "playNarration", forControlEvents: .PrimaryActionTriggered)
@@ -91,9 +92,9 @@ class DinoDetailViewController: UIViewController {
         self.currentDinoNode = node //save copy of current dino node
     }
     
-    func animateSpinningDinosaur(duration: Double) {
+    func animateSpinningDinosaur(duration: Double, angle: CGFloat) {
         sceneView.allowsCameraControl = false
-        let rotateByAxisAction = SCNAction.rotateByAngle(6.28, aroundAxis: SCNVector3.init(0, 1, 0), duration: duration)
+        let rotateByAxisAction = SCNAction.rotateByAngle(angle, aroundAxis: SCNVector3.init(0, 1, 0), duration: duration)
         rotateByAxisAction.timingMode = .EaseInEaseOut
         if let node = self.currentDinoNode {
             node.runAction(rotateByAxisAction, completionHandler: { _ in
@@ -165,6 +166,9 @@ class DinoDetailViewController: UIViewController {
             //set label for directions
             scrollLabel.text = "Scroll on the touch surface to rotate.\nPress Play/Pause to end 3D rotating."
             
+            //spin dino around once
+            animateSpinningDinosaur(0.5, angle: 6.28)
+            
             //begin dinosaur pulsating animation so user knows he/she can swipe to rotate
             addBobbingAnimation()
         }
@@ -230,7 +234,7 @@ class DinoDetailViewController: UIViewController {
                         self.feedButton.enabled = true
                         //self.sceneView.scene = SCNScene(named: self.currentDino.sceneKitString)  //replay actions
                         //rotate dino after feeding
-                        self.animateSpinningDinosaur(0.5)
+                        self.animateSpinningDinosaur(0.8, angle: 12.57)
                 })
                 
                 

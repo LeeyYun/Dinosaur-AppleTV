@@ -13,12 +13,14 @@ class Dinosaur: NSObject {
     var descriptionString: String!
     var sceneKitString: String!
     var previewImageName: String!
+    var foodString: String!
     
     
-    init(name: String!, imagePreviewString: String!, description: String!, sceneName: String!){
+    init(name: String!, imagePreviewString: String!, description: String!, sceneName: String!, foodEmojiString: String!){
         self.nameString = name
         self.previewImageName = imagePreviewString
         self.descriptionString = description
         self.sceneKitString = sceneName
+        self.foodString = foodEmojiString
     }
 }
