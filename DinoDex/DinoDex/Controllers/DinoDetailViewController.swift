@@ -252,7 +252,9 @@ extension DinoDetailViewController: AVAudioPlayerDelegate {
     
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
-        //
+        if flag == true {
+            stopNarration()
+        }
     }
 }
 
