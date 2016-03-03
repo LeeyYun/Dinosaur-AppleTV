@@ -68,6 +68,8 @@
 		34E6C9CB1C87D6A800858278 /* brach.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E6C9C81C87D6A800858278 /* brach.png */; };
 		34E6C9CD1C87D90200858278 /* Brac.scn in Resources */ = {isa = PBXBuildFile; fileRef = 34E6C9CC1C87D6B500858278 /* Brac.scn */; };
 		34E6C9CF1C87E06800858278 /* brach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34E6C9CE1C87E06800858278 /* brach.mp3 */; };
+		34E6C9D11C87E31900858278 /* eating_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34E6C9D01C87E31900858278 /* eating_2.mp3 */; };
+		34E6C9D31C87E44300858278 /* eating_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34E6C9D21C87E44300858278 /* eating_3.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +170,8 @@
 		34E6C9C81C87D6A800858278 /* brach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brach.png; sourceTree = "<group>"; };
 		34E6C9CC1C87D6B500858278 /* Brac.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Brac.scn; sourceTree = "<group>"; };
 		34E6C9CE1C87E06800858278 /* brach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = brach.mp3; sourceTree = "<group>"; };
+		34E6C9D01C87E31900858278 /* eating_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eating_2.mp3; sourceTree = "<group>"; };
+		34E6C9D21C87E44300858278 /* eating_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eating_3.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,6 +390,8 @@
 		348CAC011C7587EA0016CC38 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				34E6C9D21C87E44300858278 /* eating_3.mp3 */,
+				34E6C9D01C87E31900858278 /* eating_2.mp3 */,
 				34E6C9CE1C87E06800858278 /* brach.mp3 */,
 				34D99D221C853A8000106795 /* eating.mp3 */,
 				34D99D1A1C8539A100106795 /* Trex.mp3 */,
@@ -565,8 +571,10 @@
 				348293A91C507CD20078CB29 /* Spine_D.tga in Resources */,
 				34E6C9C01C87D4FE00858278 /* trike_diffuse.tga in Resources */,
 				348CAC131C758A550016CC38 /* trex.dae in Resources */,
+				34E6C9D31C87E44300858278 /* eating_3.mp3 in Resources */,
 				34E6C9CD1C87D90200858278 /* Brac.scn in Resources */,
 				348CAC111C758A550016CC38 /* Trex-2_opa.png in Resources */,
+				34E6C9D11C87E31900858278 /* eating_2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -222,7 +222,10 @@ class DinoDetailViewController: UIViewController {
             self.foodLabel.frame = CGRect(x: oldFrame.origin.x, y: oldFrame.origin.y + 500, width: oldFrame.width, height: oldFrame.height)
             
             }, completion: { _ in
-                self.playSound("eating")
+                //play random eating sound
+                let array = ["eating", "eating_2", "eating_3"]
+                let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
+                self.playSound(array[randomIndex])
                 UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveLinear, animations: { _ in
                     self.foodLabel.alpha = 0.0
                     
