@@ -22,7 +22,7 @@ Explore Dinosaurs 3D is an Apple TV application aimed to educate about Dinosaurs
 
 
 ## Requirements
-Currently, Chill supports Xcode 7.2, tvOS 9.1+, and Swift 2.
+Currently, Explore Dinosaurs 3D supports Xcode 7.2.1, tvOS 9.1+, and Swift 2.
 
 <br>
 ## Features
