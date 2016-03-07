@@ -111,8 +111,27 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyX-A7-qjX">
+                                <rect key="frame" x="153" y="829" width="562" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Play Voice Narration"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUu-Wo-ZKb">
+                                <rect key="frame" x="153" y="939" width="562" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Feed Dinosaur"/>
+                                <connections>
+                                    <action selector="tappedFeedButton:" destination="r7B-RV-IQg" eventType="primaryActionTriggered" id="3IL-7e-4ta"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velociraptor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="45" translatesAutoresizingMaskIntoConstraints="NO" id="ynD-37-hsv">
+                                <rect key="frame" x="80" y="53" width="709" height="108"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="90"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="-1" height="-1"/>
+                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IJv-7g-OEi">
-                                <rect key="frame" x="941" y="929" width="877" height="187"/>
+                                <rect key="frame" x="943" y="1080" width="877" height="187"/>
                                 <subviews>
                                     <view alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ayM-2g-ZwP">
                                         <rect key="frame" x="0.0" y="0.0" width="877" height="187"/>
@@ -144,25 +163,6 @@ Press Play/Pause to end 3D rotating.</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyX-A7-qjX">
-                                <rect key="frame" x="153" y="829" width="562" height="86"/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Play Voice Narration"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUu-Wo-ZKb">
-                                <rect key="frame" x="153" y="939" width="562" height="86"/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Feed Dinosaur"/>
-                                <connections>
-                                    <action selector="tappedFeedButton:" destination="r7B-RV-IQg" eventType="primaryActionTriggered" id="3IL-7e-4ta"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velociraptor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="45" translatesAutoresizingMaskIntoConstraints="NO" id="ynD-37-hsv">
-                                <rect key="frame" x="80" y="53" width="709" height="108"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="90"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="-1" height="-1"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -180,6 +180,7 @@ Press Play/Pause to end 3D rotating.</string>
                         <outlet property="descriptionLabel" destination="8MZ-1z-U7Y" id="UnY-V7-8eI"/>
                         <outlet property="feedButton" destination="cUu-Wo-ZKb" id="miQ-Nz-3gz"/>
                         <outlet property="foodLabel" destination="X0l-XJ-8vf" id="JfS-8M-z43"/>
+                        <outlet property="instructionView" destination="IJv-7g-OEi" id="iTV-rr-9As"/>
                         <outlet property="nameLabel" destination="ynD-37-hsv" id="vCX-jF-7zc"/>
                         <outlet property="sceneView" destination="FSZ-hj-5Oa" id="Pe7-Q8-Zc1"/>
                         <outlet property="scrollLabel" destination="AGn-JZ-aBw" id="oH3-7f-Xcz"/>

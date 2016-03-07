@@ -13,6 +13,7 @@ import AVFoundation
 
 class DinoDetailViewController: UIViewController {
     
+    @IBOutlet weak var instructionView: UIView!
     @IBOutlet weak var foodLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -62,15 +63,9 @@ class DinoDetailViewController: UIViewController {
         
         animateSpinningDinosaur(0.5, angle: 6.28)
         addBobbingAnimation()
+        showInstructionsMomentarily()
         
-        //setup text resizing check here
-//        if (descriptionLabel.contentSize.height > descriptionLabel.frame.size.height) {
-//            var fontIncrement: CGFloat = 1
-//            while (descriptionLabel.contentSize.height > descriptionLabel.frame.size.height) {
-//                descriptionLabel.font = UIFont.systemFontOfSize(descriptionFontSize - fontIncrement)//[UIFont systemFontOfSize:kDefaultFontSize-fontIncrement];
-//                fontIncrement = fontIncrement + 1
-//            }
-//        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -90,22 +85,32 @@ class DinoDetailViewController: UIViewController {
     
     func setupView() {
         
-        
-        
         soundString = currentDino.previewImageName //make sure mp3 file name is same as image preview name
         nameLabel.text = currentDino.nameString
         descriptionLabel.text = currentDino.descriptionString
         foodLabel.text = currentDino.foodString
-        
-        
-        
-        
-        
+
         //setup voice button
         voiceButton.addTarget(self, action: "playNarration", forControlEvents: .PrimaryActionTriggered)
         
         
     }
+    
+    func showInstructionsMomentarily() {
+        let originalFrame = instructionView.frame
+        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 10, options: .CurveEaseInOut, animations: { _ in
+            self.instructionView.frame = CGRect(x: originalFrame.origin.x, y: originalFrame.origin.y - 150, width: originalFrame.width, height: originalFrame.height)
+            }, completion: { _ in
+                UIView.animateWithDuration(0.5, delay: 5.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 10, options: .CurveEaseInOut, animations: { _ in
+                        self.instructionView.frame = originalFrame
+                    }, completion: { _ in
+                        
+                })
+        })
+        
+    }
+    
+    
     
     
     func getRootNode() {
