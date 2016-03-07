@@ -70,6 +70,12 @@
 		34E6C9CF1C87E06800858278 /* brach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34E6C9CE1C87E06800858278 /* brach.mp3 */; };
 		34E6C9D11C87E31900858278 /* eating_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34E6C9D01C87E31900858278 /* eating_2.mp3 */; };
 		34E6C9D31C87E44300858278 /* eating_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34E6C9D21C87E44300858278 /* eating_3.mp3 */; };
+		34E6CA061C8DEF4E00858278 /* weeds.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 34E6CA021C8DEF4E00858278 /* weeds.3DS */; };
+		34E6CA071C8DEF4E00858278 /* weeds.max in Resources */ = {isa = PBXBuildFile; fileRef = 34E6CA031C8DEF4E00858278 /* weeds.max */; };
+		34E6CA081C8DEF4E00858278 /* weeds.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 34E6CA041C8DEF4E00858278 /* weeds.mtl */; };
+		34E6CA161C8E05A400858278 /* weeds.scn in Resources */ = {isa = PBXBuildFile; fileRef = 34E6CA0A1C8DEF9000858278 /* weeds.scn */; };
+		34E6CA181C8E2DFA00858278 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6CA171C8E2DFA00858278 /* UIViewExtensions.swift */; };
+		34E6CA1A1C8E3CA200858278 /* UIVerticalAlignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6CA191C8E3CA200858278 /* UIVerticalAlignLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +178,12 @@
 		34E6C9CE1C87E06800858278 /* brach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = brach.mp3; sourceTree = "<group>"; };
 		34E6C9D01C87E31900858278 /* eating_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eating_2.mp3; sourceTree = "<group>"; };
 		34E6C9D21C87E44300858278 /* eating_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eating_3.mp3; sourceTree = "<group>"; };
+		34E6CA021C8DEF4E00858278 /* weeds.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = weeds.3DS; sourceTree = "<group>"; };
+		34E6CA031C8DEF4E00858278 /* weeds.max */ = {isa = PBXFileReference; lastKnownFileType = file; path = weeds.max; sourceTree = "<group>"; };
+		34E6CA041C8DEF4E00858278 /* weeds.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = weeds.mtl; sourceTree = "<group>"; };
+		34E6CA0A1C8DEF9000858278 /* weeds.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = weeds.scn; sourceTree = "<group>"; };
+		34E6CA171C8E2DFA00858278 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		34E6CA191C8E3CA200858278 /* UIVerticalAlignLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVerticalAlignLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +298,7 @@
 		3432F8D41C51DED5008727F5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				34E6CA171C8E2DFA00858278 /* UIViewExtensions.swift */,
 				3432F8D51C51DEE5008727F5 /* UIColorExtension.swift */,
 			);
 			name = Extensions;
@@ -324,6 +337,7 @@
 			children = (
 				3482939D1C506C020078CB29 /* CustomFocusCell.swift */,
 				3444AD9E1C84F757001B03F5 /* DinoSceneView.swift */,
+				34E6CA191C8E3CA200858278 /* UIVerticalAlignLabel.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -332,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				348CAC011C7587EA0016CC38 /* Sounds */,
+				34E6CA011C8DEF4E00858278 /* gepy9extvym8-grass_weeds */,
 				34E6C9C51C87D67900858278 /* Brachiosaurus */,
 				348CAC081C7589E90016CC38 /* Tyrannosaurus */,
 				348293B21C509B260078CB29 /* Triceratops */,
@@ -425,6 +440,17 @@
 				34E6C9C81C87D6A800858278 /* brach.png */,
 			);
 			name = Brachiosaurus;
+			sourceTree = "<group>";
+		};
+		34E6CA011C8DEF4E00858278 /* gepy9extvym8-grass_weeds */ = {
+			isa = PBXGroup;
+			children = (
+				34E6CA021C8DEF4E00858278 /* weeds.3DS */,
+				34E6CA031C8DEF4E00858278 /* weeds.max */,
+				34E6CA041C8DEF4E00858278 /* weeds.mtl */,
+				34E6CA0A1C8DEF9000858278 /* weeds.scn */,
+			);
+			path = "gepy9extvym8-grass_weeds";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -550,16 +576,20 @@
 				342BBFAC1C4DBE1000C4C9AE /* Raptor.obj in Resources */,
 				34E6C9CF1C87E06800858278 /* brach.mp3 in Resources */,
 				34E6C9CB1C87D6A800858278 /* brach.png in Resources */,
+				34E6CA081C8DEF4E00858278 /* weeds.mtl in Resources */,
 				348CAC161C758A550016CC38 /* Trex.png in Resources */,
+				34E6CA061C8DEF4E00858278 /* weeds.3DS in Resources */,
 				342BBFAE1C4DBE1000C4C9AE /* raptor_normal.jpg in Resources */,
 				348293BA1C509B480078CB29 /* trex.scn in Resources */,
 				348293AC1C507CD20078CB29 /* Spinosaurus.mtl in Resources */,
 				34D99D1E1C8539A100106795 /* Trex.mp3 in Resources */,
 				348CAC151C758A550016CC38 /* trex.obj in Resources */,
 				348293AA1C507CD20078CB29 /* Spine_N.tga in Resources */,
+				34E6CA161C8E05A400858278 /* weeds.scn in Resources */,
 				348293AD1C507CD20078CB29 /* Spinosaurus.obj in Resources */,
 				34E6C9C11C87D4FE00858278 /* trike_normals.tga in Resources */,
 				34D99D201C8539A100106795 /* Spinosaurus.mp3 in Resources */,
+				34E6CA071C8DEF4E00858278 /* weeds.max in Resources */,
 				348293B11C507CF70078CB29 /* Spinosaurus.scn in Resources */,
 				348CAC141C758A550016CC38 /* trex.mtl in Resources */,
 				34D99D231C853A8000106795 /* eating.mp3 in Resources */,
@@ -599,9 +629,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E6CA1A1C8E3CA200858278 /* UIVerticalAlignLabel.swift in Sources */,
 				344964E71C7BA31500633451 /* IAPHelper.swift in Sources */,
 				3444AD9F1C84F757001B03F5 /* DinoSceneView.swift in Sources */,
 				348293971C506AD50078CB29 /* exampleDetailViewController.swift in Sources */,
+				34E6CA181C8E2DFA00858278 /* UIViewExtensions.swift in Sources */,
 				3482939E1C506C020078CB29 /* CustomFocusCell.swift in Sources */,
 				342BBF7A1C4DBD6C00C4C9AE /* AppDelegate.swift in Sources */,
 				348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */,

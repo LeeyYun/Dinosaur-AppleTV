@@ -15,9 +15,11 @@ class DinoDetailViewController: UIViewController {
     
     @IBOutlet weak var foodLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var descriptionLabel: UIVerticalAlignLabel!
     @IBOutlet var sceneView: DinoSceneView!
+    
+    var descriptionFontSize: CGFloat = 26
     
     var nameString: String!
     var descriptionString: String!
@@ -49,11 +51,26 @@ class DinoDetailViewController: UIViewController {
         }
     }
     
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         animateSpinningDinosaur(0.5, angle: 6.28)
         addBobbingAnimation()
+        
+        //setup text resizing check here
+//        if (descriptionLabel.contentSize.height > descriptionLabel.frame.size.height) {
+//            var fontIncrement: CGFloat = 1
+//            while (descriptionLabel.contentSize.height > descriptionLabel.frame.size.height) {
+//                descriptionLabel.font = UIFont.systemFontOfSize(descriptionFontSize - fontIncrement)//[UIFont systemFontOfSize:kDefaultFontSize-fontIncrement];
+//                fontIncrement = fontIncrement + 1
+//            }
+//        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,11 +87,19 @@ class DinoDetailViewController: UIViewController {
     }
     
     
+    
     func setupView() {
+        
+        
+        
         soundString = currentDino.previewImageName //make sure mp3 file name is same as image preview name
         nameLabel.text = currentDino.nameString
         descriptionLabel.text = currentDino.descriptionString
         foodLabel.text = currentDino.foodString
+        
+        
+        
+        
         
         //setup voice button
         voiceButton.addTarget(self, action: "playNarration", forControlEvents: .PrimaryActionTriggered)
