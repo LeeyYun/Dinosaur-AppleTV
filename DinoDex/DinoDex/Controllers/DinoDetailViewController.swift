@@ -26,6 +26,8 @@ class DinoDetailViewController: UIViewController {
     var descriptionString: String!
     var sceneKitString: String!
     
+    var isPlayingVoice = false
+    
     var currentDino: Dinosaur!
     var currentDinoNode: SCNNode?
     var soundString: String!
@@ -45,10 +47,16 @@ class DinoDetailViewController: UIViewController {
     
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
         if(presses.first?.type == UIPressType.PlayPause) { //user pressed play/pause button, toggle spin action
-            toggleSpinDino()
+            //toggleSpinDino()
+            if (isPlayingVoice == false) {
+                playNarration()
+            }
+            else {
+                stopNarration()
+            }
         }
         else if (presses.first?.type == UIPressType.Select) {
-            
+            tappedFeedButton(self)
         }
         else {
             // perform default action (in your case, exit)
@@ -169,6 +177,7 @@ class DinoDetailViewController: UIViewController {
                 player.prepareToPlay()
                 player.delegate = self
                 player.play()
+                self.isPlayingVoice = true
             }
             catch {
                 print("Error getting the audio file")
@@ -181,6 +190,7 @@ class DinoDetailViewController: UIViewController {
     func stopSound() {
         
         player.stop()
+        self.isPlayingVoice = false
     }
     
     func toggleSpinDino() {
@@ -249,11 +259,29 @@ class DinoDetailViewController: UIViewController {
     
     @IBAction func tappedFeedButton(sender: AnyObject) {
         feedButton.enabled = false
-        foodLabel.hidden = false
-        let oldFrame = foodLabel.frame
+        
+        //add new food label
+        let xValueArray = [888, 1100, 1200, 1300, 1400, 1500, 1600, 1700] //randomly drop food from different locations
+        let randomXIndex = Int(arc4random_uniform(UInt32(xValueArray.count)))
+        let tempFoodLabel = UILabel(frame: CGRect(x: xValueArray[randomXIndex], y: -100, width: 145, height: 101))
+        
+        //randomize font size
+        let sizeArray: [CGFloat] = [90, 80, 70, 60, 50, 40] //randomly drop food to different distances
+        let randomSizeIndex = Int(arc4random_uniform(UInt32(sizeArray.count)))
+        let randomFontSize = sizeArray[randomSizeIndex]
+        tempFoodLabel.font = UIFont.systemFontOfSize(randomFontSize)
+        
+        tempFoodLabel.text = currentDino.foodString
+        self.view.addSubview(tempFoodLabel)
+        
+        
+        let yValueArray: [CGFloat] = [500, 400, 600, 700, 800] //randomly drop food to different distances
+        let randomYIndex = Int(arc4random_uniform(UInt32(yValueArray.count)))
+        let randomYDistance = yValueArray[randomYIndex]
+        let oldFrame = tempFoodLabel.frame
         UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 2, options: .CurveEaseOut, animations: { _ in
             
-            self.foodLabel.frame = CGRect(x: oldFrame.origin.x, y: oldFrame.origin.y + 500, width: oldFrame.width, height: oldFrame.height)
+            tempFoodLabel.frame = CGRect(x: oldFrame.origin.x, y: oldFrame.origin.y + randomYDistance, width: oldFrame.width, height: oldFrame.height)
             
             }, completion: { _ in
                 //play random eating sound
@@ -261,13 +289,11 @@ class DinoDetailViewController: UIViewController {
                 let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
                 self.playSound(array[randomIndex])
                 UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveLinear, animations: { _ in
-                    self.foodLabel.alpha = 0.0
+                    tempFoodLabel.alpha = 0.0
                     
                     
                     }, completion: { _ in
-                        self.foodLabel.hidden = true
-                        self.foodLabel.alpha = 1.0
-                        self.foodLabel.frame = oldFrame
+                        tempFoodLabel.removeFromSuperview()
                         self.feedButton.enabled = true
                         //self.sceneView.scene = SCNScene(named: self.currentDino.sceneKitString)  //replay actions
                         //rotate dino after feeding
