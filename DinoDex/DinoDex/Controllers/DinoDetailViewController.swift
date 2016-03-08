@@ -14,14 +14,11 @@ import AVFoundation
 class DinoDetailViewController: UIViewController {
     
     @IBOutlet weak var instructionView: UIView!
-    @IBOutlet weak var foodLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var descriptionLabel: UIVerticalAlignLabel!
     @IBOutlet var sceneView: DinoSceneView!
-    
-    var descriptionFontSize: CGFloat = 26
-    
+
     var nameString: String!
     var descriptionString: String!
     var sceneKitString: String!
@@ -34,8 +31,6 @@ class DinoDetailViewController: UIViewController {
     var player : AVAudioPlayer! = nil // will be Optional, must supply initializer
     
     @IBOutlet weak var scrollLabel: UILabel!
-    @IBOutlet weak var voiceButton: UIButton!
-    @IBOutlet weak var feedButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +51,7 @@ class DinoDetailViewController: UIViewController {
             }
         }
         else if (presses.first?.type == UIPressType.Select) {
-            tappedFeedButton(self)
+            tappedFeedButton()
         }
         else {
             // perform default action (in your case, exit)
@@ -86,11 +81,11 @@ class DinoDetailViewController: UIViewController {
     }
     
     override weak var preferredFocusedView: UIView? {
-        if voiceButton.enabled == true {
-            return voiceButton
-        } else {
+//        if voiceButton.enabled == true {
+//            return voiceButton
+//        } else {
             return sceneView
-        }
+        //}
     }
     
     
@@ -100,10 +95,6 @@ class DinoDetailViewController: UIViewController {
         soundString = currentDino.previewImageName //make sure mp3 file name is same as image preview name
         nameLabel.text = currentDino.nameString
         descriptionLabel.text = currentDino.descriptionString
-        foodLabel.text = currentDino.foodString
-        
-        //setup voice button
-        voiceButton.addTarget(self, action: "playNarration", forControlEvents: .PrimaryActionTriggered)
         
         
     }
@@ -193,72 +184,65 @@ class DinoDetailViewController: UIViewController {
         self.isPlayingVoice = false
     }
     
-    func toggleSpinDino() {
-        if voiceButton.enabled { //enable spinning
-            feedButton.resignFirstResponder()
-            voiceButton.resignFirstResponder()
-            
-            sceneView.userInteractionEnabled = true
-            sceneView.becomeFirstResponder()
-            
-            voiceButton.enabled = false
-            feedButton.enabled = false
-            
-            self.setNeedsFocusUpdate()
-            self.updateFocusIfNeeded()
-            
-            //set label for directions
-            scrollLabel.text = "Scroll on the touch surface to rotate.\nPress Play/Pause to end 3D rotating."
-            
-            //spin dino around once
-            animateSpinningDinosaur(0.5, angle: 6.28)
-            
-            //begin dinosaur pulsating animation so user knows he/she can swipe to rotate
-            addBobbingAnimation()
-        }
-        else { //disable spinning
-            
-            
-            sceneView.resignFirstResponder()
-            sceneView.userInteractionEnabled = false
-            
-            
-            voiceButton.enabled = true
-            feedButton.enabled = true
-            
-            self.setNeedsFocusUpdate()
-            self.updateFocusIfNeeded()
-            
-            voiceButton.becomeFirstResponder()
-            //voiceButton.selected = true
-            
-            //set label for directions
-            scrollLabel.text = "Select an option from the left,\nor press Play/Pause to enable 3D rotating."
-            
-            //reset scene to remove pulsating action, user no longer can swipe to rotate
-            getRootNode()
-        }
-        
-    }
+//    func toggleSpinDino() {
+//        if voiceButton.enabled { //enable spinning
+//            feedButton.resignFirstResponder()
+//            voiceButton.resignFirstResponder()
+//            
+//            sceneView.userInteractionEnabled = true
+//            sceneView.becomeFirstResponder()
+//            
+//            voiceButton.enabled = false
+//            feedButton.enabled = false
+//            
+//            self.setNeedsFocusUpdate()
+//            self.updateFocusIfNeeded()
+//            
+//            //set label for directions
+//            scrollLabel.text = "Scroll on the touch surface to rotate.\nPress Play/Pause to end 3D rotating."
+//            
+//            //spin dino around once
+//            animateSpinningDinosaur(0.5, angle: 6.28)
+//            
+//            //begin dinosaur pulsating animation so user knows he/she can swipe to rotate
+//            addBobbingAnimation()
+//        }
+//        else { //disable spinning
+//            
+//            
+//            sceneView.resignFirstResponder()
+//            sceneView.userInteractionEnabled = false
+//            
+//            
+//            voiceButton.enabled = true
+//            feedButton.enabled = true
+//            
+//            self.setNeedsFocusUpdate()
+//            self.updateFocusIfNeeded()
+//            
+//            voiceButton.becomeFirstResponder()
+//            //voiceButton.selected = true
+//            
+//            //set label for directions
+//            scrollLabel.text = "Select an option from the left,\nor press Play/Pause to enable 3D rotating."
+//            
+//            //reset scene to remove pulsating action, user no longer can swipe to rotate
+//            getRootNode()
+//        }
+//        
+//    }
     
     func playNarration() {
         playSound(soundString)
-        voiceButton.setTitle("Stop Narration", forState: .Normal)
-        voiceButton.removeTarget(nil, action: nil, forControlEvents: .AllEvents)
-        voiceButton.addTarget(self, action: "stopNarration", forControlEvents: .PrimaryActionTriggered)
     }
     
     func stopNarration() {
         stopSound()
-        voiceButton.setTitle("Play Voice Narration", forState: .Normal)
-        voiceButton.removeTarget(nil, action: nil, forControlEvents: .AllEvents)
-        voiceButton.addTarget(self, action: "playNarration", forControlEvents: .PrimaryActionTriggered)
     }
     
     
     
-    @IBAction func tappedFeedButton(sender: AnyObject) {
-        feedButton.enabled = false
+    func tappedFeedButton() {
         
         //add new food label
         let xValueArray = [888, 1100, 1200, 1300, 1400, 1500, 1600, 1700] //randomly drop food from different locations
@@ -294,7 +278,6 @@ class DinoDetailViewController: UIViewController {
                     
                     }, completion: { _ in
                         tempFoodLabel.removeFromSuperview()
-                        self.feedButton.enabled = true
                         //self.sceneView.scene = SCNScene(named: self.currentDino.sceneKitString)  //replay actions
                         //rotate dino after feeding
                         self.animateSpinningDinosaur(0.8, angle: 12.57)
