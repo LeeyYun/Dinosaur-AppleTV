@@ -86,9 +86,9 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="8MZ-1z-U7Y" customClass="UIVerticalAlignLabel" customModule="DinoDex" customModuleProvider="target">
-                                <rect key="frame" x="113" y="223" width="495" height="741"/>
+                                <rect key="frame" x="113" y="213" width="495" height="751"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="741" id="EYl-5I-OgE"/>
+                                    <constraint firstAttribute="height" constant="751" id="EYl-5I-OgE"/>
                                     <constraint firstAttribute="width" constant="495" id="axw-0i-Yjg"/>
                                 </constraints>
                                 <string key="text">Tyrannosaurus Rex was one of the largest land carnivores of all time; the largest complete specimen, located at the Field Museum of Natural History under the name FMNH PR2081 and nicknamed Sue, measured 12.3 meters (40 ft) long, and was 4 meters (13 ft) tall at the hips.
