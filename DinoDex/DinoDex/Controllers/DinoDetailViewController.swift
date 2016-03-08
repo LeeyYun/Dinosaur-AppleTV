@@ -46,7 +46,11 @@ class DinoDetailViewController: UIViewController {
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
         if(presses.first?.type == UIPressType.PlayPause) { //user pressed play/pause button, toggle spin action
             toggleSpinDino()
-        } else {
+        }
+        else if (presses.first?.type == UIPressType.Select) {
+            
+        }
+        else {
             // perform default action (in your case, exit)
             super.pressesBegan(presses, withEvent: event)
         }
@@ -89,7 +93,7 @@ class DinoDetailViewController: UIViewController {
         nameLabel.text = currentDino.nameString
         descriptionLabel.text = currentDino.descriptionString
         foodLabel.text = currentDino.foodString
-
+        
         //setup voice button
         voiceButton.addTarget(self, action: "playNarration", forControlEvents: .PrimaryActionTriggered)
         
@@ -102,7 +106,7 @@ class DinoDetailViewController: UIViewController {
             self.instructionView.frame = CGRect(x: originalFrame.origin.x, y: originalFrame.origin.y - 150, width: originalFrame.width, height: originalFrame.height)
             }, completion: { _ in
                 UIView.animateWithDuration(0.5, delay: 5.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 10, options: .CurveEaseInOut, animations: { _ in
-                        self.instructionView.frame = originalFrame
+                    self.instructionView.frame = originalFrame
                     }, completion: { _ in
                         
                 })
