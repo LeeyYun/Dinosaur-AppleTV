@@ -243,6 +243,8 @@ class DinoDetailViewController: UIViewController {
     
     
     func tappedFeedButton() {
+        getRootNode()
+        
         
         //add new food label
         let xValueArray = [888, 1100, 1200, 1300, 1400, 1500, 1600, 1700] //randomly drop food from different locations

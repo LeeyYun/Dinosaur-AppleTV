@@ -77,7 +77,7 @@
                                 </constraints>
                             </sceneKitView>
                             <view alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="emy-Pc-UyG">
-                                <rect key="frame" x="52" y="80" width="763" height="740"/>
+                                <rect key="frame" x="52" y="50" width="617" height="982"/>
                                 <color key="backgroundColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -85,36 +85,36 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="8MZ-1z-U7Y" customClass="UIVerticalAlignLabel" customModule="DinoDex" customModuleProvider="target">
-                                <rect key="frame" x="89" y="223" width="695" height="542"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="8MZ-1z-U7Y" customClass="UIVerticalAlignLabel" customModule="DinoDex" customModuleProvider="target">
+                                <rect key="frame" x="113" y="223" width="495" height="741"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="542" id="EYl-5I-OgE"/>
-                                    <constraint firstAttribute="width" constant="695" id="axw-0i-Yjg"/>
+                                    <constraint firstAttribute="height" constant="741" id="EYl-5I-OgE"/>
+                                    <constraint firstAttribute="width" constant="495" id="axw-0i-Yjg"/>
                                 </constraints>
                                 <string key="text">Tyrannosaurus Rex was one of the largest land carnivores of all time; the largest complete specimen, located at the Field Museum of Natural History under the name FMNH PR2081 and nicknamed Sue, measured 12.3 meters (40 ft) long, and was 4 meters (13 ft) tall at the hips.
 
 Most paleontologists accept that Tyrannosaurus was both an active predator and a scavenger like most large carnivores. Tyrannosaurus may have even had infectious saliva used to kill its prey.</string>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="62"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="-1" height="-1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source: Wikipedia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-Y3-JfT">
-                                <rect key="frame" x="152" y="770" width="564" height="47"/>
+                                <rect key="frame" x="113" y="966" width="495" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="iTX-uU-JMA"/>
-                                    <constraint firstAttribute="width" constant="564" id="tgL-G4-VtP"/>
+                                    <constraint firstAttribute="width" constant="495" id="tgL-G4-VtP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velociraptor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="45" translatesAutoresizingMaskIntoConstraints="NO" id="ynD-37-hsv">
-                                <rect key="frame" x="90" y="90" width="694" height="108"/>
+                                <rect key="frame" x="113" y="90" width="495" height="108"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="90"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="-1" height="-1"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IJv-7g-OEi">
-                                <rect key="frame" x="52" y="1080" width="763" height="187"/>
+                                <rect key="frame" x="1053" y="1080" width="763" height="187"/>
                                 <subviews>
                                     <view alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ayM-2g-ZwP">
                                         <rect key="frame" x="0.0" y="0.0" width="763" height="187"/>
@@ -151,11 +151,11 @@ Most paleontologists accept that Tyrannosaurus was both an active predator and a
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FSZ-hj-5Oa" firstAttribute="height" secondItem="spR-Sp-aIf" secondAttribute="height" id="3vm-Q8-RZk"/>
-                            <constraint firstItem="8MZ-1z-U7Y" firstAttribute="leading" secondItem="spR-Sp-aIf" secondAttribute="leading" constant="89" id="GJF-PS-N9P"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="ffE-Y3-JfT" secondAttribute="bottom" constant="263" id="TSI-Ha-5ph"/>
+                            <constraint firstItem="8MZ-1z-U7Y" firstAttribute="leading" secondItem="spR-Sp-aIf" secondAttribute="leading" constant="113" id="GJF-PS-N9P"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ffE-Y3-JfT" secondAttribute="bottom" constant="67" id="TSI-Ha-5ph"/>
                             <constraint firstAttribute="topMargin" secondItem="FSZ-hj-5Oa" secondAttribute="top" id="bV2-VH-2Fl"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="8MZ-1z-U7Y" secondAttribute="bottom" constant="315" id="gKE-op-2Iq"/>
-                            <constraint firstItem="ffE-Y3-JfT" firstAttribute="leading" secondItem="spR-Sp-aIf" secondAttribute="leading" constant="152" id="lin-X2-dAH"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="8MZ-1z-U7Y" secondAttribute="bottom" constant="116" id="gKE-op-2Iq"/>
+                            <constraint firstItem="ffE-Y3-JfT" firstAttribute="leading" secondItem="spR-Sp-aIf" secondAttribute="leading" constant="113" id="lin-X2-dAH"/>
                             <constraint firstAttribute="trailing" secondItem="FSZ-hj-5Oa" secondAttribute="trailing" constant="-141" id="t7Z-KT-jca"/>
                         </constraints>
                     </view>
