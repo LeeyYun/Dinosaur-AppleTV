@@ -27,6 +27,13 @@
 		3471CA9D1C91123F003DAF0E /* stegosaurus.max in Resources */ = {isa = PBXBuildFile; fileRef = 3471CA961C91123F003DAF0E /* stegosaurus.max */; };
 		3471CA9E1C91123F003DAF0E /* stegosaurus.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 3471CA971C91123F003DAF0E /* stegosaurus.mtl */; };
 		3471CAA11C911257003DAF0E /* stegosaurus.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAA01C911251003DAF0E /* stegosaurus.scn */; };
+		3471CAAA1C911C27003DAF0E /* comcolor.tga in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAA31C911C27003DAF0E /* comcolor.tga */; };
+		3471CAAB1C911C27003DAF0E /* comnormal.tga in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAA41C911C27003DAF0E /* comnormal.tga */; };
+		3471CAAC1C911C27003DAF0E /* Compy.FBX in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAA51C911C27003DAF0E /* Compy.FBX */; };
+		3471CAAD1C911C27003DAF0E /* Compy.max in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAA61C911C27003DAF0E /* Compy.max */; };
+		3471CAAE1C911C27003DAF0E /* Compy.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAA71C911C27003DAF0E /* Compy.mtl */; };
+		3471CAB01C911C27003DAF0E /* comspec.tga in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAA91C911C27003DAF0E /* comspec.tga */; };
+		3471CAB21C911C37003DAF0E /* Compy.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAB11C911C32003DAF0E /* Compy.scn */; };
 		348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */; };
 		348293971C506AD50078CB29 /* exampleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293931C506AD50078CB29 /* exampleDetailViewController.swift */; };
 		348293981C506AD50078CB29 /* DinoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293941C506AD50078CB29 /* DinoDetailViewController.swift */; };
@@ -147,6 +154,13 @@
 		3471CA961C91123F003DAF0E /* stegosaurus.max */ = {isa = PBXFileReference; lastKnownFileType = file; path = stegosaurus.max; sourceTree = "<group>"; };
 		3471CA971C91123F003DAF0E /* stegosaurus.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stegosaurus.mtl; sourceTree = "<group>"; };
 		3471CAA01C911251003DAF0E /* stegosaurus.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = stegosaurus.scn; sourceTree = "<group>"; };
+		3471CAA31C911C27003DAF0E /* comcolor.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = comcolor.tga; sourceTree = "<group>"; };
+		3471CAA41C911C27003DAF0E /* comnormal.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = comnormal.tga; sourceTree = "<group>"; };
+		3471CAA51C911C27003DAF0E /* Compy.FBX */ = {isa = PBXFileReference; lastKnownFileType = file; path = Compy.FBX; sourceTree = "<group>"; };
+		3471CAA61C911C27003DAF0E /* Compy.max */ = {isa = PBXFileReference; lastKnownFileType = file; path = Compy.max; sourceTree = "<group>"; };
+		3471CAA71C911C27003DAF0E /* Compy.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Compy.mtl; sourceTree = "<group>"; };
+		3471CAA91C911C27003DAF0E /* comspec.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = comspec.tga; sourceTree = "<group>"; };
+		3471CAB11C911C32003DAF0E /* Compy.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Compy.scn; sourceTree = "<group>"; };
 		348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFocusEffectsCollectionViewController.swift; path = Controllers/CustomFocusEffectsCollectionViewController.swift; sourceTree = "<group>"; };
 		348293931C506AD50078CB29 /* exampleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = exampleDetailViewController.swift; path = Controllers/exampleDetailViewController.swift; sourceTree = "<group>"; };
 		348293941C506AD50078CB29 /* DinoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DinoDetailViewController.swift; path = Controllers/DinoDetailViewController.swift; sourceTree = "<group>"; };
@@ -333,6 +347,20 @@
 			name = Stegosaurus;
 			sourceTree = "<group>";
 		};
+		3471CAA21C911C1E003DAF0E /* Compy */ = {
+			isa = PBXGroup;
+			children = (
+				3471CAA31C911C27003DAF0E /* comcolor.tga */,
+				3471CAA41C911C27003DAF0E /* comnormal.tga */,
+				3471CAA51C911C27003DAF0E /* Compy.FBX */,
+				3471CAA61C911C27003DAF0E /* Compy.max */,
+				3471CAA71C911C27003DAF0E /* Compy.mtl */,
+				3471CAB11C911C32003DAF0E /* Compy.scn */,
+				3471CAA91C911C27003DAF0E /* comspec.tga */,
+			);
+			name = Compy;
+			sourceTree = "<group>";
+		};
 		3482938D1C506A3F0078CB29 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +393,7 @@
 		3482939A1C506B030078CB29 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3471CAA21C911C1E003DAF0E /* Compy */,
 				3471CA911C911234003DAF0E /* Stegosaurus */,
 				348CAC011C7587EA0016CC38 /* Sounds */,
 				34E6C9C51C87D67900858278 /* Brachiosaurus */,
@@ -580,6 +609,7 @@
 				3471CA9E1C91123F003DAF0E /* stegosaurus.mtl in Resources */,
 				34E6C9C41C87D59300858278 /* trike.scn in Resources */,
 				342BBF811C4DBD6C00C4C9AE /* Main.storyboard in Resources */,
+				3471CAB21C911C37003DAF0E /* Compy.scn in Resources */,
 				342BBFAB1C4DBE1000C4C9AE /* Raptor.mtl in Resources */,
 				34E6C9C21C87D4FE00858278 /* trike_spec.tga in Resources */,
 				3471CA9C1C91123F003DAF0E /* stegosaurus.FBX in Resources */,
@@ -592,12 +622,15 @@
 				348CAC161C758A550016CC38 /* Trex.png in Resources */,
 				342BBFAE1C4DBE1000C4C9AE /* raptor_normal.jpg in Resources */,
 				348293BA1C509B480078CB29 /* trex.scn in Resources */,
+				3471CAAB1C911C27003DAF0E /* comnormal.tga in Resources */,
+				3471CAAE1C911C27003DAF0E /* Compy.mtl in Resources */,
 				348293AC1C507CD20078CB29 /* Spinosaurus.mtl in Resources */,
 				3471CA9A1C91123F003DAF0E /* Stegosaurus_N.tga in Resources */,
 				34D99D1E1C8539A100106795 /* Trex.mp3 in Resources */,
 				348CAC151C758A550016CC38 /* trex.obj in Resources */,
 				348293AA1C507CD20078CB29 /* Spine_N.tga in Resources */,
 				348293AD1C507CD20078CB29 /* Spinosaurus.obj in Resources */,
+				3471CAAC1C911C27003DAF0E /* Compy.FBX in Resources */,
 				34E6C9C11C87D4FE00858278 /* trike_normals.tga in Resources */,
 				3471CAA11C911257003DAF0E /* stegosaurus.scn in Resources */,
 				34D99D201C8539A100106795 /* Spinosaurus.mp3 in Resources */,
@@ -608,7 +641,10 @@
 				34E6C9BE1C87D4FE00858278 /* Triceratop.mtl in Resources */,
 				348293AB1C507CD20078CB29 /* Spine_S.tga in Resources */,
 				34D99D1F1C8539A100106795 /* trike.mp3 in Resources */,
+				3471CAAD1C911C27003DAF0E /* Compy.max in Resources */,
+				3471CAAA1C911C27003DAF0E /* comcolor.tga in Resources */,
 				34E6C9C91C87D6A800858278 /* Brac.mtl in Resources */,
+				3471CAB01C911C27003DAF0E /* comspec.tga in Resources */,
 				348293A91C507CD20078CB29 /* Spine_D.tga in Resources */,
 				34E6C9C01C87D4FE00858278 /* trike_diffuse.tga in Resources */,
 				348CAC131C758A550016CC38 /* trex.dae in Resources */,

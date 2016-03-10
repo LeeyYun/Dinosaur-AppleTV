@@ -60,7 +60,13 @@ class DinoDataManager: NSObject {
             imagePreviewString: "trike",
             description: "Individual Triceratops are estimated to have reached about 7.9 to 9.0 m (26.0–29.5 ft) in length, 2.9 to 3.0 m (9.5 to 9.8 ft) in height, and 6.1–12.0 tonnes (13,000–26,000 lb) in weight. The most distinctive feature is their large skull, among the largest of all land animals. The largest known skull is estimated to have been 2.5 metres (8.2 ft) in length when complete, and could reach almost a third of the length of the entire animal. It bore a single horn on the snout, above the nostrils, and a pair of horns approximately 1 m (3.3 ft) long, with one above each eye. To the rear of the skull was a relatively short, bony frill, adorned with epoccipitals in some specimens.\n\nTriceratops were herbivorous, and because of their low head, their primary food was probably low growth, although they may have been able to knock down taller plants with their horns, beak, and bulk. The jaws were tipped with a deep, narrow beak, believed to have been better at grasping and plucking than biting.",
             sceneName: "trike.scn",
-            foodEmojiString: "🌿")
+            foodEmojiString: "🌿"),
+        Dinosaur(
+            name: "Compsognathus",
+            imagePreviewString: "Compy",
+            description: "Compsognathus (\"elegant\" or \"dainty\", and \"jaw\") is a genus of small, bipedal, carnivorous theropod dinosaurs. For decades, Compsognathus were famed as the smallest dinosaurs known; the first specimen collected was around 1 m (3 ft) in length. They had long hind legs and longer tails, which they used for balance during locomotion. The forelimbs were smaller than the hindlimbs and featured three digits equipped with solid claws suited for grasping prey.\n\nThe teeth were small but sharp, suited for its diet of small vertebrates and possibly other small animals, such as insects.",
+            sceneName: "Compy.scn",
+            foodEmojiString: "🐞")
     ]
     
     var dinoDLCArray: [Dinosaur] = [
@@ -81,7 +87,13 @@ class DinoDataManager: NSObject {
             imagePreviewString: "trike",
             description: "Individual Triceratops are estimated to have reached about 7.9 to 9.0 m (26.0–29.5 ft) in length, 2.9 to 3.0 m (9.5 to 9.8 ft) in height, and 6.1–12.0 tonnes (13,000–26,000 lb) in weight. The most distinctive feature is their large skull, among the largest of all land animals. The largest known skull is estimated to have been 2.5 metres (8.2 ft) in length when complete, and could reach almost a third of the length of the entire animal. It bore a single horn on the snout, above the nostrils, and a pair of horns approximately 1 m (3.3 ft) long, with one above each eye. To the rear of the skull was a relatively short, bony frill, adorned with epoccipitals in some specimens.\n\nTriceratops were herbivorous, and because of their low head, their primary food was probably low growth, although they may have been able to knock down taller plants with their horns, beak, and bulk. The jaws were tipped with a deep, narrow beak, believed to have been better at grasping and plucking than biting.",
             sceneName: "trike.scn",
-            foodEmojiString: "🌿")
+            foodEmojiString: "🌿"),
+        Dinosaur(
+            name: "Compsognathus",
+            imagePreviewString: "Compy",
+            description: "Compsognathus (\"elegant\" or \"dainty\", and \"jaw\") is a genus of small, bipedal, carnivorous theropod dinosaurs. For decades, Compsognathus were famed as the smallest dinosaurs known; the first specimen collected was around 1 m (3 ft) in length. They had long hind legs and longer tails, which they used for balance during locomotion. The forelimbs were smaller than the hindlimbs and featured three digits equipped with solid claws suited for grasping prey.\n\nThe teeth were small but sharp, suited for its diet of small vertebrates and possibly other small animals, such as insects.",
+            sceneName: "Compy.scn",
+            foodEmojiString: "🐜")
     ]
     
     
