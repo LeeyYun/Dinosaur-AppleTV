@@ -33,10 +33,16 @@ class DinoDataManager: NSObject {
             foodEmojiString: "🍗"),
         Dinosaur(
             name: "Tyrannosaurus Rex",
-            imagePreviewString: "Trex",
+            imagePreviewString: "TRex2",
             description: "Tyrannosaurus Rex was one of the largest land carnivores of all time; the largest complete specimen, located at the Field Museum of Natural History under the name FMNH PR2081 and nicknamed Sue, measured 12.3 meters (40 ft) long, and was 4 meters (13 ft) tall at the hips.\n\nMost paleontologists accept that Tyrannosaurus was both an active predator and a scavenger like most large carnivores. Tyrannosaurus may have even had infectious saliva used to kill its prey.",
             sceneName: "trex.scn",
             foodEmojiString: "🍖"),
+        Dinosaur(
+            name: "Stegosaurus",
+            imagePreviewString: "Stegosaurus",
+            description: "Stegosaurus was a large, heavily built, herbivorous quadrupedal animal with rounded backs, short fore limbs, long hind limbs, and tails held high in the air. Due to their distinctive combination of broad, upright plates and tail tipped with spikes, Stegosaurus is one of the most recognizable kinds of dinosaur. The function of this array of plates and spikes has been the subject of much speculation among scientists. Today, it is generally agreed that their spikes were most likely used for defense against predators, while their plates may have been used primarily for display, and secondarily for thermoregulatory functions.\n\nStegosaurus had short necks and small heads, meaning they most likely ate low-lying bushes and shrubs.",
+            sceneName: "stegosaurus.scn",
+            foodEmojiString: "🌳"),
         Dinosaur(
             name: "Brachiosaurus",
             imagePreviewString: "brach",
@@ -58,6 +64,12 @@ class DinoDataManager: NSObject {
     ]
     
     var dinoDLCArray: [Dinosaur] = [
+        Dinosaur(
+            name: "Brachiosaurus",
+            imagePreviewString: "brach",
+            description: "Brachiosaurus was a quadrupedal animal with a small skull, a long neck, a large trunk with a high-ellipsoid cross section, a long, muscular tail and slender, columnar limbs. The skull had a robust, wide muzzle and thick jaw bones, with spoon–shaped teeth.\n\nIts diet likely consisted of ginkgos, conifers, tree ferns, and large cycads, with intake estimated at 200 to 400 kilograms (440 to 880 lb) of plant matter daily. Brachiosaur feeding involved simple up–and–down jaw motion. The teeth were arranged to shear material as they closed, and were probably used to crop and/or nip vegetation.",
+            sceneName: "Brac.scn",
+            foodEmojiString: "🌲"),
         Dinosaur(
             name: "Spinosaurus",
             imagePreviewString: "Spinosaurus",

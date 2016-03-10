@@ -20,6 +20,13 @@
 		3444AD9F1C84F757001B03F5 /* DinoSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3444AD9E1C84F757001B03F5 /* DinoSceneView.swift */; };
 		344964E61C7BA31500633451 /* DinoProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344964E41C7BA31500633451 /* DinoProducts.swift */; };
 		344964E71C7BA31500633451 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344964E51C7BA31500633451 /* IAPHelper.swift */; };
+		3471CA991C91123F003DAF0E /* Stegosaurus_D.tga in Resources */ = {isa = PBXBuildFile; fileRef = 3471CA921C91123F003DAF0E /* Stegosaurus_D.tga */; };
+		3471CA9A1C91123F003DAF0E /* Stegosaurus_N.tga in Resources */ = {isa = PBXBuildFile; fileRef = 3471CA931C91123F003DAF0E /* Stegosaurus_N.tga */; };
+		3471CA9B1C91123F003DAF0E /* Stegosaurus_S.tga in Resources */ = {isa = PBXBuildFile; fileRef = 3471CA941C91123F003DAF0E /* Stegosaurus_S.tga */; };
+		3471CA9C1C91123F003DAF0E /* stegosaurus.FBX in Resources */ = {isa = PBXBuildFile; fileRef = 3471CA951C91123F003DAF0E /* stegosaurus.FBX */; };
+		3471CA9D1C91123F003DAF0E /* stegosaurus.max in Resources */ = {isa = PBXBuildFile; fileRef = 3471CA961C91123F003DAF0E /* stegosaurus.max */; };
+		3471CA9E1C91123F003DAF0E /* stegosaurus.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 3471CA971C91123F003DAF0E /* stegosaurus.mtl */; };
+		3471CAA11C911257003DAF0E /* stegosaurus.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAA01C911251003DAF0E /* stegosaurus.scn */; };
 		348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */; };
 		348293971C506AD50078CB29 /* exampleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293931C506AD50078CB29 /* exampleDetailViewController.swift */; };
 		348293981C506AD50078CB29 /* DinoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293941C506AD50078CB29 /* DinoDetailViewController.swift */; };
@@ -133,6 +140,13 @@
 		3444AD9E1C84F757001B03F5 /* DinoSceneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinoSceneView.swift; sourceTree = "<group>"; };
 		344964E41C7BA31500633451 /* DinoProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinoProducts.swift; sourceTree = "<group>"; };
 		344964E51C7BA31500633451 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		3471CA921C91123F003DAF0E /* Stegosaurus_D.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stegosaurus_D.tga; sourceTree = "<group>"; };
+		3471CA931C91123F003DAF0E /* Stegosaurus_N.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stegosaurus_N.tga; sourceTree = "<group>"; };
+		3471CA941C91123F003DAF0E /* Stegosaurus_S.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stegosaurus_S.tga; sourceTree = "<group>"; };
+		3471CA951C91123F003DAF0E /* stegosaurus.FBX */ = {isa = PBXFileReference; lastKnownFileType = file; path = stegosaurus.FBX; sourceTree = "<group>"; };
+		3471CA961C91123F003DAF0E /* stegosaurus.max */ = {isa = PBXFileReference; lastKnownFileType = file; path = stegosaurus.max; sourceTree = "<group>"; };
+		3471CA971C91123F003DAF0E /* stegosaurus.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stegosaurus.mtl; sourceTree = "<group>"; };
+		3471CAA01C911251003DAF0E /* stegosaurus.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = stegosaurus.scn; sourceTree = "<group>"; };
 		348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFocusEffectsCollectionViewController.swift; path = Controllers/CustomFocusEffectsCollectionViewController.swift; sourceTree = "<group>"; };
 		348293931C506AD50078CB29 /* exampleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = exampleDetailViewController.swift; path = Controllers/exampleDetailViewController.swift; sourceTree = "<group>"; };
 		348293941C506AD50078CB29 /* DinoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DinoDetailViewController.swift; path = Controllers/DinoDetailViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +319,20 @@
 			name = IAP;
 			sourceTree = "<group>";
 		};
+		3471CA911C911234003DAF0E /* Stegosaurus */ = {
+			isa = PBXGroup;
+			children = (
+				3471CA921C91123F003DAF0E /* Stegosaurus_D.tga */,
+				3471CA931C91123F003DAF0E /* Stegosaurus_N.tga */,
+				3471CA941C91123F003DAF0E /* Stegosaurus_S.tga */,
+				3471CA951C91123F003DAF0E /* stegosaurus.FBX */,
+				3471CA961C91123F003DAF0E /* stegosaurus.max */,
+				3471CA971C91123F003DAF0E /* stegosaurus.mtl */,
+				3471CAA01C911251003DAF0E /* stegosaurus.scn */,
+			);
+			name = Stegosaurus;
+			sourceTree = "<group>";
+		};
 		3482938D1C506A3F0078CB29 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +365,7 @@
 		3482939A1C506B030078CB29 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3471CA911C911234003DAF0E /* Stegosaurus */,
 				348CAC011C7587EA0016CC38 /* Sounds */,
 				34E6C9C51C87D67900858278 /* Brachiosaurus */,
 				348CAC081C7589E90016CC38 /* Tyrannosaurus */,
@@ -546,25 +575,31 @@
 			files = (
 				34D99D211C8539A100106795 /* Raptor.mp3 in Resources */,
 				348CAC101C758A550016CC38 /* Trex_opa.png in Resources */,
+				3471CA9B1C91123F003DAF0E /* Stegosaurus_S.tga in Resources */,
 				342BBF831C4DBD6C00C4C9AE /* Assets.xcassets in Resources */,
+				3471CA9E1C91123F003DAF0E /* stegosaurus.mtl in Resources */,
 				34E6C9C41C87D59300858278 /* trike.scn in Resources */,
 				342BBF811C4DBD6C00C4C9AE /* Main.storyboard in Resources */,
 				342BBFAB1C4DBE1000C4C9AE /* Raptor.mtl in Resources */,
 				34E6C9C21C87D4FE00858278 /* trike_spec.tga in Resources */,
+				3471CA9C1C91123F003DAF0E /* stegosaurus.FBX in Resources */,
 				3482939C1C506B290078CB29 /* Raptor.scn in Resources */,
 				348CAC121C758A550016CC38 /* Trex-2.png in Resources */,
 				342BBFAC1C4DBE1000C4C9AE /* Raptor.obj in Resources */,
 				34E6C9CF1C87E06800858278 /* brach.mp3 in Resources */,
 				34E6C9CB1C87D6A800858278 /* brach.png in Resources */,
+				3471CA9D1C91123F003DAF0E /* stegosaurus.max in Resources */,
 				348CAC161C758A550016CC38 /* Trex.png in Resources */,
 				342BBFAE1C4DBE1000C4C9AE /* raptor_normal.jpg in Resources */,
 				348293BA1C509B480078CB29 /* trex.scn in Resources */,
 				348293AC1C507CD20078CB29 /* Spinosaurus.mtl in Resources */,
+				3471CA9A1C91123F003DAF0E /* Stegosaurus_N.tga in Resources */,
 				34D99D1E1C8539A100106795 /* Trex.mp3 in Resources */,
 				348CAC151C758A550016CC38 /* trex.obj in Resources */,
 				348293AA1C507CD20078CB29 /* Spine_N.tga in Resources */,
 				348293AD1C507CD20078CB29 /* Spinosaurus.obj in Resources */,
 				34E6C9C11C87D4FE00858278 /* trike_normals.tga in Resources */,
+				3471CAA11C911257003DAF0E /* stegosaurus.scn in Resources */,
 				34D99D201C8539A100106795 /* Spinosaurus.mp3 in Resources */,
 				348293B11C507CF70078CB29 /* Spinosaurus.scn in Resources */,
 				348CAC141C758A550016CC38 /* trex.mtl in Resources */,
@@ -581,6 +616,7 @@
 				34E6C9CD1C87D90200858278 /* Brac.scn in Resources */,
 				348CAC111C758A550016CC38 /* Trex-2_opa.png in Resources */,
 				34E6C9D11C87E31900858278 /* eating_2.mp3 in Resources */,
+				3471CA991C91123F003DAF0E /* Stegosaurus_D.tga in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
