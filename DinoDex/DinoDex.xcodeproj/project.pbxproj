@@ -34,6 +34,8 @@
 		3471CAAE1C911C27003DAF0E /* Compy.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAA71C911C27003DAF0E /* Compy.mtl */; };
 		3471CAB01C911C27003DAF0E /* comspec.tga in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAA91C911C27003DAF0E /* comspec.tga */; };
 		3471CAB21C911C37003DAF0E /* Compy.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAB11C911C32003DAF0E /* Compy.scn */; };
+		3471CABB1C9778ED003DAF0E /* Compy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAB91C9778ED003DAF0E /* Compy.mp3 */; };
+		3471CABE1C977A04003DAF0E /* Stegosaurus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3471CABD1C977A04003DAF0E /* Stegosaurus.mp3 */; };
 		348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */; };
 		348293971C506AD50078CB29 /* exampleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293931C506AD50078CB29 /* exampleDetailViewController.swift */; };
 		348293981C506AD50078CB29 /* DinoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293941C506AD50078CB29 /* DinoDetailViewController.swift */; };
@@ -161,6 +163,8 @@
 		3471CAA71C911C27003DAF0E /* Compy.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Compy.mtl; sourceTree = "<group>"; };
 		3471CAA91C911C27003DAF0E /* comspec.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = comspec.tga; sourceTree = "<group>"; };
 		3471CAB11C911C32003DAF0E /* Compy.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Compy.scn; sourceTree = "<group>"; };
+		3471CAB91C9778ED003DAF0E /* Compy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Compy.mp3; sourceTree = "<group>"; };
+		3471CABD1C977A04003DAF0E /* Stegosaurus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Stegosaurus.mp3; sourceTree = "<group>"; };
 		348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFocusEffectsCollectionViewController.swift; path = Controllers/CustomFocusEffectsCollectionViewController.swift; sourceTree = "<group>"; };
 		348293931C506AD50078CB29 /* exampleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = exampleDetailViewController.swift; path = Controllers/exampleDetailViewController.swift; sourceTree = "<group>"; };
 		348293941C506AD50078CB29 /* DinoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DinoDetailViewController.swift; path = Controllers/DinoDetailViewController.swift; sourceTree = "<group>"; };
@@ -462,6 +466,8 @@
 				34D99D1B1C8539A100106795 /* trike.mp3 */,
 				34D99D1C1C8539A100106795 /* Spinosaurus.mp3 */,
 				34D99D1D1C8539A100106795 /* Raptor.mp3 */,
+				3471CAB91C9778ED003DAF0E /* Compy.mp3 */,
+				3471CABD1C977A04003DAF0E /* Stegosaurus.mp3 */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -609,6 +615,7 @@
 				3471CA9E1C91123F003DAF0E /* stegosaurus.mtl in Resources */,
 				34E6C9C41C87D59300858278 /* trike.scn in Resources */,
 				342BBF811C4DBD6C00C4C9AE /* Main.storyboard in Resources */,
+				3471CABB1C9778ED003DAF0E /* Compy.mp3 in Resources */,
 				3471CAB21C911C37003DAF0E /* Compy.scn in Resources */,
 				342BBFAB1C4DBE1000C4C9AE /* Raptor.mtl in Resources */,
 				34E6C9C21C87D4FE00858278 /* trike_spec.tga in Resources */,
@@ -644,6 +651,7 @@
 				3471CAAD1C911C27003DAF0E /* Compy.max in Resources */,
 				3471CAAA1C911C27003DAF0E /* comcolor.tga in Resources */,
 				34E6C9C91C87D6A800858278 /* Brac.mtl in Resources */,
+				3471CABE1C977A04003DAF0E /* Stegosaurus.mp3 in Resources */,
 				3471CAB01C911C27003DAF0E /* comspec.tga in Resources */,
 				348293A91C507CD20078CB29 /* Spine_D.tga in Resources */,
 				34E6C9C01C87D4FE00858278 /* trike_diffuse.tga in Resources */,

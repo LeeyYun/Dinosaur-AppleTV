@@ -33,7 +33,7 @@ class DinoDataManager: NSObject {
             foodEmojiString: "🍗"),
         Dinosaur(
             name: "Tyrannosaurus Rex",
-            imagePreviewString: "TRex2",
+            imagePreviewString: "Trex",
             description: "Tyrannosaurus Rex was one of the largest land carnivores of all time; the largest complete specimen, located at the Field Museum of Natural History under the name FMNH PR2081 and nicknamed Sue, measured 12.3 meters (40 ft) long, and was 4 meters (13 ft) tall at the hips.\n\nMost paleontologists accept that Tyrannosaurus was both an active predator and a scavenger like most large carnivores. Tyrannosaurus may have even had infectious saliva used to kill its prey.",
             sceneName: "trex.scn",
             foodEmojiString: "🍖"),
