@@ -53,6 +53,7 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
         // Subscribe to a notification that fires when a product is purchased.
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "productPurchased:", name: IAPHelperProductPurchasedNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "productPurchaseFailed:", name: IAPHelperProductFailedNotification, object: nil)
+        
     }
     
     override func viewDidAppear(animated: Bool) {

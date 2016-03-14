@@ -185,6 +185,10 @@ Most paleontologists accept that Tyrannosaurus was both an active predator and a
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="90" minY="145" maxX="90" maxY="20"/>
                         </collectionViewFlowLayout>
+                        <imageView key="backgroundView" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prehistoric_original" id="9Ha-YE-CzU">
+                            <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <cells>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="T84-cp-CBc" customClass="CustomFocusCell" customModule="DinoDex" customModuleProvider="target">
                                 <rect key="frame" x="90" y="145" width="397" height="345"/>
@@ -289,6 +293,7 @@ Most paleontologists accept that Tyrannosaurus was both an active predator and a
         <image name="first" width="30" height="30"/>
         <image name="jungle_background" width="1280" height="800"/>
         <image name="play_pause_small" width="96" height="113"/>
+        <image name="prehistoric_original" width="1693" height="677"/>
         <image name="sliders_up_2" width="32" height="32"/>
         <image name="swipe_small" width="77" height="88"/>
     </resources>
