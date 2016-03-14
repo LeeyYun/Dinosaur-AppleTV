@@ -36,6 +36,7 @@
 		3471CAB21C911C37003DAF0E /* Compy.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAB11C911C32003DAF0E /* Compy.scn */; };
 		3471CABB1C9778ED003DAF0E /* Compy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAB91C9778ED003DAF0E /* Compy.mp3 */; };
 		3471CABE1C977A04003DAF0E /* Stegosaurus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3471CABD1C977A04003DAF0E /* Stegosaurus.mp3 */; };
+		3471CAC41C978325003DAF0E /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAC31C978325003DAF0E /* background.mp3 */; };
 		348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */; };
 		348293971C506AD50078CB29 /* exampleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293931C506AD50078CB29 /* exampleDetailViewController.swift */; };
 		348293981C506AD50078CB29 /* DinoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293941C506AD50078CB29 /* DinoDetailViewController.swift */; };
@@ -165,6 +166,7 @@
 		3471CAB11C911C32003DAF0E /* Compy.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Compy.scn; sourceTree = "<group>"; };
 		3471CAB91C9778ED003DAF0E /* Compy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Compy.mp3; sourceTree = "<group>"; };
 		3471CABD1C977A04003DAF0E /* Stegosaurus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Stegosaurus.mp3; sourceTree = "<group>"; };
+		3471CAC31C978325003DAF0E /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFocusEffectsCollectionViewController.swift; path = Controllers/CustomFocusEffectsCollectionViewController.swift; sourceTree = "<group>"; };
 		348293931C506AD50078CB29 /* exampleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = exampleDetailViewController.swift; path = Controllers/exampleDetailViewController.swift; sourceTree = "<group>"; };
 		348293941C506AD50078CB29 /* DinoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DinoDetailViewController.swift; path = Controllers/DinoDetailViewController.swift; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 		348CAC011C7587EA0016CC38 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				3471CAC31C978325003DAF0E /* background.mp3 */,
 				34E6C9D21C87E44300858278 /* eating_3.mp3 */,
 				34E6C9D01C87E31900858278 /* eating_2.mp3 */,
 				34E6C9CE1C87E06800858278 /* brach.mp3 */,
@@ -624,6 +627,7 @@
 				348CAC121C758A550016CC38 /* Trex-2.png in Resources */,
 				342BBFAC1C4DBE1000C4C9AE /* Raptor.obj in Resources */,
 				34E6C9CF1C87E06800858278 /* brach.mp3 in Resources */,
+				3471CAC41C978325003DAF0E /* background.mp3 in Resources */,
 				34E6C9CB1C87D6A800858278 /* brach.png in Resources */,
 				3471CA9D1C91123F003DAF0E /* stegosaurus.max in Resources */,
 				348CAC161C758A550016CC38 /* Trex.png in Resources */,
