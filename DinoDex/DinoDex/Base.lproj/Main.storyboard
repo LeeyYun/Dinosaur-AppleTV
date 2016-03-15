@@ -173,7 +173,7 @@ Most paleontologists accept that Tyrannosaurus was both an active predator and a
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHk-5s-vdg">
-                                <rect key="frame" x="1830" y="796" width="59" height="67"/>
+                                <rect key="frame" x="1920" y="796" width="59" height="67"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hny-TF-05L">
                                         <rect key="frame" x="0.0" y="27" width="59" height="33"/>
@@ -216,13 +216,14 @@ Most paleontologists accept that Tyrannosaurus was both an active predator and a
                             <constraint firstItem="gHk-5s-vdg" firstAttribute="top" secondItem="spR-Sp-aIf" secondAttribute="topMargin" constant="796" id="h8N-bW-jGK"/>
                             <constraint firstItem="ffE-Y3-JfT" firstAttribute="leading" secondItem="spR-Sp-aIf" secondAttribute="leading" constant="113" id="lin-X2-dAH"/>
                             <constraint firstAttribute="trailing" secondItem="FSZ-hj-5Oa" secondAttribute="trailing" constant="-141" id="t7Z-KT-jca"/>
-                            <constraint firstAttribute="trailing" secondItem="gHk-5s-vdg" secondAttribute="trailing" constant="31" id="xFj-lZ-DtK"/>
+                            <constraint firstAttribute="trailing" secondItem="gHk-5s-vdg" secondAttribute="trailing" constant="-59" id="xFj-lZ-DtK"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dinosaurs" image="first" id="bdB-V2-1t9"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="8MZ-1z-U7Y" id="UnY-V7-8eI"/>
                         <outlet property="goalBarTopConstraint" destination="h8N-bW-jGK" id="aP7-bI-Ou1"/>
+                        <outlet property="goalBarTrailingConstraint" destination="xFj-lZ-DtK" id="pGx-S8-LH0"/>
                         <outlet property="goalBarView" destination="gHk-5s-vdg" id="fLh-Cg-NjF"/>
                         <outlet property="healthLabel" destination="hny-TF-05L" id="tdh-Xh-7M5"/>
                         <outlet property="instructionView" destination="IJv-7g-OEi" id="iTV-rr-9As"/>
