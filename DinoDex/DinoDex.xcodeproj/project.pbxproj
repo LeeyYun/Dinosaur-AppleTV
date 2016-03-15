@@ -37,6 +37,7 @@
 		3471CABB1C9778ED003DAF0E /* Compy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAB91C9778ED003DAF0E /* Compy.mp3 */; };
 		3471CABE1C977A04003DAF0E /* Stegosaurus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3471CABD1C977A04003DAF0E /* Stegosaurus.mp3 */; };
 		3471CAC41C978325003DAF0E /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAC31C978325003DAF0E /* background.mp3 */; };
+		3471CAC91C979227003DAF0E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471CAC81C979227003DAF0E /* Utils.swift */; };
 		348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */; };
 		348293971C506AD50078CB29 /* exampleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293931C506AD50078CB29 /* exampleDetailViewController.swift */; };
 		348293981C506AD50078CB29 /* DinoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293941C506AD50078CB29 /* DinoDetailViewController.swift */; };
@@ -167,6 +168,7 @@
 		3471CAB91C9778ED003DAF0E /* Compy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Compy.mp3; sourceTree = "<group>"; };
 		3471CABD1C977A04003DAF0E /* Stegosaurus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Stegosaurus.mp3; sourceTree = "<group>"; };
 		3471CAC31C978325003DAF0E /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
+		3471CAC81C979227003DAF0E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFocusEffectsCollectionViewController.swift; path = Controllers/CustomFocusEffectsCollectionViewController.swift; sourceTree = "<group>"; };
 		348293931C506AD50078CB29 /* exampleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = exampleDetailViewController.swift; path = Controllers/exampleDetailViewController.swift; sourceTree = "<group>"; };
 		348293941C506AD50078CB29 /* DinoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DinoDetailViewController.swift; path = Controllers/DinoDetailViewController.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				344964E31C7BA30A00633451 /* IAP */,
 				3432F8D41C51DED5008727F5 /* Extensions */,
 				3432F8A11C51DE3F008727F5 /* ExternalLibraries */,
+				3471CAC71C979227003DAF0E /* Utils */,
 				3482939A1C506B030078CB29 /* Assets */,
 				3482938F1C506A4D0078CB29 /* Views */,
 				3482938E1C506A480078CB29 /* Models */,
@@ -365,6 +368,14 @@
 				3471CAA91C911C27003DAF0E /* comspec.tga */,
 			);
 			name = Compy;
+			sourceTree = "<group>";
+		};
+		3471CAC71C979227003DAF0E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3471CAC81C979227003DAF0E /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		3482938D1C506A3F0078CB29 /* Controllers */ = {
@@ -694,6 +705,7 @@
 				3444AD9F1C84F757001B03F5 /* DinoSceneView.swift in Sources */,
 				348293971C506AD50078CB29 /* exampleDetailViewController.swift in Sources */,
 				34E6CA181C8E2DFA00858278 /* UIViewExtensions.swift in Sources */,
+				3471CAC91C979227003DAF0E /* Utils.swift in Sources */,
 				3482939E1C506C020078CB29 /* CustomFocusCell.swift in Sources */,
 				342BBF7A1C4DBD6C00C4C9AE /* AppDelegate.swift in Sources */,
 				348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */,

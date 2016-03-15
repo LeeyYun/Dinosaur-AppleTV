@@ -19,7 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        startBackgroundMusic()
+        if let musicBooleanString = Utils.retrieveStringFromUserDefaultsKey("backgroundDinoMusic") {
+            if musicBooleanString == "true" {
+                startBackgroundMusic()
+            }
+        }
+        else { //settings not yet saved, so play music by default
+            startBackgroundMusic()
+            Utils.updateUserDefaultsKeyWithString("backgroundDinoMusic", message: "true")
+        }
+        
         return true
     }
 
@@ -36,7 +45,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-        player.play()
+        
+        if let musicBooleanString = Utils.retrieveStringFromUserDefaultsKey("backgroundDinoMusic") {
+            if musicBooleanString == "true" {
+                player.play()
+            }
+        }
         
     }
 
@@ -53,6 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let path = NSBundle.mainBundle().pathForResource("background", ofType:"mp3") {
             let fileURL = NSURL(fileURLWithPath: path)
             do {
+                player = nil
                 player = try AVAudioPlayer(contentsOfURL: fileURL)
                 player.numberOfLoops = -1
                 player.volume = 0.5
