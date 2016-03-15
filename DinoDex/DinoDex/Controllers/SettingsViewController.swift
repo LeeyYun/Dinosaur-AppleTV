@@ -45,11 +45,19 @@ class SettingsViewController: UIViewController {
     
     //toggle music on/off
     @IBAction func tappedMusicButton(sender: AnyObject) {
+        
         if musicIsPlaying == true { //turn off music if playing
             Utils.updateUserDefaultsKeyWithString("backgroundDinoMusic", message: "false")
             appDelegate.player.pause()
             musicIsPlaying = false
             musicButton.setTitle("Background Music: OFF", forState: .Normal)
+            
+            //shake it
+            musicButton.shake(10,              // 10 times
+                withDelta: 5.0,  // 5 points wide
+                speed: 0.03,     // 30ms per shake
+                shakeDirection: ShakeDirection.Horizontal
+            )
         }
         else { //turn on music if stopped
             Utils.updateUserDefaultsKeyWithString("backgroundDinoMusic", message: "true")

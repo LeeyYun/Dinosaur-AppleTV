@@ -18,7 +18,10 @@ class DinoDetailViewController: UIViewController {
     
     @IBOutlet weak var descriptionLabel: UIVerticalAlignLabel!
     @IBOutlet var sceneView: DinoSceneView!
-
+    @IBOutlet weak var goalBarView: UIView!
+    @IBOutlet weak var healthLabel: UILabel!
+    
+    @IBOutlet weak var goalBarTopConstraint: NSLayoutConstraint!
     var nameString: String!
     var descriptionString: String!
     var sceneKitString: String!
@@ -30,6 +33,8 @@ class DinoDetailViewController: UIViewController {
     var soundString: String!
     var player : AVAudioPlayer! = nil // will be Optional, must supply initializer
     
+    var healthHeightLevel: CGFloat = 796
+    
     @IBOutlet weak var scrollLabel: UILabel!
     
     override func viewDidLoad() {
@@ -38,6 +43,8 @@ class DinoDetailViewController: UIViewController {
         setupView()
         //get root node (dinosaur object)
         getRootNode()
+        
+        
     }
     
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
@@ -73,6 +80,7 @@ class DinoDetailViewController: UIViewController {
         showInstructionsMomentarily()
         
         
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,10 +89,10 @@ class DinoDetailViewController: UIViewController {
     }
     
     override weak var preferredFocusedView: UIView? {
-//        if voiceButton.enabled == true {
-//            return voiceButton
-//        } else {
-            return sceneView
+        //        if voiceButton.enabled == true {
+        //            return voiceButton
+        //        } else {
+        return sceneView
         //}
     }
     
@@ -98,6 +106,25 @@ class DinoDetailViewController: UIViewController {
         
         
     }
+    
+    
+    func growScoreBar(constraintHeight: CGFloat) {
+        goalBarView.shake(10,              // 10 times
+            withDelta: 5.0,  // 5 points wide
+            speed: 0.03,     // 30ms per shake
+            shakeDirection: ShakeDirection.Horizontal
+        )
+        
+        self.goalBarTopConstraint.constant = constraintHeight
+        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 10, options: .CurveEaseInOut, animations: { _ in
+            
+            self.view.layoutIfNeeded()
+            }, completion: { _ in
+                
+        })
+        
+    }
+    
     
     func showInstructionsMomentarily() {
         let originalFrame = instructionView.frame
@@ -184,53 +211,53 @@ class DinoDetailViewController: UIViewController {
         self.isPlayingVoice = false
     }
     
-//    func toggleSpinDino() {
-//        if voiceButton.enabled { //enable spinning
-//            feedButton.resignFirstResponder()
-//            voiceButton.resignFirstResponder()
-//            
-//            sceneView.userInteractionEnabled = true
-//            sceneView.becomeFirstResponder()
-//            
-//            voiceButton.enabled = false
-//            feedButton.enabled = false
-//            
-//            self.setNeedsFocusUpdate()
-//            self.updateFocusIfNeeded()
-//            
-//            //set label for directions
-//            scrollLabel.text = "Scroll on the touch surface to rotate.\nPress Play/Pause to end 3D rotating."
-//            
-//            //spin dino around once
-//            animateSpinningDinosaur(0.5, angle: 6.28)
-//            
-//            //begin dinosaur pulsating animation so user knows he/she can swipe to rotate
-//            addBobbingAnimation()
-//        }
-//        else { //disable spinning
-//            
-//            
-//            sceneView.resignFirstResponder()
-//            sceneView.userInteractionEnabled = false
-//            
-//            
-//            voiceButton.enabled = true
-//            feedButton.enabled = true
-//            
-//            self.setNeedsFocusUpdate()
-//            self.updateFocusIfNeeded()
-//            
-//            voiceButton.becomeFirstResponder()
-//            //voiceButton.selected = true
-//            
-//            //set label for directions
-//            scrollLabel.text = "Select an option from the left,\nor press Play/Pause to enable 3D rotating."
-//            
-//            //reset scene to remove pulsating action, user no longer can swipe to rotate
-//            getRootNode()
-//        }
-//        
-//    }
+    //    func toggleSpinDino() {
+    //        if voiceButton.enabled { //enable spinning
+    //            feedButton.resignFirstResponder()
+    //            voiceButton.resignFirstResponder()
+    //            
+    //            sceneView.userInteractionEnabled = true
+    //            sceneView.becomeFirstResponder()
+    //            
+    //            voiceButton.enabled = false
+    //            feedButton.enabled = false
+    //            
+    //            self.setNeedsFocusUpdate()
+    //            self.updateFocusIfNeeded()
+    //            
+    //            //set label for directions
+    //            scrollLabel.text = "Scroll on the touch surface to rotate.\nPress Play/Pause to end 3D rotating."
+    //            
+    //            //spin dino around once
+    //            animateSpinningDinosaur(0.5, angle: 6.28)
+    //            
+    //            //begin dinosaur pulsating animation so user knows he/she can swipe to rotate
+    //            addBobbingAnimation()
+    //        }
+    //        else { //disable spinning
+    //            
+    //            
+    //            sceneView.resignFirstResponder()
+    //            sceneView.userInteractionEnabled = false
+    //            
+    //            
+    //            voiceButton.enabled = true
+    //            feedButton.enabled = true
+    //            
+    //            self.setNeedsFocusUpdate()
+    //            self.updateFocusIfNeeded()
+    //            
+    //            voiceButton.becomeFirstResponder()
+    //            //voiceButton.selected = true
+    //            
+    //            //set label for directions
+    //            scrollLabel.text = "Select an option from the left,\nor press Play/Pause to enable 3D rotating."
+    //            
+    //            //reset scene to remove pulsating action, user no longer can swipe to rotate
+    //            getRootNode()
+    //        }
+    //        
+    //    }
     
     func playNarration() {
         playSound(soundString)
@@ -244,6 +271,9 @@ class DinoDetailViewController: UIViewController {
     
     func tappedFeedButton() {
         getRootNode()
+        
+        
+        
         
         
         //add new food label
@@ -274,15 +304,45 @@ class DinoDetailViewController: UIViewController {
                 let array = ["eating", "eating_2", "eating_3"]
                 let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
                 self.playSound(array[randomIndex])
+                
+                //increase health bar
+                if self.healthHeightLevel >= 217 {
+                    self.healthHeightLevel = self.healthHeightLevel - 20
+                    self.growScoreBar(self.healthHeightLevel)
+                }
+                else {
+                    //flash orange if health bar full
+                    self.goalBarView.shake(10,              // 10 times
+                        withDelta: 5.0,  // 5 points wide
+                        speed: 0.03,     // 30ms per shake
+                        shakeDirection: ShakeDirection.Vertical
+                    )
+                    UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveLinear, animations: { _ in
+                        self.goalBarView.backgroundColor = UIColor ( red: 0.9618, green: 0.5325, blue: 0.0325, alpha: 1.0 )
+                        }, completion: { _ in
+                            UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveLinear, animations: { _ in
+                                self.healthLabel.text = "Full!"
+                                self.goalBarView.backgroundColor = UIColor ( red: 0.9753, green: 0.7408, blue: 0.036, alpha: 1.0 )
+                                }, completion: { _ in
+                                    //play random eating sound
+                                    let growlArray = ["trex_growl2", "velociraptor_growl", "trex_growl", "dinosaur_growl"]
+                                    let randomGrowlIndex = Int(arc4random_uniform(UInt32(growlArray.count)))
+                                    self.playSound(growlArray[randomGrowlIndex])
+                            })
+                    })
+                    
+                }
+                
                 UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveLinear, animations: { _ in
-                    tempFoodLabel.alpha = 0.0
-                    
-                    
-                    }, completion: { _ in
-                        tempFoodLabel.removeFromSuperview()
-                        //self.sceneView.scene = SCNScene(named: self.currentDino.sceneKitString)  //replay actions
-                        //rotate dino after feeding
-                        self.animateSpinningDinosaur(0.8, angle: 12.57)
+                tempFoodLabel.alpha = 0.0
+                
+                
+                }, completion: { _ in
+                tempFoodLabel.removeFromSuperview()
+                //self.sceneView.scene = SCNScene(named: self.currentDino.sceneKitString)  //replay actions
+                //rotate dino after feeding
+                self.animateSpinningDinosaur(0.8, angle: 12.57)
+                
                 })
                 
                 

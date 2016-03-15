@@ -38,6 +38,12 @@
 		3471CABE1C977A04003DAF0E /* Stegosaurus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3471CABD1C977A04003DAF0E /* Stegosaurus.mp3 */; };
 		3471CAC41C978325003DAF0E /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAC31C978325003DAF0E /* background.mp3 */; };
 		3471CAC91C979227003DAF0E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471CAC81C979227003DAF0E /* Utils.swift */; };
+		3471CACE1C97AF70003DAF0E /* trex_growl2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3471CACA1C97AF70003DAF0E /* trex_growl2.mp3 */; };
+		3471CACF1C97AF70003DAF0E /* velociraptor_growl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3471CACB1C97AF70003DAF0E /* velociraptor_growl.mp3 */; };
+		3471CAD01C97AF70003DAF0E /* trex_growl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3471CACC1C97AF70003DAF0E /* trex_growl.mp3 */; };
+		3471CAD11C97AF70003DAF0E /* dinosaur_growl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3471CACD1C97AF70003DAF0E /* dinosaur_growl.mp3 */; };
+		3471CAD81C97B120003DAF0E /* UIView+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 3471CAD71C97B120003DAF0E /* UIView+Shake.m */; };
+		3471CADA1C97B1F3003DAF0E /* DinoDex-Bridging-Header.h in Resources */ = {isa = PBXBuildFile; fileRef = 3471CAD91C97B15F003DAF0E /* DinoDex-Bridging-Header.h */; };
 		348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */; };
 		348293971C506AD50078CB29 /* exampleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293931C506AD50078CB29 /* exampleDetailViewController.swift */; };
 		348293981C506AD50078CB29 /* DinoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348293941C506AD50078CB29 /* DinoDetailViewController.swift */; };
@@ -169,6 +175,13 @@
 		3471CABD1C977A04003DAF0E /* Stegosaurus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Stegosaurus.mp3; sourceTree = "<group>"; };
 		3471CAC31C978325003DAF0E /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		3471CAC81C979227003DAF0E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		3471CACA1C97AF70003DAF0E /* trex_growl2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trex_growl2.mp3; sourceTree = "<group>"; };
+		3471CACB1C97AF70003DAF0E /* velociraptor_growl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = velociraptor_growl.mp3; sourceTree = "<group>"; };
+		3471CACC1C97AF70003DAF0E /* trex_growl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trex_growl.mp3; sourceTree = "<group>"; };
+		3471CACD1C97AF70003DAF0E /* dinosaur_growl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dinosaur_growl.mp3; sourceTree = "<group>"; };
+		3471CAD61C97B120003DAF0E /* UIView+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shake.h"; sourceTree = "<group>"; };
+		3471CAD71C97B120003DAF0E /* UIView+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shake.m"; sourceTree = "<group>"; };
+		3471CAD91C97B15F003DAF0E /* DinoDex-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DinoDex-Bridging-Header.h"; sourceTree = "<group>"; };
 		348293921C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFocusEffectsCollectionViewController.swift; path = Controllers/CustomFocusEffectsCollectionViewController.swift; sourceTree = "<group>"; };
 		348293931C506AD50078CB29 /* exampleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = exampleDetailViewController.swift; path = Controllers/exampleDetailViewController.swift; sourceTree = "<group>"; };
 		348293941C506AD50078CB29 /* DinoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DinoDetailViewController.swift; path = Controllers/DinoDetailViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +300,7 @@
 				342BBF841C4DBD6C00C4C9AE /* Info.plist */,
 				342BBF791C4DBD6C00C4C9AE /* AppDelegate.swift */,
 				342BBF7F1C4DBD6C00C4C9AE /* Main.storyboard */,
+				3471CAD91C97B15F003DAF0E /* DinoDex-Bridging-Header.h */,
 			);
 			path = DinoDex;
 			sourceTree = "<group>";
@@ -320,6 +334,7 @@
 		3432F8A11C51DE3F008727F5 /* ExternalLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				3471CAD51C97B120003DAF0E /* Shake */,
 			);
 			name = ExternalLibraries;
 			sourceTree = "<group>";
@@ -376,6 +391,15 @@
 				3471CAC81C979227003DAF0E /* Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3471CAD51C97B120003DAF0E /* Shake */ = {
+			isa = PBXGroup;
+			children = (
+				3471CAD61C97B120003DAF0E /* UIView+Shake.h */,
+				3471CAD71C97B120003DAF0E /* UIView+Shake.m */,
+			);
+			path = Shake;
 			sourceTree = "<group>";
 		};
 		3482938D1C506A3F0078CB29 /* Controllers */ = {
@@ -471,6 +495,10 @@
 		348CAC011C7587EA0016CC38 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				3471CACA1C97AF70003DAF0E /* trex_growl2.mp3 */,
+				3471CACB1C97AF70003DAF0E /* velociraptor_growl.mp3 */,
+				3471CACC1C97AF70003DAF0E /* trex_growl.mp3 */,
+				3471CACD1C97AF70003DAF0E /* dinosaur_growl.mp3 */,
 				3471CAC31C978325003DAF0E /* background.mp3 */,
 				34E6C9D21C87E44300858278 /* eating_3.mp3 */,
 				34E6C9D01C87E31900858278 /* eating_2.mp3 */,
@@ -622,6 +650,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3471CADA1C97B1F3003DAF0E /* DinoDex-Bridging-Header.h in Resources */,
 				34D99D211C8539A100106795 /* Raptor.mp3 in Resources */,
 				348CAC101C758A550016CC38 /* Trex_opa.png in Resources */,
 				3471CA9B1C91123F003DAF0E /* Stegosaurus_S.tga in Resources */,
@@ -638,21 +667,25 @@
 				348CAC121C758A550016CC38 /* Trex-2.png in Resources */,
 				342BBFAC1C4DBE1000C4C9AE /* Raptor.obj in Resources */,
 				34E6C9CF1C87E06800858278 /* brach.mp3 in Resources */,
+				3471CACE1C97AF70003DAF0E /* trex_growl2.mp3 in Resources */,
 				3471CAC41C978325003DAF0E /* background.mp3 in Resources */,
 				34E6C9CB1C87D6A800858278 /* brach.png in Resources */,
 				3471CA9D1C91123F003DAF0E /* stegosaurus.max in Resources */,
 				348CAC161C758A550016CC38 /* Trex.png in Resources */,
 				342BBFAE1C4DBE1000C4C9AE /* raptor_normal.jpg in Resources */,
+				3471CAD01C97AF70003DAF0E /* trex_growl.mp3 in Resources */,
 				348293BA1C509B480078CB29 /* trex.scn in Resources */,
 				3471CAAB1C911C27003DAF0E /* comnormal.tga in Resources */,
 				3471CAAE1C911C27003DAF0E /* Compy.mtl in Resources */,
 				348293AC1C507CD20078CB29 /* Spinosaurus.mtl in Resources */,
 				3471CA9A1C91123F003DAF0E /* Stegosaurus_N.tga in Resources */,
 				34D99D1E1C8539A100106795 /* Trex.mp3 in Resources */,
+				3471CAD11C97AF70003DAF0E /* dinosaur_growl.mp3 in Resources */,
 				348CAC151C758A550016CC38 /* trex.obj in Resources */,
 				348293AA1C507CD20078CB29 /* Spine_N.tga in Resources */,
 				348293AD1C507CD20078CB29 /* Spinosaurus.obj in Resources */,
 				3471CAAC1C911C27003DAF0E /* Compy.FBX in Resources */,
+				3471CACF1C97AF70003DAF0E /* velociraptor_growl.mp3 in Resources */,
 				34E6C9C11C87D4FE00858278 /* trike_normals.tga in Resources */,
 				3471CAA11C911257003DAF0E /* stegosaurus.scn in Resources */,
 				34D99D201C8539A100106795 /* Spinosaurus.mp3 in Resources */,
@@ -707,6 +740,7 @@
 				34E6CA181C8E2DFA00858278 /* UIViewExtensions.swift in Sources */,
 				3471CAC91C979227003DAF0E /* Utils.swift in Sources */,
 				3482939E1C506C020078CB29 /* CustomFocusCell.swift in Sources */,
+				3471CAD81C97B120003DAF0E /* UIView+Shake.m in Sources */,
 				342BBF7A1C4DBD6C00C4C9AE /* AppDelegate.swift in Sources */,
 				348293961C506AD50078CB29 /* CustomFocusEffectsCollectionViewController.swift in Sources */,
 				348293991C506AD50078CB29 /* SettingsViewController.swift in Sources */,
@@ -857,6 +891,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.NTH.Dinosaurs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "DinoDex/DinoDex-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -873,6 +908,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.NTH.Dinosaurs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "DinoDex/DinoDex-Bridging-Header.h";
 			};
 			name = Release;
 		};
