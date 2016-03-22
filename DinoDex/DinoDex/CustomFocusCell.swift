@@ -17,12 +17,12 @@ class CustomFocusCell: UICollectionViewCell {
     var gradient: CAGradientLayer!
     
     override func awakeFromNib() {
-        self.gradient = CAGradientLayer()
-        self.gradient.colors = [UIColor(hex: 0xFBC700, alpha: 0.8).CGColor, UIColor(hex: 0xF99A00, alpha: 0.8).CGColor]
-        self.gradient.startPoint = CGPointMake(0.5, 1)
-        self.gradient.endPoint = CGPointMake(0.5, 0.5)
-        self.gradient.frame = gradientView.bounds
-        self.gradientView.layer.addSublayer(self.gradient)
+//        self.gradient = CAGradientLayer()
+//        self.gradient.colors = [UIColor(hex: 0xFBC700, alpha: 0.8).CGColor, UIColor(hex: 0xF99A00, alpha: 0.8).CGColor]
+//        self.gradient.startPoint = CGPointMake(0.5, 1)
+//        self.gradient.endPoint = CGPointMake(0.5, 0.5)
+//        self.gradient.frame = gradientView.bounds
+//        self.gradientView.layer.addSublayer(self.gradient)
         
         self.titleLabel.font = UIFont.systemFontOfSize(37.0, weight: UIFontWeightLight)
         self.titleLabel.hidden = true
@@ -31,7 +31,7 @@ class CustomFocusCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.gradient.frame = self.imageView.bounds
+        //self.gradient.frame = self.imageView.bounds
     }
     
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
@@ -48,13 +48,13 @@ class CustomFocusCell: UICollectionViewCell {
     
     func setPurchasedState() {
         self.imageView.alpha = 1.0
-        self.gradient.colors = [UIColor(hex: 0xFBC700, alpha: 0.8).CGColor, UIColor(hex: 0xF99A00, alpha: 0.8).CGColor]
+        //self.gradient.colors = [UIColor(hex: 0xFBC700, alpha: 0.8).CGColor, UIColor(hex: 0xF99A00, alpha: 0.8).CGColor]
         
     }
     
     func setDLCState() {
         self.imageView.alpha = 0.7
-        self.gradient.colors = [UIColor(hex: 0xE8ECEE, alpha: 1.0).CGColor, UIColor(hex: 0x6D797A, alpha: 1.0).CGColor]
+       // self.gradient.colors = [UIColor(hex: 0xE8ECEE, alpha: 1.0).CGColor, UIColor(hex: 0x6D797A, alpha: 1.0).CGColor]
     }
     
     func enableFocusedState() {
@@ -78,23 +78,23 @@ class CustomFocusCell: UICollectionViewCell {
         let gradientHorizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis)
         gradientHorizontalMotionEffect.minimumRelativeValue = -15
         gradientHorizontalMotionEffect.maximumRelativeValue = 15
-        self.gradientView.addMotionEffect(gradientHorizontalMotionEffect)
+        //self.gradientView.addMotionEffect(gradientHorizontalMotionEffect)
         
         let gradientVerticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y", type: .TiltAlongVerticalAxis)
         gradientVerticalMotionEffect.minimumRelativeValue = -15
         gradientVerticalMotionEffect.maximumRelativeValue = 15
-        self.gradientView.addMotionEffect(gradientVerticalMotionEffect)
+        //self.gradientView.addMotionEffect(gradientVerticalMotionEffect)
         
-        self.gradientView.transform = CGAffineTransformMakeScale(1.35, 1.35)
+        //self.gradientView.transform = CGAffineTransformMakeScale(1.35, 1.35)
         
     }
     
     func disableFocusedState() {
         self.titleLabel.motionEffects.forEach { self.titleLabel.removeMotionEffect($0) }
-        self.gradientView.motionEffects.forEach { self.gradientView.removeMotionEffect($0) }
+        //self.gradientView.motionEffects.forEach { self.gradientView.removeMotionEffect($0) }
         
         self.imageView.transform = CGAffineTransformMakeScale(1.0, 1.0)
-        self.gradientView.transform = CGAffineTransformMakeScale(1.0, 1.0)
+       // self.gradientView.transform = CGAffineTransformMakeScale(1.0, 1.0)
         self.titleLabel.transform = CGAffineTransformIdentity
         self.titleLabel.font = UIFont.systemFontOfSize(37.0, weight: UIFontWeightLight)
         self.titleLabel.hidden = true

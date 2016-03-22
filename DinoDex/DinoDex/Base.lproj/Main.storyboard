@@ -261,12 +261,12 @@ Most paleontologists accept that Tyrannosaurus was both an active predator and a
                                     <rect key="frame" x="0.0" y="0.0" width="397" height="345"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="0WY-rs-hRx">
+                                        <view hidden="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="0WY-rs-hRx">
                                             <rect key="frame" x="0.0" y="0.0" width="397" height="235"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" red="0.97647058823529409" green="0.60392156862745094" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAi-CS-TIE">
+                                        <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAi-CS-TIE">
                                             <rect key="frame" x="0.0" y="0.0" width="397" height="235"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="B4P-nh-prL">
@@ -280,7 +280,7 @@ Most paleontologists accept that Tyrannosaurus was both an active predator and a
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="tintColor" red="0.98431372549019602" green="0.7803921568627451" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="IAi-CS-TIE" firstAttribute="leading" secondItem="T84-cp-CBc" secondAttribute="leading" id="JX5-qS-9TK"/>
                                     <constraint firstAttribute="bottom" secondItem="IAi-CS-TIE" secondAttribute="bottom" constant="110" id="Kiz-cq-o1N"/>
