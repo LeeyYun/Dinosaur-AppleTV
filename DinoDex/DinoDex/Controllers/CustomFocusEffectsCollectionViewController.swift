@@ -147,7 +147,7 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
                 else if IAPHelper.canMakePayments() {
                     //setup cell for "Buy" state, so user can buy this new content
                     let oldText = imageCell.titleLabel.text!
-                    imageCell.titleLabel.text = "\(oldText) - \(numberAsString)"
+                    imageCell.titleLabel.text = "🔒 \(oldText) - \(numberAsString)"
                     imageCell.setDLCState()
                 }
                 else {

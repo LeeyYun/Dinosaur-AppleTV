@@ -47,13 +47,13 @@ class CustomFocusCell: UICollectionViewCell {
     }
     
     func setPurchasedState() {
-        self.imageView.alpha = 1.0
+        //self.imageView.alpha = 1.0
         //self.gradient.colors = [UIColor(hex: 0xFBC700, alpha: 0.8).CGColor, UIColor(hex: 0xF99A00, alpha: 0.8).CGColor]
         
     }
     
     func setDLCState() {
-        self.imageView.alpha = 0.7
+        //self.imageView.alpha = 0.7
        // self.gradient.colors = [UIColor(hex: 0xE8ECEE, alpha: 1.0).CGColor, UIColor(hex: 0x6D797A, alpha: 1.0).CGColor]
     }
     
@@ -67,11 +67,13 @@ class CustomFocusCell: UICollectionViewCell {
         horizontalMotionEffect.minimumRelativeValue = -3
         horizontalMotionEffect.maximumRelativeValue = 3
         self.titleLabel.addMotionEffect(horizontalMotionEffect)
+        self.imageView.addMotionEffect(horizontalMotionEffect)
         
         let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y", type: .TiltAlongVerticalAxis)
         verticalMotionEffect.minimumRelativeValue = -3
         verticalMotionEffect.maximumRelativeValue = 3
         self.titleLabel.addMotionEffect(verticalMotionEffect)
+        self.imageView.addMotionEffect(verticalMotionEffect)
         self.imageView.transform = CGAffineTransformMakeScale(1.15, 1.15)
         self.titleLabel.transform = CGAffineTransformMakeScale(1.2, 1.2)
         
@@ -91,6 +93,7 @@ class CustomFocusCell: UICollectionViewCell {
     
     func disableFocusedState() {
         self.titleLabel.motionEffects.forEach { self.titleLabel.removeMotionEffect($0) }
+        self.imageView.motionEffects.forEach { self.imageView.removeMotionEffect($0) }
         //self.gradientView.motionEffects.forEach { self.gradientView.removeMotionEffect($0) }
         
         self.imageView.transform = CGAffineTransformMakeScale(1.0, 1.0)
