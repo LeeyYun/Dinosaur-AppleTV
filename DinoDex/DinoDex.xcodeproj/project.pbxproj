@@ -66,18 +66,12 @@
 		348CAC141C758A550016CC38 /* trex.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC0D1C758A550016CC38 /* trex.mtl */; };
 		348CAC151C758A550016CC38 /* trex.obj in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC0E1C758A550016CC38 /* trex.obj */; };
 		348CAC161C758A550016CC38 /* Trex.png in Resources */ = {isa = PBXBuildFile; fileRef = 348CAC0F1C758A550016CC38 /* Trex.png */; };
-		34C7CC901C7BA243005E044B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C7CC741C7B9FB8005E044B /* StoreKit.framework */; };
-		34C7CC911C7BA243005E044B /* StoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34C7CC741C7B9FB8005E044B /* StoreKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		34C7CC921C7BA243005E044B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC061C75895E0016CC38 /* AudioToolbox.framework */; };
-		34C7CC931C7BA243005E044B /* AudioToolbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC061C75895E0016CC38 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		34C7CC941C7BA243005E044B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC041C75884A0016CC38 /* AVFoundation.framework */; };
-		34C7CC951C7BA243005E044B /* AVFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 348CAC041C75884A0016CC38 /* AVFoundation.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		34C7CC961C7BA243005E044B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */; };
-		34C7CC971C7BA243005E044B /* QuartzCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		34C7CC981C7BA243005E044B /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEC1C4EF39100C4C9AE /* Metal.framework */; };
-		34C7CC991C7BA243005E044B /* Metal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEC1C4EF39100C4C9AE /* Metal.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		34C7CC9A1C7BA243005E044B /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */; };
-		34C7CC9B1C7BA243005E044B /* SceneKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		34AA0CDF1CA0FDE7009A0204 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AA0CDE1CA0FDE7009A0204 /* StoreKit.framework */; };
+		34AA0CE11CA0FDEE009A0204 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AA0CE01CA0FDEE009A0204 /* AudioToolbox.framework */; };
+		34AA0CE31CA0FDF3009A0204 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AA0CE21CA0FDF3009A0204 /* AVFoundation.framework */; };
+		34AA0CE51CA0FDF9009A0204 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AA0CE41CA0FDF9009A0204 /* QuartzCore.framework */; };
+		34AA0CE71CA0FDFE009A0204 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AA0CE61CA0FDFE009A0204 /* Metal.framework */; };
+		34AA0CE91CA0FE04009A0204 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AA0CE81CA0FE04009A0204 /* SceneKit.framework */; };
 		34D99D1E1C8539A100106795 /* Trex.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34D99D1A1C8539A100106795 /* Trex.mp3 */; };
 		34D99D1F1C8539A100106795 /* trike.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34D99D1B1C8539A100106795 /* trike.mp3 */; };
 		34D99D201C8539A100106795 /* Spinosaurus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34D99D1C1C8539A100106795 /* Spinosaurus.mp3 */; };
@@ -115,25 +109,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		34C7CC9C1C7BA243005E044B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				34C7CC971C7BA243005E044B /* QuartzCore.framework in Embed Frameworks */,
-				34C7CC911C7BA243005E044B /* StoreKit.framework in Embed Frameworks */,
-				34C7CC991C7BA243005E044B /* Metal.framework in Embed Frameworks */,
-				34C7CC931C7BA243005E044B /* AudioToolbox.framework in Embed Frameworks */,
-				34C7CC9B1C7BA243005E044B /* SceneKit.framework in Embed Frameworks */,
-				34C7CC951C7BA243005E044B /* AVFoundation.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		342BBF761C4DBD6C00C4C9AE /* DinoDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinoDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		342BBF791C4DBD6C00C4C9AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,9 +125,6 @@
 		342BBFA71C4DBE1000C4C9AE /* Raptor.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Raptor.obj; path = ../Raptor.obj; sourceTree = "<group>"; };
 		342BBFA91C4DBE1000C4C9AE /* raptor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = raptor.jpg; path = ../Texture/raptor.jpg; sourceTree = "<group>"; };
 		342BBFAA1C4DBE1000C4C9AE /* raptor_normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = raptor_normal.jpg; path = ../Texture/raptor_normal.jpg; sourceTree = "<group>"; };
-		342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
-		342BBFEC1C4EF39100C4C9AE /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
-		342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3432F8D51C51DEE5008727F5 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		3444AD9E1C84F757001B03F5 /* DinoSceneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinoSceneView.swift; sourceTree = "<group>"; };
 		344964E41C7BA31500633451 /* DinoProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinoProducts.swift; sourceTree = "<group>"; };
@@ -197,8 +169,6 @@
 		348293A81C507CD20078CB29 /* Spinosaurus.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Spinosaurus.obj; sourceTree = "<group>"; };
 		348293B01C507CF70078CB29 /* Spinosaurus.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Spinosaurus.scn; sourceTree = "<group>"; };
 		348293B91C509B480078CB29 /* trex.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = trex.scn; sourceTree = "<group>"; };
-		348CAC041C75884A0016CC38 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		348CAC061C75895E0016CC38 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		348CAC091C758A550016CC38 /* Trex_opa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trex_opa.png; sourceTree = "<group>"; };
 		348CAC0A1C758A550016CC38 /* Trex-2_opa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Trex-2_opa.png"; sourceTree = "<group>"; };
 		348CAC0B1C758A550016CC38 /* Trex-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Trex-2.png"; sourceTree = "<group>"; };
@@ -206,7 +176,12 @@
 		348CAC0D1C758A550016CC38 /* trex.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trex.mtl; sourceTree = "<group>"; };
 		348CAC0E1C758A550016CC38 /* trex.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trex.obj; sourceTree = "<group>"; };
 		348CAC0F1C758A550016CC38 /* Trex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trex.png; sourceTree = "<group>"; };
-		34C7CC741C7B9FB8005E044B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		34AA0CDE1CA0FDE7009A0204 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		34AA0CE01CA0FDEE009A0204 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		34AA0CE21CA0FDF3009A0204 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		34AA0CE41CA0FDF9009A0204 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		34AA0CE61CA0FDFE009A0204 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		34AA0CE81CA0FE04009A0204 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		34D99D1A1C8539A100106795 /* Trex.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Trex.mp3; sourceTree = "<group>"; };
 		34D99D1B1C8539A100106795 /* trike.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trike.mp3; sourceTree = "<group>"; };
 		34D99D1C1C8539A100106795 /* Spinosaurus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Spinosaurus.mp3; sourceTree = "<group>"; };
@@ -232,12 +207,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34C7CC961C7BA243005E044B /* QuartzCore.framework in Frameworks */,
-				34C7CC901C7BA243005E044B /* StoreKit.framework in Frameworks */,
-				34C7CC981C7BA243005E044B /* Metal.framework in Frameworks */,
-				34C7CC921C7BA243005E044B /* AudioToolbox.framework in Frameworks */,
-				34C7CC9A1C7BA243005E044B /* SceneKit.framework in Frameworks */,
-				34C7CC941C7BA243005E044B /* AVFoundation.framework in Frameworks */,
+				34AA0CE91CA0FE04009A0204 /* SceneKit.framework in Frameworks */,
+				34AA0CE71CA0FDFE009A0204 /* Metal.framework in Frameworks */,
+				34AA0CE51CA0FDF9009A0204 /* QuartzCore.framework in Frameworks */,
+				34AA0CE31CA0FDF3009A0204 /* AVFoundation.framework in Frameworks */,
+				34AA0CE11CA0FDEE009A0204 /* AudioToolbox.framework in Frameworks */,
+				34AA0CDF1CA0FDE7009A0204 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,12 +236,12 @@
 		342BBF6D1C4DBD6C00C4C9AE = {
 			isa = PBXGroup;
 			children = (
-				34C7CC741C7B9FB8005E044B /* StoreKit.framework */,
-				348CAC061C75895E0016CC38 /* AudioToolbox.framework */,
-				348CAC041C75884A0016CC38 /* AVFoundation.framework */,
-				342BBFEE1C4EF39600C4C9AE /* QuartzCore.framework */,
-				342BBFEC1C4EF39100C4C9AE /* Metal.framework */,
-				342BBFEA1C4EF38B00C4C9AE /* SceneKit.framework */,
+				34AA0CE81CA0FE04009A0204 /* SceneKit.framework */,
+				34AA0CE61CA0FDFE009A0204 /* Metal.framework */,
+				34AA0CE41CA0FDF9009A0204 /* QuartzCore.framework */,
+				34AA0CE21CA0FDF3009A0204 /* AVFoundation.framework */,
+				34AA0CE01CA0FDEE009A0204 /* AudioToolbox.framework */,
+				34AA0CDE1CA0FDE7009A0204 /* StoreKit.framework */,
 				342BBF781C4DBD6C00C4C9AE /* DinoDex */,
 				342BBF8C1C4DBD6C00C4C9AE /* DinoDexTests */,
 				342BBF971C4DBD6C00C4C9AE /* DinoDexUITests */,
@@ -549,7 +524,6 @@
 				342BBF721C4DBD6C00C4C9AE /* Sources */,
 				342BBF731C4DBD6C00C4C9AE /* Frameworks */,
 				342BBF741C4DBD6C00C4C9AE /* Resources */,
-				34C7CC9C1C7BA243005E044B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -885,7 +859,6 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DinoDex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NTH.Dinosaurs;
@@ -902,7 +875,6 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DinoDex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NTH.Dinosaurs;
