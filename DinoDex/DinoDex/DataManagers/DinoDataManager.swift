@@ -69,7 +69,7 @@ class DinoDataManager: NSObject {
             imagePreviewString: "Compy",
             description: "Compsognathus (\"elegant\" or \"dainty\", and \"jaw\") is a genus of small, bipedal, carnivorous theropod dinosaurs. For decades, Compsognathus were famed as the smallest dinosaurs known; the first specimen collected was around 1 m (3 ft) in length. They had long hind legs and longer tails, which they used for balance during locomotion. The forelimbs were smaller than the hindlimbs and featured three digits equipped with solid claws suited for grasping prey.\n\nThe teeth were small but sharp, suited for its diet of small vertebrates and possibly other small animals, such as insects.",
             sceneName: "Compy.scn",
-            foodEmojiString: "🐜")
+            foodEmojiString: "🐞")
     ]
     
     
