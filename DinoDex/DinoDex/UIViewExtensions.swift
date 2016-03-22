@@ -156,7 +156,7 @@ extension UIView{
         rotateAnimation.duration = duration
         rotateAnimation.removedOnCompletion = false
         
-        if let delegate: AnyObject = completionDelegate {
+        if let _: AnyObject = completionDelegate {
             rotateAnimation.delegate = self
         }
         CATransaction.setCompletionBlock { () -> Void in

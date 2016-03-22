@@ -66,7 +66,7 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
     // When a product is purchased, this notification fires, redraw the correct row
     func productPurchased(notification: NSNotification) {
         let productIdentifier = notification.object as! String
-        for (index, product) in products.enumerate() {
+        for (_, product) in products.enumerate() {
             if product.productIdentifier == productIdentifier {
                 //redraw view showing that product was purchased
                 //self.collectionView!.reloadRowsAtIndexPaths([NSIndexPath(forRow: index, inSection: 0)], withRowAnimation: .Fade)
@@ -79,7 +79,7 @@ class CustomFocusEffectsCollectionViewController: UICollectionViewController {
     // When a product is purchased, this notification fires, redraw the correct row
     func productPurchaseFailed(notification: NSNotification) {
         let productIdentifier = notification.object as! String
-        for (index, product) in products.enumerate() {
+        for (_, product) in products.enumerate() {
             if product.productIdentifier == productIdentifier {
                 print("Received notification couldn't purchase \(productIdentifier)")
                 //redraw view showing that product failed purchasing
