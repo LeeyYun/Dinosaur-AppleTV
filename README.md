@@ -5,6 +5,8 @@
 
 # Explore Dinosaurs 3D
 Step into Explore Dinosaurs 3D. Use the touch surface to play with high definition 3D models. Listen to professional HD voiceover narrations for each dinosaur. Ever wanted a Velociraptor as a pet? Feed your dinos until they're stuffed, and see what happens!
+
+Explore Dinosaurs 3D is now in the Apple TV App Store. Search for **"Explore Dinosaurs"** on the Apple TV App Store to try it out!
 <br>
 <br>
 
@@ -30,7 +32,7 @@ Step into Explore Dinosaurs 3D. Use the touch surface to play with high definiti
 
 
 ## Requirements
-Currently, Explore Dinosaurs 3D supports Xcode 7.2.1, tvOS 9.1+, and Swift 2.
+Currently, Explore Dinosaurs 3D supports Xcode 7.3, tvOS 9.1+, and Swift 2.
 
 <br>
 ## Features
