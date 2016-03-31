@@ -265,6 +265,11 @@ class DinoDetailViewController: UIViewController {
                             //play random eating sound
                             let array = ["eating", "eating_2", "eating_3"]
                             let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
+                            self.sceneView.shake(10,              // 10 times
+                                withDelta: 5.0,  // 5 points wide
+                                speed: 0.03,     // 30ms per shake
+                                shakeDirection: ShakeDirection.Horizontal
+                            )
                             self.playSound(array[randomIndex])
                         }
                         else {
