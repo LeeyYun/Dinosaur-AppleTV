@@ -36,7 +36,7 @@ Currently, Explore Dinosaurs 3D supports Xcode 7.3, tvOS 9.1+, and Swift 2.
 
 <br>
 ## Features
-- Utilizes tvOS
+- Utilizes tvOS (SceneKit, StoreKit, AudioToolbox, AVFoundation)
 - High-detail 3D models of each dinosaur
 - Educational at-a-glance info about each dinosaur and its diet
 - Professional voiceover narrations
